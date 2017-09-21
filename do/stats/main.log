@@ -1,0 +1,3102 @@
+
+  ___  ____  ____  ____  ____ (R)
+ /__    /   ____/   /   ____/
+___/   /   /___/   /   /___/   13.1   Copyright 1985-2013 StataCorp LP
+  Statistics/Data Analysis            StataCorp
+                                      4905 Lakeway Drive
+     MP - Parallel Edition            College Station, Texas 77845 USA
+                                      800-STATA-PC        http://www.stata.com
+                                      979-696-4600        stata@stata.com
+                                      979-696-4601 (fax)
+
+15-student 2-core Stata lab perpetual license:
+       Serial number:  501306214154
+         Licensed to:  Carrefour technologique
+                       ESG UQAM
+
+Notes:
+      1.  (-v# option or -set maxvar-) 5000 maximum variables
+      2.  Command line editing disabled
+      3.  Stata running in batch mode
+
+Note:  Your site can add messages to the introduction by editing the file
+       stata.msg in the directory where Stata is installed.
+
+. do main notrendmortality 100 
+
+. * main code to produce statistics from a scenario
+. clear all
+
+. capture log close
+
+. set more off
+
+. global scenario = "`1'"
+
+. global rep = "`2'" 
+
+. 
+. * read data from ascii file and transform to stata
+. cd ~/compas/do/stats/
+/share/Laliberteaug/compas/do/stats
+
+. !./readpop.sh $scenario $rep
+
+
+real    1m20.498s
+user    0m59.049s
+sys     0m0.409s
+
+real    1m40.341s
+user    1m10.433s
+sys     0m0.590s
+
+real    1m40.347s
+user    1m8.894s
+sys     0m0.462s
+
+real    1m40.346s
+user    1m7.580s
+sys     0m0.414s
+
+real    1m40.476s
+user    1m9.042s
+sys     0m0.590s
+
+real    1m45.525s
+user    1m10.837s
+sys     0m0.454s
+
+real    1m48.456s
+user    1m12.151s
+sys     0m0.474s
+
+real    1m48.522s
+user    1m13.035s
+sys     0m0.486s
+
+real    1m50.410s
+user    1m13.104s
+sys     0m0.477s
+
+real    1m50.519s
+user    1m14.732s
+sys     0m0.558s
+
+real    1m52.187s
+user    1m14.025s
+sys     0m0.529s
+
+real    1m53.411s
+user    1m15.594s
+sys     0m0.808s
+
+real    1m53.662s
+user    1m7.436s
+sys     0m0.490s
+
+real    1m57.745s
+user    1m17.389s
+sys     0m0.555s
+
+real    1m57.834s
+user    1m17.935s
+sys     0m0.524s
+
+real    1m57.869s
+user    1m21.167s
+sys     0m0.693s
+
+real    1m59.741s
+user    1m17.076s
+sys     0m0.634s
+
+real    2m6.373s
+user    1m11.734s
+sys     0m0.486s
+
+real    2m6.659s
+user    1m14.833s
+sys     0m0.555s
+
+real    2m7.981s
+user    1m16.577s
+sys     0m0.559s
+
+real    2m9.056s
+user    1m13.699s
+sys     0m0.519s
+
+real    2m9.268s
+user    1m24.824s
+sys     0m0.550s
+
+real    2m9.875s
+user    1m17.755s
+sys     0m0.460s
+
+real    2m10.205s
+user    1m28.215s
+sys     0m0.630s
+
+real    2m10.398s
+user    1m26.428s
+sys     0m0.762s
+
+real    2m13.044s
+user    1m24.075s
+sys     0m0.615s
+
+real    2m14.275s
+user    1m17.763s
+sys     0m0.568s
+
+real    2m14.708s
+user    1m21.430s
+sys     0m0.539s
+
+real    2m15.173s
+user    1m32.607s
+sys     0m0.557s
+
+real    2m15.368s
+user    1m19.217s
+sys     0m0.690s
+
+real    2m16.266s
+user    1m18.076s
+sys     0m0.664s
+
+real    2m16.457s
+user    1m16.464s
+sys     0m0.517s
+
+real    2m16.507s
+user    1m21.628s
+sys     0m0.526s
+
+real    2m17.665s
+user    1m20.885s
+sys     0m0.722s
+
+real    2m18.042s
+user    1m23.665s
+sys     0m0.610s
+
+real    2m18.606s
+user    1m26.119s
+sys     0m0.542s
+
+real    2m18.736s
+user    1m21.811s
+sys     0m0.659s
+
+real    2m19.613s
+user    1m23.400s
+sys     0m0.555s
+
+real    2m20.267s
+user    1m26.624s
+sys     0m0.644s
+
+real    2m20.931s
+user    1m25.227s
+sys     0m0.621s
+
+real    2m22.836s
+user    1m27.516s
+sys     0m0.558s
+
+real    2m22.904s
+user    1m24.221s
+sys     0m0.458s
+
+real    2m23.080s
+user    1m26.151s
+sys     0m0.610s
+
+real    2m23.925s
+user    1m30.951s
+sys     0m0.667s
+
+real    2m24.547s
+user    1m27.610s
+sys     0m0.583s
+
+real    2m25.004s
+user    1m31.107s
+sys     0m0.507s
+
+real    2m25.768s
+user    1m25.980s
+sys     0m0.784s
+
+real    2m27.340s
+user    1m29.910s
+sys     0m1.495s
+
+real    2m28.890s
+user    1m32.755s
+sys     0m1.073s
+
+real    2m29.427s
+user    1m27.165s
+sys     0m0.576s
+
+real    2m34.801s
+user    1m32.438s
+sys     0m0.553s
+
+real    2m35.380s
+user    1m33.454s
+sys     0m0.590s
+
+real    2m35.612s
+user    1m35.739s
+sys     0m0.522s
+
+real    2m35.658s
+user    1m30.420s
+sys     0m0.481s
+
+real    2m35.674s
+user    1m30.554s
+sys     0m0.582s
+
+real    2m35.690s
+user    1m31.451s
+sys     0m0.596s
+
+real    2m35.694s
+user    1m32.572s
+sys     0m0.814s
+
+real    2m35.702s
+user    1m31.299s
+sys     0m0.592s
+
+real    2m35.706s
+user    1m29.877s
+sys     0m0.466s
+
+real    2m35.722s
+user    1m29.634s
+sys     0m0.554s
+
+real    2m35.710s
+user    1m37.031s
+sys     0m0.509s
+
+real    2m35.747s
+user    1m41.583s
+sys     0m0.562s
+
+real    2m35.746s
+user    1m38.677s
+sys     0m0.542s
+
+real    2m35.772s
+user    1m28.812s
+sys     0m0.482s
+
+real    2m35.783s
+user    1m31.788s
+sys     0m0.392s
+
+real    2m35.795s
+user    1m33.222s
+sys     0m0.368s
+
+
+real    2m35.800s
+user    1m33.093s
+real    2m35.793s
+sys     0m0.454s
+user    1m33.864s
+sys     0m0.533s
+
+real    2m35.790s
+user    1m29.698s
+sys     0m0.450s
+
+real    2m35.817s
+user    1m37.044s
+sys     0m0.445s
+
+real    2m35.812s
+user    1m34.040s
+sys     0m0.454s
+
+real    2m35.823s
+user    1m33.336s
+sys     0m0.554s
+
+real    2m35.825s
+user    1m34.125s
+sys     0m0.535s
+
+real    2m35.814s
+user    1m36.323s
+sys     0m0.474s
+
+real    2m35.828s
+user    1m30.088s
+sys     0m0.530s
+
+real    2m35.917s
+user    1m29.682s
+sys     0m0.397s
+
+
+real    2m35.929s
+real    2m35.926s
+user    1m40.480s
+user    1m30.375s
+sys     0m0.484s
+sys     0m1.173s
+
+
+real    2m35.924s
+
+user    1m44.153s
+real    2m35.919s
+sys     0m0.626s
+user    1m40.003s
+real    2m35.928s
+sys     0m0.729s
+user    1m37.539s
+sys     0m0.457s
+
+real    2m36.382s
+user    1m40.335s
+sys     0m0.822s
+
+real    2m36.408s
+user    1m35.403s
+sys     0m0.487s
+
+real    2m36.489s
+user    1m41.874s
+sys     0m0.600s
+
+real    2m39.308s
+user    1m39.859s
+sys     0m0.507s
+
+real    2m39.348s
+user    1m41.031s
+sys     0m1.148s
+
+real    2m39.366s
+user    1m43.288s
+sys     0m1.014s
+
+real    2m39.361s
+user    1m41.964s
+sys     0m0.476s
+
+real    2m39.420s
+user    1m37.541s
+sys     0m0.473s
+
+real    2m39.467s
+user    1m39.994s
+sys     0m0.483s
+
+real    2m39.467s
+user    1m38.348s
+sys     0m0.500s
+
+real    2m39.483s
+user    1m44.475s
+sys     0m0.577s
+
+real    2m39.486s
+user    1m40.945s
+sys     0m0.702s
+
+real    2m40.055s
+user    1m46.964s
+sys     0m0.908s
+
+real    2m40.063s
+user    1m44.069s
+sys     0m0.955s
+
+real    2m40.594s
+user    1m46.560s
+sys     0m0.555s
+
+real    2m40.648s
+user    1m42.909s
+sys     0m0.507s
+
+real    2m40.846s
+user    1m47.018s
+sys     0m0.584s
+
+real    2m42.597s
+user    1m48.706s
+sys     0m0.545s
+
+real    2m52.274s
+user    1m54.690s
+sys     0m0.509s
+
+. !cp ~/compas/output/$scenario/simpop-1.dta ~/compas/output/$scenario/simpop.d
+> ta 
+
+
+. cd ~/compas
+/share/Laliberteaug/compas
+
+. * creates base pop statistics
+.    do do/stats/popstats.do
+
+. clear all
+
+. capture log close
+
+. set more off
+
+. 
+. cd ~/compas
+/share/Laliberteaug/compas
+
+. program def popstatsbyage
+  1. 
+.                 * prevalence by 5 year age cells
+. 
+.                 *use output/$scenario/simpop.dta,clear
+.                 drop if year>2050
+  2.                 egen age5 = cut(age), at(30(5)110)
+  3.                 qui tab educ, gen(educ_)
+  4.                 qui tab smoke, gen(smoke_)
+  5.                 qui tab bmi, gen(bmi_)
+  6.                 gen cognitive= (inv==2|inv==5|inv==7)
+  7.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  8.                 gen adl =(inv==4|inv==6|inv==7)
+  9.                 gen nhome =(ltc==3)
+ 10.                 gen homecare =(ltc==2)
+ 11.                 rename bmi_2 obese
+ 12.                 rename bmi_3 veryobese
+ 13.                 rename smoke_2 smoker
+ 14.                 rename smoke_3 former
+ 15.                 rename educ_1 lesshs
+ 16.                 rename educ_2 hs
+ 17.                 rename educ_3 college
+ 18.                 rename educ_4 univ
+ 19.                 gen pop = 1
+ 20.                 foreach v of var cost_* {
+ 21.                         replace `v' = . if `v'==0
+ 22.                 }
+ 23.                 #d ;
+delimiter now ;
+.                 global vars = "pop imm sex diabe hibpe hearte stroke cancre l
+> unge mentae  
+>                 obese veryobese smoker former lesshs hs college univ cognitiv
+> e iadl adl
+>                 hc_* income
+>                 nhome homecare
+>                 cost_* hours_* nyrs* agefirst* agedead
+>                 total* ever*";
+ 24.                 #d cr
+delimiter now cr
+. 
+.                 collapse ($stat) $vars [fw=wgt], by(year age5 province) fast
+ 25.                 *save output/$scenario/`stat'byyearage.dta, replace
+. end
+
+. 
+. program def popstats
+  1.                 * prevalence overall
+.                 *use output/$scenario/simpop.dta        , clear
+.                 drop if year>2050
+  2.                 qui tab educ, gen(educ_)
+  3.                 qui tab smoke, gen(smoke_)
+  4.                 qui tab bmi, gen(bmi_)
+  5.                 gen cognitive= (inv==2|inv==5|inv==7)
+  6.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  7.                 gen adl =(inv==4|inv==6|inv==7)
+  8.                 gen nhome =(ltc==3)
+  9.                 gen homecare =(ltc==2)
+ 10.                 rename bmi_2 obese
+ 11.                 rename bmi_3 veryobese
+ 12.                 rename smoke_2 smoker
+ 13.                 rename smoke_3 former
+ 14.                 rename educ_1 lesshs
+ 15.                 rename educ_2 hs
+ 16.                 rename educ_3 college
+ 17.                 rename educ_4 univ      
+ 18.                 gen pop = 1
+ 19.                 foreach v of var cost_* {
+ 20.                         replace `v' = . if `v'==0
+ 21.                 }
+ 22.                 #d ;
+delimiter now ;
+.                 global vars = "pop age imm sex diabe hibpe hearte stroke canc
+> re lunge mentae  
+>                 obese veryobese smoker former lesshs hs college univ cognitiv
+> e iadl adl
+>                 hc_* income
+>                 homecare nhome
+>                 cost_*  hours_* nyrs* agefirst* agedead
+>                 total* ever*";
+ 23.                 #d cr
+delimiter now cr
+.                 collapse ($stat) $vars [fw=wgt], by(year province) fast
+ 24.                 if ("`stat'"=="sum") {
+ 25.                         merge 1:1 year province using params/trends/trend-
+> pop-under30.dta
+ 26.                         gen totpop = pop + popunder30
+ 27.                         label var totpop "total population, includes <30"
+ 28.                 }
+ 29.                 *save output/$scenario/`stat'byyear.dta, replace
+. end
+
+. 
+. 
+. *all
+. #d ;
+delimiter now ;
+.                 global statvars = "pop imm sex diabe hibpe hearte stroke canc
+> re lunge mentae  
+>                 obese veryobese smoker former lesshs hs college univ cognitiv
+> e iadl adl
+>                 hc_* income
+>                 homecare nhome
+>                 cost_*  hours_* nyrs* agefirst* agedead
+>                 total* ever*";
+
+.                 #d cr
+delimiter now cr
+.                 
+. timer on 1
+
+. parallel setclusters 50,force
+N Clusters: 50
+Stata dir:  /usr/local/stata/stata-mp
+
+. global stat = "mean"
+
+. parallel append, do(popstats) programs(popstats) e("output/$scenario/simpop-%
+> 01.0f, 1/$rep")
+The following files will be processed:
+ 001 output/notrendmortality/simpop-1.dta
+ 002 output/notrendmortality/simpop-2.dta
+ 003 output/notrendmortality/simpop-3.dta
+ 004 output/notrendmortality/simpop-4.dta
+ 005 output/notrendmortality/simpop-5.dta
+ 006 output/notrendmortality/simpop-6.dta
+ 007 output/notrendmortality/simpop-7.dta
+ 008 output/notrendmortality/simpop-8.dta
+ 009 output/notrendmortality/simpop-9.dta
+ 010 output/notrendmortality/simpop-10.dta
+ 011 output/notrendmortality/simpop-11.dta
+ 012 output/notrendmortality/simpop-12.dta
+ 013 output/notrendmortality/simpop-13.dta
+ 014 output/notrendmortality/simpop-14.dta
+ 015 output/notrendmortality/simpop-15.dta
+ 016 output/notrendmortality/simpop-16.dta
+ 017 output/notrendmortality/simpop-17.dta
+ 018 output/notrendmortality/simpop-18.dta
+ 019 output/notrendmortality/simpop-19.dta
+ 020 output/notrendmortality/simpop-20.dta
+ 021 output/notrendmortality/simpop-21.dta
+ 022 output/notrendmortality/simpop-22.dta
+ 023 output/notrendmortality/simpop-23.dta
+ 024 output/notrendmortality/simpop-24.dta
+ 025 output/notrendmortality/simpop-25.dta
+ 026 output/notrendmortality/simpop-26.dta
+ 027 output/notrendmortality/simpop-27.dta
+ 028 output/notrendmortality/simpop-28.dta
+ 029 output/notrendmortality/simpop-29.dta
+ 030 output/notrendmortality/simpop-30.dta
+ 031 output/notrendmortality/simpop-31.dta
+ 032 output/notrendmortality/simpop-32.dta
+ 033 output/notrendmortality/simpop-33.dta
+ 034 output/notrendmortality/simpop-34.dta
+ 035 output/notrendmortality/simpop-35.dta
+ 036 output/notrendmortality/simpop-36.dta
+ 037 output/notrendmortality/simpop-37.dta
+ 038 output/notrendmortality/simpop-38.dta
+ 039 output/notrendmortality/simpop-39.dta
+ 040 output/notrendmortality/simpop-40.dta
+ 041 output/notrendmortality/simpop-41.dta
+ 042 output/notrendmortality/simpop-42.dta
+ 043 output/notrendmortality/simpop-43.dta
+ 044 output/notrendmortality/simpop-44.dta
+ 045 output/notrendmortality/simpop-45.dta
+ 046 output/notrendmortality/simpop-46.dta
+ 047 output/notrendmortality/simpop-47.dta
+ 048 output/notrendmortality/simpop-48.dta
+ 049 output/notrendmortality/simpop-49.dta
+ 050 output/notrendmortality/simpop-50.dta
+ 051 output/notrendmortality/simpop-51.dta
+ 052 output/notrendmortality/simpop-52.dta
+ 053 output/notrendmortality/simpop-53.dta
+ 054 output/notrendmortality/simpop-54.dta
+ 055 output/notrendmortality/simpop-55.dta
+ 056 output/notrendmortality/simpop-56.dta
+ 057 output/notrendmortality/simpop-57.dta
+ 058 output/notrendmortality/simpop-58.dta
+ 059 output/notrendmortality/simpop-59.dta
+ 060 output/notrendmortality/simpop-60.dta
+ 061 output/notrendmortality/simpop-61.dta
+ 062 output/notrendmortality/simpop-62.dta
+ 063 output/notrendmortality/simpop-63.dta
+ 064 output/notrendmortality/simpop-64.dta
+ 065 output/notrendmortality/simpop-65.dta
+ 066 output/notrendmortality/simpop-66.dta
+ 067 output/notrendmortality/simpop-67.dta
+ 068 output/notrendmortality/simpop-68.dta
+ 069 output/notrendmortality/simpop-69.dta
+ 070 output/notrendmortality/simpop-70.dta
+ 071 output/notrendmortality/simpop-71.dta
+ 072 output/notrendmortality/simpop-72.dta
+ 073 output/notrendmortality/simpop-73.dta
+ 074 output/notrendmortality/simpop-74.dta
+ 075 output/notrendmortality/simpop-75.dta
+ 076 output/notrendmortality/simpop-76.dta
+ 077 output/notrendmortality/simpop-77.dta
+ 078 output/notrendmortality/simpop-78.dta
+ 079 output/notrendmortality/simpop-79.dta
+ 080 output/notrendmortality/simpop-80.dta
+ 081 output/notrendmortality/simpop-81.dta
+ 082 output/notrendmortality/simpop-82.dta
+ 083 output/notrendmortality/simpop-83.dta
+ 084 output/notrendmortality/simpop-84.dta
+ 085 output/notrendmortality/simpop-85.dta
+ 086 output/notrendmortality/simpop-86.dta
+ 087 output/notrendmortality/simpop-87.dta
+ 088 output/notrendmortality/simpop-88.dta
+ 089 output/notrendmortality/simpop-89.dta
+ 090 output/notrendmortality/simpop-90.dta
+ 091 output/notrendmortality/simpop-91.dta
+ 092 output/notrendmortality/simpop-92.dta
+ 093 output/notrendmortality/simpop-93.dta
+ 094 output/notrendmortality/simpop-94.dta
+ 095 output/notrendmortality/simpop-95.dta
+ 096 output/notrendmortality/simpop-96.dta
+ 097 output/notrendmortality/simpop-97.dta
+ 098 output/notrendmortality/simpop-98.dta
+ 099 output/notrendmortality/simpop-99.dta
+ 100 output/notrendmortality/simpop-100.dta
+The files will be processed in the following order:
+ 001 output/notrendmortality/simpop-1.dta output/notrendmortality/simpop-2.dta 
+> output/notrendmortality/simpop-3.dta output/notrendmortality/simpop-4.dta out
+> put/notrendmortality/simpop-5.dta output/notrendmortality/simpop-6.dta output
+> /notrendmortality/simpop-7.dta output/notrendmortality/simpop-8.dta output/no
+> trendmortality/simpop-9.dta output/notrendmortality/simpop-10.dta output/notr
+> endmortality/simpop-11.dta output/notrendmortality/simpop-12.dta output/notre
+> ndmortality/simpop-13.dta output/notrendmortality/simpop-14.dta output/notren
+> dmortality/simpop-15.dta output/notrendmortality/simpop-16.dta output/notrend
+> mortality/simpop-17.dta output/notrendmortality/simpop-18.dta output/notrendm
+> ortality/simpop-19.dta output/notrendmortality/simpop-20.dta output/notrendmo
+> rtality/simpop-21.dta output/notrendmortality/simpop-22.dta output/notrendmor
+> tality/simpop-23.dta output/notrendmortality/simpop-24.dta output/notrendmort
+> ality/simpop-25.dta output/notrendmortality/simpop-26.dta output/notrendmorta
+> lity/simpop-27.dta output/notrendmortality/simpop-28.dta output/notrendmortal
+> ity/simpop-29.dta output/notrendmortality/simpop-30.dta output/notrendmortali
+> ty/simpop-31.dta output/notrendmortality/simpop-32.dta output/notrendmortalit
+> y/simpop-33.dta output/notrendmortality/simpop-34.dta output/notrendmortality
+> /simpop-35.dta output/notrendmortality/simpop-36.dta output/notrendmortality/
+> simpop-37.dta output/notrendmortality/simpop-38.dta output/notrendmortality/s
+> impop-39.dta output/notrendmortality/simpop-40.dta output/notrendmortality/si
+> mpop-41.dta output/notrendmortality/simpop-42.dta output/notrendmortality/sim
+> pop-43.dta output/notrendmortality/simpop-44.dta output/notrendmortality/simp
+> op-45.dta output/notrendmortality/simpop-46.dta output/notrendmortality/simpo
+> p-47.dta output/notrendmortality/simpop-48.dta output/notrendmortality/simpop
+> -49.dta output/notrendmortality/simpop-50.dta
+ 002 output/notrendmortality/simpop-51.dta output/notrendmortality/simpop-52.dt
+> a output/notrendmortality/simpop-53.dta output/notrendmortality/simpop-54.dta
+>  output/notrendmortality/simpop-55.dta output/notrendmortality/simpop-56.dta 
+> output/notrendmortality/simpop-57.dta output/notrendmortality/simpop-58.dta o
+> utput/notrendmortality/simpop-59.dta output/notrendmortality/simpop-60.dta ou
+> tput/notrendmortality/simpop-61.dta output/notrendmortality/simpop-62.dta out
+> put/notrendmortality/simpop-63.dta output/notrendmortality/simpop-64.dta outp
+> ut/notrendmortality/simpop-65.dta output/notrendmortality/simpop-66.dta outpu
+> t/notrendmortality/simpop-67.dta output/notrendmortality/simpop-68.dta output
+> /notrendmortality/simpop-69.dta output/notrendmortality/simpop-70.dta output/
+> notrendmortality/simpop-71.dta output/notrendmortality/simpop-72.dta output/n
+> otrendmortality/simpop-73.dta output/notrendmortality/simpop-74.dta output/no
+> trendmortality/simpop-75.dta output/notrendmortality/simpop-76.dta output/not
+> rendmortality/simpop-77.dta output/notrendmortality/simpop-78.dta output/notr
+> endmortality/simpop-79.dta output/notrendmortality/simpop-80.dta output/notre
+> ndmortality/simpop-81.dta output/notrendmortality/simpop-82.dta output/notren
+> dmortality/simpop-83.dta output/notrendmortality/simpop-84.dta output/notrend
+> mortality/simpop-85.dta output/notrendmortality/simpop-86.dta output/notrendm
+> ortality/simpop-87.dta output/notrendmortality/simpop-88.dta output/notrendmo
+> rtality/simpop-89.dta output/notrendmortality/simpop-90.dta output/notrendmor
+> tality/simpop-91.dta output/notrendmortality/simpop-92.dta output/notrendmort
+> ality/simpop-93.dta output/notrendmortality/simpop-94.dta output/notrendmorta
+> lity/simpop-95.dta output/notrendmortality/simpop-96.dta output/notrendmortal
+> ity/simpop-97.dta output/notrendmortality/simpop-98.dta output/notrendmortali
+> ty/simpop-99.dta output/notrendmortality/simpop-100.dta
+(note: file /share/Laliberteaug/compas/__plluo6eg9u2d2_prog.log not found)
+-------------------------------------------------------------------------------
+      name:  pllloguo6eg9u2d2
+       log:  /share/Laliberteaug/compas/__plluo6eg9u2d2_prog.log
+  log type:  text
+ opened on:  19 Jun 2015, 10:40:44
+
+popstats:
+  1.                 drop if year>2050
+  2.                 qui tab educ, gen(educ_)
+  3.                 qui tab smoke, gen(smoke_)
+  4.                 qui tab bmi, gen(bmi_)
+  5.                 gen cognitive= (inv==2|inv==5|inv==7)
+  6.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  7.                 gen adl =(inv==4|inv==6|inv==7)
+  8.                 gen nhome =(ltc==3)
+  9.                 gen homecare =(ltc==2)
+ 10.                 rename bmi_2 obese
+ 11.                 rename bmi_3 veryobese
+ 12.                 rename smoke_2 smoker
+ 13.                 rename smoke_3 former
+ 14.                 rename educ_1 lesshs
+ 15.                 rename educ_2 hs
+ 16.                 rename educ_3 college
+ 17.                 rename educ_4 univ
+ 18.                 gen pop = 1
+ 19.                 foreach v of var cost_* {
+ 20.                         replace `v' = . if `v'==0
+ 21.                 }
+ 22.                 global vars = "pop age imm sex diabe hibpe hearte stroke c
+> ancre lunge mentae                   obese veryobese smoker former lesshs hs 
+> college univ cognitive iadl adl                 hc_* income                 h
+> omecare nhome                 cost_*  hours_* nyrs* agefirst* agedead        
+>          total* ever*"
+ 23.                 collapse ($stat) $vars [fw=wgt], by(year province) fast
+ 24.                 if ("`stat'"=="sum") {
+ 25.                         merge 1:1 year province using params/trends/trend-
+> pop-under30.dta
+ 26.                         gen totpop = pop + popunder30
+ 27.                         label var totpop "total population, includes <30"
+ 28.                 }
+      name:  pllloguo6eg9u2d2
+       log:  /share/Laliberteaug/compas/__plluo6eg9u2d2_prog.log
+  log type:  text
+ closed on:  19 Jun 2015, 10:40:44
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Parallel Computing with Stata (by GVY)
+Clusters   : 50
+pll_id     : uo6eg9u2d2
+Running at : /share/Laliberteaug/compas
+Randtype   : datetime
+Waiting for the clusters to finish...
+cluster 0012 has exited without error...
+cluster 0013 has exited without error...
+cluster 0015 has exited without error...
+cluster 0017 has exited without error...
+cluster 0020 has exited without error...
+cluster 0024 has exited without error...
+cluster 0029 has exited without error...
+cluster 0033 has exited without error...
+cluster 0035 has exited without error...
+cluster 0036 has exited without error...
+cluster 0037 has exited without error...
+cluster 0038 has exited without error...
+cluster 0039 has exited without error...
+cluster 0040 has exited without error...
+cluster 0044 has exited without error...
+cluster 0045 has exited without error...
+cluster 0047 has exited without error...
+cluster 0048 has exited without error...
+cluster 0049 has exited without error...
+cluster 0001 has exited without error...
+cluster 0002 has exited without error...
+cluster 0003 has exited without error...
+cluster 0004 has exited without error...
+cluster 0006 has exited without error...
+cluster 0007 has exited without error...
+cluster 0008 has exited without error...
+cluster 0009 has exited without error...
+cluster 0010 has exited without error...
+cluster 0011 has exited without error...
+cluster 0018 has exited without error...
+cluster 0019 has exited without error...
+cluster 0021 has exited without error...
+cluster 0023 has exited without error...
+cluster 0026 has exited without error...
+cluster 0027 has exited without error...
+cluster 0028 has exited without error...
+cluster 0030 has exited without error...
+cluster 0031 has exited without error...
+cluster 0032 has exited without error...
+cluster 0042 has exited without error...
+cluster 0046 has exited without error...
+cluster 0050 has exited without error...
+cluster 0014 has exited without error...
+cluster 0016 has exited without error...
+cluster 0022 has exited without error...
+cluster 0025 has exited without error...
+cluster 0034 has exited without error...
+cluster 0041 has exited without error...
+cluster 0005 has exited without error...
+cluster 0043 has exited without error...
+-------------------------------------------------------------------------------
+Enter -parallel printlog #- to checkout logfiles.
+-------------------------------------------------------------------------------
+(note: file /share/Laliberteaug/compas/__pllvs2c6lnuk4_prog.log not found)
+-------------------------------------------------------------------------------
+      name:  plllogvs2c6lnuk4
+       log:  /share/Laliberteaug/compas/__pllvs2c6lnuk4_prog.log
+  log type:  text
+ opened on:  19 Jun 2015, 10:41:10
+
+popstats:
+  1.                 drop if year>2050
+  2.                 qui tab educ, gen(educ_)
+  3.                 qui tab smoke, gen(smoke_)
+  4.                 qui tab bmi, gen(bmi_)
+  5.                 gen cognitive= (inv==2|inv==5|inv==7)
+  6.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  7.                 gen adl =(inv==4|inv==6|inv==7)
+  8.                 gen nhome =(ltc==3)
+  9.                 gen homecare =(ltc==2)
+ 10.                 rename bmi_2 obese
+ 11.                 rename bmi_3 veryobese
+ 12.                 rename smoke_2 smoker
+ 13.                 rename smoke_3 former
+ 14.                 rename educ_1 lesshs
+ 15.                 rename educ_2 hs
+ 16.                 rename educ_3 college
+ 17.                 rename educ_4 univ
+ 18.                 gen pop = 1
+ 19.                 foreach v of var cost_* {
+ 20.                         replace `v' = . if `v'==0
+ 21.                 }
+ 22.                 global vars = "pop age imm sex diabe hibpe hearte stroke c
+> ancre lunge mentae                   obese veryobese smoker former lesshs hs 
+> college univ cognitive iadl adl                 hc_* income                 h
+> omecare nhome                 cost_*  hours_* nyrs* agefirst* agedead        
+>          total* ever*"
+ 23.                 collapse ($stat) $vars [fw=wgt], by(year province) fast
+ 24.                 if ("`stat'"=="sum") {
+ 25.                         merge 1:1 year province using params/trends/trend-
+> pop-under30.dta
+ 26.                         gen totpop = pop + popunder30
+ 27.                         label var totpop "total population, includes <30"
+ 28.                 }
+      name:  plllogvs2c6lnuk4
+       log:  /share/Laliberteaug/compas/__pllvs2c6lnuk4_prog.log
+  log type:  text
+ closed on:  19 Jun 2015, 10:41:10
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Parallel Computing with Stata (by GVY)
+Clusters   : 50
+pll_id     : vs2c6lnuk4
+Running at : /share/Laliberteaug/compas
+Randtype   : datetime
+Waiting for the clusters to finish...
+cluster 0010 has exited without error...
+cluster 0025 has exited without error...
+cluster 0027 has exited without error...
+cluster 0031 has exited without error...
+cluster 0034 has exited without error...
+cluster 0035 has exited without error...
+cluster 0038 has exited without error...
+cluster 0040 has exited without error...
+cluster 0041 has exited without error...
+cluster 0043 has exited without error...
+cluster 0045 has exited without error...
+cluster 0049 has exited without error...
+cluster 0003 has exited without error...
+cluster 0005 has exited without error...
+cluster 0006 has exited without error...
+cluster 0008 has exited without error...
+cluster 0009 has exited without error...
+cluster 0011 has exited without error...
+cluster 0012 has exited without error...
+cluster 0013 has exited without error...
+cluster 0014 has exited without error...
+cluster 0015 has exited without error...
+cluster 0016 has exited without error...
+cluster 0017 has exited without error...
+cluster 0018 has exited without error...
+cluster 0020 has exited without error...
+cluster 0021 has exited without error...
+cluster 0022 has exited without error...
+cluster 0024 has exited without error...
+cluster 0026 has exited without error...
+cluster 0028 has exited without error...
+cluster 0029 has exited without error...
+cluster 0030 has exited without error...
+cluster 0032 has exited without error...
+cluster 0033 has exited without error...
+cluster 0036 has exited without error...
+cluster 0037 has exited without error...
+cluster 0039 has exited without error...
+cluster 0042 has exited without error...
+cluster 0044 has exited without error...
+cluster 0047 has exited without error...
+cluster 0048 has exited without error...
+cluster 0001 has exited without error...
+cluster 0002 has exited without error...
+cluster 0004 has exited without error...
+cluster 0046 has exited without error...
+cluster 0050 has exited without error...
+cluster 0019 has exited without error...
+cluster 0007 has exited without error...
+cluster 0023 has exited without error...
+-------------------------------------------------------------------------------
+Enter -parallel printlog #- to checkout logfiles.
+-------------------------------------------------------------------------------
+
+.  foreach v of var $statvars {
+  2.                         local l`v' : variable label `v'
+  3.                         if `"`l`v''"' == "" {
+  4.                                 local l`v' "`v'"
+  5.                         }
+  6.                 }
+
+. collapse (mean) $statvars , by(year province) fast
+
+. foreach v of var $statvars {
+  2.                         label var `v' "`l`v''"
+  3.                 }
+
+. save output/$scenario/meanbyyear.dta, replace
+file output/notrendmortality/meanbyyear.dta saved
+
+. timer off 1
+
+. timer list
+   1:     53.45 /        1 =      53.4520
+  97:      0.00 /        2 =       0.0000
+  98:      0.00 /        1 =       0.0000
+  99:     26.28 /        1 =      26.2810
+
+. timer clear
+
+. 
+. timer on 1
+
+. global stat = "sum"
+
+. parallel append, do(popstats) programs(popstats) e("output/$scenario/simpop-%
+> 01.0f, 1/$rep")
+The following files will be processed:
+ 001 output/notrendmortality/simpop-1.dta
+ 002 output/notrendmortality/simpop-2.dta
+ 003 output/notrendmortality/simpop-3.dta
+ 004 output/notrendmortality/simpop-4.dta
+ 005 output/notrendmortality/simpop-5.dta
+ 006 output/notrendmortality/simpop-6.dta
+ 007 output/notrendmortality/simpop-7.dta
+ 008 output/notrendmortality/simpop-8.dta
+ 009 output/notrendmortality/simpop-9.dta
+ 010 output/notrendmortality/simpop-10.dta
+ 011 output/notrendmortality/simpop-11.dta
+ 012 output/notrendmortality/simpop-12.dta
+ 013 output/notrendmortality/simpop-13.dta
+ 014 output/notrendmortality/simpop-14.dta
+ 015 output/notrendmortality/simpop-15.dta
+ 016 output/notrendmortality/simpop-16.dta
+ 017 output/notrendmortality/simpop-17.dta
+ 018 output/notrendmortality/simpop-18.dta
+ 019 output/notrendmortality/simpop-19.dta
+ 020 output/notrendmortality/simpop-20.dta
+ 021 output/notrendmortality/simpop-21.dta
+ 022 output/notrendmortality/simpop-22.dta
+ 023 output/notrendmortality/simpop-23.dta
+ 024 output/notrendmortality/simpop-24.dta
+ 025 output/notrendmortality/simpop-25.dta
+ 026 output/notrendmortality/simpop-26.dta
+ 027 output/notrendmortality/simpop-27.dta
+ 028 output/notrendmortality/simpop-28.dta
+ 029 output/notrendmortality/simpop-29.dta
+ 030 output/notrendmortality/simpop-30.dta
+ 031 output/notrendmortality/simpop-31.dta
+ 032 output/notrendmortality/simpop-32.dta
+ 033 output/notrendmortality/simpop-33.dta
+ 034 output/notrendmortality/simpop-34.dta
+ 035 output/notrendmortality/simpop-35.dta
+ 036 output/notrendmortality/simpop-36.dta
+ 037 output/notrendmortality/simpop-37.dta
+ 038 output/notrendmortality/simpop-38.dta
+ 039 output/notrendmortality/simpop-39.dta
+ 040 output/notrendmortality/simpop-40.dta
+ 041 output/notrendmortality/simpop-41.dta
+ 042 output/notrendmortality/simpop-42.dta
+ 043 output/notrendmortality/simpop-43.dta
+ 044 output/notrendmortality/simpop-44.dta
+ 045 output/notrendmortality/simpop-45.dta
+ 046 output/notrendmortality/simpop-46.dta
+ 047 output/notrendmortality/simpop-47.dta
+ 048 output/notrendmortality/simpop-48.dta
+ 049 output/notrendmortality/simpop-49.dta
+ 050 output/notrendmortality/simpop-50.dta
+ 051 output/notrendmortality/simpop-51.dta
+ 052 output/notrendmortality/simpop-52.dta
+ 053 output/notrendmortality/simpop-53.dta
+ 054 output/notrendmortality/simpop-54.dta
+ 055 output/notrendmortality/simpop-55.dta
+ 056 output/notrendmortality/simpop-56.dta
+ 057 output/notrendmortality/simpop-57.dta
+ 058 output/notrendmortality/simpop-58.dta
+ 059 output/notrendmortality/simpop-59.dta
+ 060 output/notrendmortality/simpop-60.dta
+ 061 output/notrendmortality/simpop-61.dta
+ 062 output/notrendmortality/simpop-62.dta
+ 063 output/notrendmortality/simpop-63.dta
+ 064 output/notrendmortality/simpop-64.dta
+ 065 output/notrendmortality/simpop-65.dta
+ 066 output/notrendmortality/simpop-66.dta
+ 067 output/notrendmortality/simpop-67.dta
+ 068 output/notrendmortality/simpop-68.dta
+ 069 output/notrendmortality/simpop-69.dta
+ 070 output/notrendmortality/simpop-70.dta
+ 071 output/notrendmortality/simpop-71.dta
+ 072 output/notrendmortality/simpop-72.dta
+ 073 output/notrendmortality/simpop-73.dta
+ 074 output/notrendmortality/simpop-74.dta
+ 075 output/notrendmortality/simpop-75.dta
+ 076 output/notrendmortality/simpop-76.dta
+ 077 output/notrendmortality/simpop-77.dta
+ 078 output/notrendmortality/simpop-78.dta
+ 079 output/notrendmortality/simpop-79.dta
+ 080 output/notrendmortality/simpop-80.dta
+ 081 output/notrendmortality/simpop-81.dta
+ 082 output/notrendmortality/simpop-82.dta
+ 083 output/notrendmortality/simpop-83.dta
+ 084 output/notrendmortality/simpop-84.dta
+ 085 output/notrendmortality/simpop-85.dta
+ 086 output/notrendmortality/simpop-86.dta
+ 087 output/notrendmortality/simpop-87.dta
+ 088 output/notrendmortality/simpop-88.dta
+ 089 output/notrendmortality/simpop-89.dta
+ 090 output/notrendmortality/simpop-90.dta
+ 091 output/notrendmortality/simpop-91.dta
+ 092 output/notrendmortality/simpop-92.dta
+ 093 output/notrendmortality/simpop-93.dta
+ 094 output/notrendmortality/simpop-94.dta
+ 095 output/notrendmortality/simpop-95.dta
+ 096 output/notrendmortality/simpop-96.dta
+ 097 output/notrendmortality/simpop-97.dta
+ 098 output/notrendmortality/simpop-98.dta
+ 099 output/notrendmortality/simpop-99.dta
+ 100 output/notrendmortality/simpop-100.dta
+The files will be processed in the following order:
+ 001 output/notrendmortality/simpop-1.dta output/notrendmortality/simpop-2.dta 
+> output/notrendmortality/simpop-3.dta output/notrendmortality/simpop-4.dta out
+> put/notrendmortality/simpop-5.dta output/notrendmortality/simpop-6.dta output
+> /notrendmortality/simpop-7.dta output/notrendmortality/simpop-8.dta output/no
+> trendmortality/simpop-9.dta output/notrendmortality/simpop-10.dta output/notr
+> endmortality/simpop-11.dta output/notrendmortality/simpop-12.dta output/notre
+> ndmortality/simpop-13.dta output/notrendmortality/simpop-14.dta output/notren
+> dmortality/simpop-15.dta output/notrendmortality/simpop-16.dta output/notrend
+> mortality/simpop-17.dta output/notrendmortality/simpop-18.dta output/notrendm
+> ortality/simpop-19.dta output/notrendmortality/simpop-20.dta output/notrendmo
+> rtality/simpop-21.dta output/notrendmortality/simpop-22.dta output/notrendmor
+> tality/simpop-23.dta output/notrendmortality/simpop-24.dta output/notrendmort
+> ality/simpop-25.dta output/notrendmortality/simpop-26.dta output/notrendmorta
+> lity/simpop-27.dta output/notrendmortality/simpop-28.dta output/notrendmortal
+> ity/simpop-29.dta output/notrendmortality/simpop-30.dta output/notrendmortali
+> ty/simpop-31.dta output/notrendmortality/simpop-32.dta output/notrendmortalit
+> y/simpop-33.dta output/notrendmortality/simpop-34.dta output/notrendmortality
+> /simpop-35.dta output/notrendmortality/simpop-36.dta output/notrendmortality/
+> simpop-37.dta output/notrendmortality/simpop-38.dta output/notrendmortality/s
+> impop-39.dta output/notrendmortality/simpop-40.dta output/notrendmortality/si
+> mpop-41.dta output/notrendmortality/simpop-42.dta output/notrendmortality/sim
+> pop-43.dta output/notrendmortality/simpop-44.dta output/notrendmortality/simp
+> op-45.dta output/notrendmortality/simpop-46.dta output/notrendmortality/simpo
+> p-47.dta output/notrendmortality/simpop-48.dta output/notrendmortality/simpop
+> -49.dta output/notrendmortality/simpop-50.dta
+ 002 output/notrendmortality/simpop-51.dta output/notrendmortality/simpop-52.dt
+> a output/notrendmortality/simpop-53.dta output/notrendmortality/simpop-54.dta
+>  output/notrendmortality/simpop-55.dta output/notrendmortality/simpop-56.dta 
+> output/notrendmortality/simpop-57.dta output/notrendmortality/simpop-58.dta o
+> utput/notrendmortality/simpop-59.dta output/notrendmortality/simpop-60.dta ou
+> tput/notrendmortality/simpop-61.dta output/notrendmortality/simpop-62.dta out
+> put/notrendmortality/simpop-63.dta output/notrendmortality/simpop-64.dta outp
+> ut/notrendmortality/simpop-65.dta output/notrendmortality/simpop-66.dta outpu
+> t/notrendmortality/simpop-67.dta output/notrendmortality/simpop-68.dta output
+> /notrendmortality/simpop-69.dta output/notrendmortality/simpop-70.dta output/
+> notrendmortality/simpop-71.dta output/notrendmortality/simpop-72.dta output/n
+> otrendmortality/simpop-73.dta output/notrendmortality/simpop-74.dta output/no
+> trendmortality/simpop-75.dta output/notrendmortality/simpop-76.dta output/not
+> rendmortality/simpop-77.dta output/notrendmortality/simpop-78.dta output/notr
+> endmortality/simpop-79.dta output/notrendmortality/simpop-80.dta output/notre
+> ndmortality/simpop-81.dta output/notrendmortality/simpop-82.dta output/notren
+> dmortality/simpop-83.dta output/notrendmortality/simpop-84.dta output/notrend
+> mortality/simpop-85.dta output/notrendmortality/simpop-86.dta output/notrendm
+> ortality/simpop-87.dta output/notrendmortality/simpop-88.dta output/notrendmo
+> rtality/simpop-89.dta output/notrendmortality/simpop-90.dta output/notrendmor
+> tality/simpop-91.dta output/notrendmortality/simpop-92.dta output/notrendmort
+> ality/simpop-93.dta output/notrendmortality/simpop-94.dta output/notrendmorta
+> lity/simpop-95.dta output/notrendmortality/simpop-96.dta output/notrendmortal
+> ity/simpop-97.dta output/notrendmortality/simpop-98.dta output/notrendmortali
+> ty/simpop-99.dta output/notrendmortality/simpop-100.dta
+(note: file /share/Laliberteaug/compas/__pllji8y6hqcf7_prog.log not found)
+-------------------------------------------------------------------------------
+      name:  plllogji8y6hqcf7
+       log:  /share/Laliberteaug/compas/__pllji8y6hqcf7_prog.log
+  log type:  text
+ opened on:  19 Jun 2015, 10:41:37
+
+popstats:
+  1.                 drop if year>2050
+  2.                 qui tab educ, gen(educ_)
+  3.                 qui tab smoke, gen(smoke_)
+  4.                 qui tab bmi, gen(bmi_)
+  5.                 gen cognitive= (inv==2|inv==5|inv==7)
+  6.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  7.                 gen adl =(inv==4|inv==6|inv==7)
+  8.                 gen nhome =(ltc==3)
+  9.                 gen homecare =(ltc==2)
+ 10.                 rename bmi_2 obese
+ 11.                 rename bmi_3 veryobese
+ 12.                 rename smoke_2 smoker
+ 13.                 rename smoke_3 former
+ 14.                 rename educ_1 lesshs
+ 15.                 rename educ_2 hs
+ 16.                 rename educ_3 college
+ 17.                 rename educ_4 univ
+ 18.                 gen pop = 1
+ 19.                 foreach v of var cost_* {
+ 20.                         replace `v' = . if `v'==0
+ 21.                 }
+ 22.                 global vars = "pop age imm sex diabe hibpe hearte stroke c
+> ancre lunge mentae                   obese veryobese smoker former lesshs hs 
+> college univ cognitive iadl adl                 hc_* income                 h
+> omecare nhome                 cost_*  hours_* nyrs* agefirst* agedead        
+>          total* ever*"
+ 23.                 collapse ($stat) $vars [fw=wgt], by(year province) fast
+ 24.                 if ("`stat'"=="sum") {
+ 25.                         merge 1:1 year province using params/trends/trend-
+> pop-under30.dta
+ 26.                         gen totpop = pop + popunder30
+ 27.                         label var totpop "total population, includes <30"
+ 28.                 }
+      name:  plllogji8y6hqcf7
+       log:  /share/Laliberteaug/compas/__pllji8y6hqcf7_prog.log
+  log type:  text
+ closed on:  19 Jun 2015, 10:41:37
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Parallel Computing with Stata (by GVY)
+Clusters   : 50
+pll_id     : ji8y6hqcf7
+Running at : /share/Laliberteaug/compas
+Randtype   : datetime
+Waiting for the clusters to finish...
+cluster 0025 has exited without error...
+cluster 0036 has exited without error...
+cluster 0039 has exited without error...
+cluster 0044 has exited without error...
+cluster 0045 has exited without error...
+cluster 0046 has exited without error...
+cluster 0002 has exited without error...
+cluster 0004 has exited without error...
+cluster 0006 has exited without error...
+cluster 0007 has exited without error...
+cluster 0010 has exited without error...
+cluster 0011 has exited without error...
+cluster 0012 has exited without error...
+cluster 0013 has exited without error...
+cluster 0014 has exited without error...
+cluster 0015 has exited without error...
+cluster 0016 has exited without error...
+cluster 0017 has exited without error...
+cluster 0019 has exited without error...
+cluster 0020 has exited without error...
+cluster 0021 has exited without error...
+cluster 0022 has exited without error...
+cluster 0023 has exited without error...
+cluster 0027 has exited without error...
+cluster 0028 has exited without error...
+cluster 0030 has exited without error...
+cluster 0031 has exited without error...
+cluster 0033 has exited without error...
+cluster 0035 has exited without error...
+cluster 0037 has exited without error...
+cluster 0038 has exited without error...
+cluster 0040 has exited without error...
+cluster 0042 has exited without error...
+cluster 0043 has exited without error...
+cluster 0047 has exited without error...
+cluster 0048 has exited without error...
+cluster 0050 has exited without error...
+cluster 0001 has exited without error...
+cluster 0008 has exited without error...
+cluster 0024 has exited without error...
+cluster 0026 has exited without error...
+cluster 0032 has exited without error...
+cluster 0034 has exited without error...
+cluster 0041 has exited without error...
+cluster 0049 has exited without error...
+cluster 0009 has exited without error...
+cluster 0018 has exited without error...
+cluster 0005 has exited without error...
+cluster 0003 has exited without error...
+cluster 0029 has exited without error...
+-------------------------------------------------------------------------------
+Enter -parallel printlog #- to checkout logfiles.
+-------------------------------------------------------------------------------
+(note: file /share/Laliberteaug/compas/__pllqxy83caud9_prog.log not found)
+-------------------------------------------------------------------------------
+      name:  plllogqxy83caud9
+       log:  /share/Laliberteaug/compas/__pllqxy83caud9_prog.log
+  log type:  text
+ opened on:  19 Jun 2015, 10:42:07
+
+popstats:
+  1.                 drop if year>2050
+  2.                 qui tab educ, gen(educ_)
+  3.                 qui tab smoke, gen(smoke_)
+  4.                 qui tab bmi, gen(bmi_)
+  5.                 gen cognitive= (inv==2|inv==5|inv==7)
+  6.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  7.                 gen adl =(inv==4|inv==6|inv==7)
+  8.                 gen nhome =(ltc==3)
+  9.                 gen homecare =(ltc==2)
+ 10.                 rename bmi_2 obese
+ 11.                 rename bmi_3 veryobese
+ 12.                 rename smoke_2 smoker
+ 13.                 rename smoke_3 former
+ 14.                 rename educ_1 lesshs
+ 15.                 rename educ_2 hs
+ 16.                 rename educ_3 college
+ 17.                 rename educ_4 univ
+ 18.                 gen pop = 1
+ 19.                 foreach v of var cost_* {
+ 20.                         replace `v' = . if `v'==0
+ 21.                 }
+ 22.                 global vars = "pop age imm sex diabe hibpe hearte stroke c
+> ancre lunge mentae                   obese veryobese smoker former lesshs hs 
+> college univ cognitive iadl adl                 hc_* income                 h
+> omecare nhome                 cost_*  hours_* nyrs* agefirst* agedead        
+>          total* ever*"
+ 23.                 collapse ($stat) $vars [fw=wgt], by(year province) fast
+ 24.                 if ("`stat'"=="sum") {
+ 25.                         merge 1:1 year province using params/trends/trend-
+> pop-under30.dta
+ 26.                         gen totpop = pop + popunder30
+ 27.                         label var totpop "total population, includes <30"
+ 28.                 }
+      name:  plllogqxy83caud9
+       log:  /share/Laliberteaug/compas/__pllqxy83caud9_prog.log
+  log type:  text
+ closed on:  19 Jun 2015, 10:42:07
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Parallel Computing with Stata (by GVY)
+Clusters   : 50
+pll_id     : qxy83caud9
+Running at : /share/Laliberteaug/compas
+Randtype   : datetime
+Waiting for the clusters to finish...
+cluster 0022 has exited without error...
+cluster 0028 has exited without error...
+cluster 0031 has exited without error...
+cluster 0032 has exited without error...
+cluster 0035 has exited without error...
+cluster 0043 has exited without error...
+cluster 0045 has exited without error...
+cluster 0047 has exited without error...
+cluster 0048 has exited without error...
+cluster 0049 has exited without error...
+cluster 0001 has exited without error...
+cluster 0005 has exited without error...
+cluster 0011 has exited without error...
+cluster 0012 has exited without error...
+cluster 0013 has exited without error...
+cluster 0018 has exited without error...
+cluster 0020 has exited without error...
+cluster 0021 has exited without error...
+cluster 0024 has exited without error...
+cluster 0027 has exited without error...
+cluster 0030 has exited without error...
+cluster 0033 has exited without error...
+cluster 0036 has exited without error...
+cluster 0037 has exited without error...
+cluster 0038 has exited without error...
+cluster 0040 has exited without error...
+cluster 0042 has exited without error...
+cluster 0050 has exited without error...
+cluster 0003 has exited without error...
+cluster 0004 has exited without error...
+cluster 0006 has exited without error...
+cluster 0010 has exited without error...
+cluster 0023 has exited without error...
+cluster 0026 has exited without error...
+cluster 0034 has exited without error...
+cluster 0041 has exited without error...
+cluster 0044 has exited without error...
+cluster 0008 has exited without error...
+cluster 0014 has exited without error...
+cluster 0015 has exited without error...
+cluster 0025 has exited without error...
+cluster 0029 has exited without error...
+cluster 0002 has exited without error...
+cluster 0007 has exited without error...
+cluster 0019 has exited without error...
+cluster 0039 has exited without error...
+cluster 0009 has exited without error...
+cluster 0016 has exited without error...
+cluster 0046 has exited without error...
+cluster 0017 has exited without error...
+-------------------------------------------------------------------------------
+Enter -parallel printlog #- to checkout logfiles.
+-------------------------------------------------------------------------------
+
+.  foreach v of var $statvars {
+  2.                         local l`v' : variable label `v'
+  3.                         if `"`l`v''"' == "" {
+  4.                                 local l`v' "`v'"
+  5.                         }
+  6.                 }
+
+. collapse (mean) $statvars , by(year province) fast
+
+. foreach v of var $statvars {
+  2.                         label var `v' "`l`v''"
+  3.                 }
+
+. save output/$scenario/sumbyyear.dta, replace
+file output/notrendmortality/sumbyyear.dta saved
+
+. timer off 1
+
+. timer list
+   1:     60.92 /        1 =      60.9230
+  97:      0.00 /        2 =       0.0000
+  98:      0.00 /        1 =       0.0000
+  99:     30.24 /        1 =      30.2390
+
+. timer clear
+
+. *by age 
+. timer on 1
+
+. parallel setclusters 50,force
+N Clusters: 50
+Stata dir:  /usr/local/stata/stata-mp
+
+. global stat = "mean"
+
+. parallel append, do(popstatsbyage) programs(popstatsbyage) e("output/$scenari
+> o/simpop-%01.0f, 1/$rep")
+The following files will be processed:
+ 001 output/notrendmortality/simpop-1.dta
+ 002 output/notrendmortality/simpop-2.dta
+ 003 output/notrendmortality/simpop-3.dta
+ 004 output/notrendmortality/simpop-4.dta
+ 005 output/notrendmortality/simpop-5.dta
+ 006 output/notrendmortality/simpop-6.dta
+ 007 output/notrendmortality/simpop-7.dta
+ 008 output/notrendmortality/simpop-8.dta
+ 009 output/notrendmortality/simpop-9.dta
+ 010 output/notrendmortality/simpop-10.dta
+ 011 output/notrendmortality/simpop-11.dta
+ 012 output/notrendmortality/simpop-12.dta
+ 013 output/notrendmortality/simpop-13.dta
+ 014 output/notrendmortality/simpop-14.dta
+ 015 output/notrendmortality/simpop-15.dta
+ 016 output/notrendmortality/simpop-16.dta
+ 017 output/notrendmortality/simpop-17.dta
+ 018 output/notrendmortality/simpop-18.dta
+ 019 output/notrendmortality/simpop-19.dta
+ 020 output/notrendmortality/simpop-20.dta
+ 021 output/notrendmortality/simpop-21.dta
+ 022 output/notrendmortality/simpop-22.dta
+ 023 output/notrendmortality/simpop-23.dta
+ 024 output/notrendmortality/simpop-24.dta
+ 025 output/notrendmortality/simpop-25.dta
+ 026 output/notrendmortality/simpop-26.dta
+ 027 output/notrendmortality/simpop-27.dta
+ 028 output/notrendmortality/simpop-28.dta
+ 029 output/notrendmortality/simpop-29.dta
+ 030 output/notrendmortality/simpop-30.dta
+ 031 output/notrendmortality/simpop-31.dta
+ 032 output/notrendmortality/simpop-32.dta
+ 033 output/notrendmortality/simpop-33.dta
+ 034 output/notrendmortality/simpop-34.dta
+ 035 output/notrendmortality/simpop-35.dta
+ 036 output/notrendmortality/simpop-36.dta
+ 037 output/notrendmortality/simpop-37.dta
+ 038 output/notrendmortality/simpop-38.dta
+ 039 output/notrendmortality/simpop-39.dta
+ 040 output/notrendmortality/simpop-40.dta
+ 041 output/notrendmortality/simpop-41.dta
+ 042 output/notrendmortality/simpop-42.dta
+ 043 output/notrendmortality/simpop-43.dta
+ 044 output/notrendmortality/simpop-44.dta
+ 045 output/notrendmortality/simpop-45.dta
+ 046 output/notrendmortality/simpop-46.dta
+ 047 output/notrendmortality/simpop-47.dta
+ 048 output/notrendmortality/simpop-48.dta
+ 049 output/notrendmortality/simpop-49.dta
+ 050 output/notrendmortality/simpop-50.dta
+ 051 output/notrendmortality/simpop-51.dta
+ 052 output/notrendmortality/simpop-52.dta
+ 053 output/notrendmortality/simpop-53.dta
+ 054 output/notrendmortality/simpop-54.dta
+ 055 output/notrendmortality/simpop-55.dta
+ 056 output/notrendmortality/simpop-56.dta
+ 057 output/notrendmortality/simpop-57.dta
+ 058 output/notrendmortality/simpop-58.dta
+ 059 output/notrendmortality/simpop-59.dta
+ 060 output/notrendmortality/simpop-60.dta
+ 061 output/notrendmortality/simpop-61.dta
+ 062 output/notrendmortality/simpop-62.dta
+ 063 output/notrendmortality/simpop-63.dta
+ 064 output/notrendmortality/simpop-64.dta
+ 065 output/notrendmortality/simpop-65.dta
+ 066 output/notrendmortality/simpop-66.dta
+ 067 output/notrendmortality/simpop-67.dta
+ 068 output/notrendmortality/simpop-68.dta
+ 069 output/notrendmortality/simpop-69.dta
+ 070 output/notrendmortality/simpop-70.dta
+ 071 output/notrendmortality/simpop-71.dta
+ 072 output/notrendmortality/simpop-72.dta
+ 073 output/notrendmortality/simpop-73.dta
+ 074 output/notrendmortality/simpop-74.dta
+ 075 output/notrendmortality/simpop-75.dta
+ 076 output/notrendmortality/simpop-76.dta
+ 077 output/notrendmortality/simpop-77.dta
+ 078 output/notrendmortality/simpop-78.dta
+ 079 output/notrendmortality/simpop-79.dta
+ 080 output/notrendmortality/simpop-80.dta
+ 081 output/notrendmortality/simpop-81.dta
+ 082 output/notrendmortality/simpop-82.dta
+ 083 output/notrendmortality/simpop-83.dta
+ 084 output/notrendmortality/simpop-84.dta
+ 085 output/notrendmortality/simpop-85.dta
+ 086 output/notrendmortality/simpop-86.dta
+ 087 output/notrendmortality/simpop-87.dta
+ 088 output/notrendmortality/simpop-88.dta
+ 089 output/notrendmortality/simpop-89.dta
+ 090 output/notrendmortality/simpop-90.dta
+ 091 output/notrendmortality/simpop-91.dta
+ 092 output/notrendmortality/simpop-92.dta
+ 093 output/notrendmortality/simpop-93.dta
+ 094 output/notrendmortality/simpop-94.dta
+ 095 output/notrendmortality/simpop-95.dta
+ 096 output/notrendmortality/simpop-96.dta
+ 097 output/notrendmortality/simpop-97.dta
+ 098 output/notrendmortality/simpop-98.dta
+ 099 output/notrendmortality/simpop-99.dta
+ 100 output/notrendmortality/simpop-100.dta
+The files will be processed in the following order:
+ 001 output/notrendmortality/simpop-1.dta output/notrendmortality/simpop-2.dta 
+> output/notrendmortality/simpop-3.dta output/notrendmortality/simpop-4.dta out
+> put/notrendmortality/simpop-5.dta output/notrendmortality/simpop-6.dta output
+> /notrendmortality/simpop-7.dta output/notrendmortality/simpop-8.dta output/no
+> trendmortality/simpop-9.dta output/notrendmortality/simpop-10.dta output/notr
+> endmortality/simpop-11.dta output/notrendmortality/simpop-12.dta output/notre
+> ndmortality/simpop-13.dta output/notrendmortality/simpop-14.dta output/notren
+> dmortality/simpop-15.dta output/notrendmortality/simpop-16.dta output/notrend
+> mortality/simpop-17.dta output/notrendmortality/simpop-18.dta output/notrendm
+> ortality/simpop-19.dta output/notrendmortality/simpop-20.dta output/notrendmo
+> rtality/simpop-21.dta output/notrendmortality/simpop-22.dta output/notrendmor
+> tality/simpop-23.dta output/notrendmortality/simpop-24.dta output/notrendmort
+> ality/simpop-25.dta output/notrendmortality/simpop-26.dta output/notrendmorta
+> lity/simpop-27.dta output/notrendmortality/simpop-28.dta output/notrendmortal
+> ity/simpop-29.dta output/notrendmortality/simpop-30.dta output/notrendmortali
+> ty/simpop-31.dta output/notrendmortality/simpop-32.dta output/notrendmortalit
+> y/simpop-33.dta output/notrendmortality/simpop-34.dta output/notrendmortality
+> /simpop-35.dta output/notrendmortality/simpop-36.dta output/notrendmortality/
+> simpop-37.dta output/notrendmortality/simpop-38.dta output/notrendmortality/s
+> impop-39.dta output/notrendmortality/simpop-40.dta output/notrendmortality/si
+> mpop-41.dta output/notrendmortality/simpop-42.dta output/notrendmortality/sim
+> pop-43.dta output/notrendmortality/simpop-44.dta output/notrendmortality/simp
+> op-45.dta output/notrendmortality/simpop-46.dta output/notrendmortality/simpo
+> p-47.dta output/notrendmortality/simpop-48.dta output/notrendmortality/simpop
+> -49.dta output/notrendmortality/simpop-50.dta
+ 002 output/notrendmortality/simpop-51.dta output/notrendmortality/simpop-52.dt
+> a output/notrendmortality/simpop-53.dta output/notrendmortality/simpop-54.dta
+>  output/notrendmortality/simpop-55.dta output/notrendmortality/simpop-56.dta 
+> output/notrendmortality/simpop-57.dta output/notrendmortality/simpop-58.dta o
+> utput/notrendmortality/simpop-59.dta output/notrendmortality/simpop-60.dta ou
+> tput/notrendmortality/simpop-61.dta output/notrendmortality/simpop-62.dta out
+> put/notrendmortality/simpop-63.dta output/notrendmortality/simpop-64.dta outp
+> ut/notrendmortality/simpop-65.dta output/notrendmortality/simpop-66.dta outpu
+> t/notrendmortality/simpop-67.dta output/notrendmortality/simpop-68.dta output
+> /notrendmortality/simpop-69.dta output/notrendmortality/simpop-70.dta output/
+> notrendmortality/simpop-71.dta output/notrendmortality/simpop-72.dta output/n
+> otrendmortality/simpop-73.dta output/notrendmortality/simpop-74.dta output/no
+> trendmortality/simpop-75.dta output/notrendmortality/simpop-76.dta output/not
+> rendmortality/simpop-77.dta output/notrendmortality/simpop-78.dta output/notr
+> endmortality/simpop-79.dta output/notrendmortality/simpop-80.dta output/notre
+> ndmortality/simpop-81.dta output/notrendmortality/simpop-82.dta output/notren
+> dmortality/simpop-83.dta output/notrendmortality/simpop-84.dta output/notrend
+> mortality/simpop-85.dta output/notrendmortality/simpop-86.dta output/notrendm
+> ortality/simpop-87.dta output/notrendmortality/simpop-88.dta output/notrendmo
+> rtality/simpop-89.dta output/notrendmortality/simpop-90.dta output/notrendmor
+> tality/simpop-91.dta output/notrendmortality/simpop-92.dta output/notrendmort
+> ality/simpop-93.dta output/notrendmortality/simpop-94.dta output/notrendmorta
+> lity/simpop-95.dta output/notrendmortality/simpop-96.dta output/notrendmortal
+> ity/simpop-97.dta output/notrendmortality/simpop-98.dta output/notrendmortali
+> ty/simpop-99.dta output/notrendmortality/simpop-100.dta
+(note: file /share/Laliberteaug/compas/__pll2vgcsdxg12_prog.log not found)
+-------------------------------------------------------------------------------
+      name:  plllog2vgcsdxg12
+       log:  /share/Laliberteaug/compas/__pll2vgcsdxg12_prog.log
+  log type:  text
+ opened on:  19 Jun 2015, 10:42:38
+
+popstatsbyage:
+  1.                 drop if year>2050
+  2.                 egen age5 = cut(age), at(30(5)110)
+  3.                 qui tab educ, gen(educ_)
+  4.                 qui tab smoke, gen(smoke_)
+  5.                 qui tab bmi, gen(bmi_)
+  6.                 gen cognitive= (inv==2|inv==5|inv==7)
+  7.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  8.                 gen adl =(inv==4|inv==6|inv==7)
+  9.                 gen nhome =(ltc==3)
+ 10.                 gen homecare =(ltc==2)
+ 11.                 rename bmi_2 obese
+ 12.                 rename bmi_3 veryobese
+ 13.                 rename smoke_2 smoker
+ 14.                 rename smoke_3 former
+ 15.                 rename educ_1 lesshs
+ 16.                 rename educ_2 hs
+ 17.                 rename educ_3 college
+ 18.                 rename educ_4 univ
+ 19.                 gen pop = 1
+ 20.                 foreach v of var cost_* {
+ 21.                         replace `v' = . if `v'==0
+ 22.                 }
+ 23.                 global vars = "pop imm sex diabe hibpe hearte stroke cancr
+> e lunge mentae                   obese veryobese smoker former lesshs hs coll
+> ege univ cognitive iadl adl                 hc_* income                 nhome
+>  homecare                 cost_* hours_* nyrs* agefirst* agedead             
+>     total* ever*"
+ 24.                 collapse ($stat) $vars [fw=wgt], by(year age5 province) fa
+> st
+      name:  plllog2vgcsdxg12
+       log:  /share/Laliberteaug/compas/__pll2vgcsdxg12_prog.log
+  log type:  text
+ closed on:  19 Jun 2015, 10:42:38
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Parallel Computing with Stata (by GVY)
+Clusters   : 50
+pll_id     : 2vgcsdxg12
+Running at : /share/Laliberteaug/compas
+Randtype   : datetime
+Waiting for the clusters to finish...
+cluster 0036 has exited without error...
+cluster 0049 has exited without error...
+cluster 0005 has exited without error...
+cluster 0007 has exited without error...
+cluster 0008 has exited without error...
+cluster 0010 has exited without error...
+cluster 0011 has exited without error...
+cluster 0012 has exited without error...
+cluster 0016 has exited without error...
+cluster 0020 has exited without error...
+cluster 0023 has exited without error...
+cluster 0024 has exited without error...
+cluster 0027 has exited without error...
+cluster 0028 has exited without error...
+cluster 0038 has exited without error...
+cluster 0042 has exited without error...
+cluster 0044 has exited without error...
+cluster 0045 has exited without error...
+cluster 0046 has exited without error...
+cluster 0047 has exited without error...
+cluster 0048 has exited without error...
+cluster 0050 has exited without error...
+cluster 0001 has exited without error...
+cluster 0002 has exited without error...
+cluster 0003 has exited without error...
+cluster 0004 has exited without error...
+cluster 0009 has exited without error...
+cluster 0013 has exited without error...
+cluster 0014 has exited without error...
+cluster 0015 has exited without error...
+cluster 0018 has exited without error...
+cluster 0019 has exited without error...
+cluster 0021 has exited without error...
+cluster 0025 has exited without error...
+cluster 0026 has exited without error...
+cluster 0029 has exited without error...
+cluster 0030 has exited without error...
+cluster 0031 has exited without error...
+cluster 0032 has exited without error...
+cluster 0033 has exited without error...
+cluster 0034 has exited without error...
+cluster 0035 has exited without error...
+cluster 0037 has exited without error...
+cluster 0039 has exited without error...
+cluster 0006 has exited without error...
+cluster 0017 has exited without error...
+cluster 0040 has exited without error...
+cluster 0041 has exited without error...
+cluster 0022 has exited without error...
+cluster 0043 has exited without error...
+-------------------------------------------------------------------------------
+Enter -parallel printlog #- to checkout logfiles.
+-------------------------------------------------------------------------------
+(note: file /share/Laliberteaug/compas/__pll74dcoh6814_prog.log not found)
+-------------------------------------------------------------------------------
+      name:  plllog74dcoh6814
+       log:  /share/Laliberteaug/compas/__pll74dcoh6814_prog.log
+  log type:  text
+ opened on:  19 Jun 2015, 10:43:10
+
+popstatsbyage:
+  1.                 drop if year>2050
+  2.                 egen age5 = cut(age), at(30(5)110)
+  3.                 qui tab educ, gen(educ_)
+  4.                 qui tab smoke, gen(smoke_)
+  5.                 qui tab bmi, gen(bmi_)
+  6.                 gen cognitive= (inv==2|inv==5|inv==7)
+  7.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  8.                 gen adl =(inv==4|inv==6|inv==7)
+  9.                 gen nhome =(ltc==3)
+ 10.                 gen homecare =(ltc==2)
+ 11.                 rename bmi_2 obese
+ 12.                 rename bmi_3 veryobese
+ 13.                 rename smoke_2 smoker
+ 14.                 rename smoke_3 former
+ 15.                 rename educ_1 lesshs
+ 16.                 rename educ_2 hs
+ 17.                 rename educ_3 college
+ 18.                 rename educ_4 univ
+ 19.                 gen pop = 1
+ 20.                 foreach v of var cost_* {
+ 21.                         replace `v' = . if `v'==0
+ 22.                 }
+ 23.                 global vars = "pop imm sex diabe hibpe hearte stroke cancr
+> e lunge mentae                   obese veryobese smoker former lesshs hs coll
+> ege univ cognitive iadl adl                 hc_* income                 nhome
+>  homecare                 cost_* hours_* nyrs* agefirst* agedead             
+>     total* ever*"
+ 24.                 collapse ($stat) $vars [fw=wgt], by(year age5 province) fa
+> st
+      name:  plllog74dcoh6814
+       log:  /share/Laliberteaug/compas/__pll74dcoh6814_prog.log
+  log type:  text
+ closed on:  19 Jun 2015, 10:43:10
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Parallel Computing with Stata (by GVY)
+Clusters   : 50
+pll_id     : 74dcoh6814
+Running at : /share/Laliberteaug/compas
+Randtype   : datetime
+Waiting for the clusters to finish...
+cluster 0044 has exited without error...
+cluster 0045 has exited without error...
+cluster 0008 has exited without error...
+cluster 0010 has exited without error...
+cluster 0011 has exited without error...
+cluster 0014 has exited without error...
+cluster 0017 has exited without error...
+cluster 0018 has exited without error...
+cluster 0020 has exited without error...
+cluster 0022 has exited without error...
+cluster 0024 has exited without error...
+cluster 0025 has exited without error...
+cluster 0026 has exited without error...
+cluster 0027 has exited without error...
+cluster 0028 has exited without error...
+cluster 0029 has exited without error...
+cluster 0032 has exited without error...
+cluster 0033 has exited without error...
+cluster 0034 has exited without error...
+cluster 0035 has exited without error...
+cluster 0036 has exited without error...
+cluster 0037 has exited without error...
+cluster 0038 has exited without error...
+cluster 0040 has exited without error...
+cluster 0042 has exited without error...
+cluster 0046 has exited without error...
+cluster 0048 has exited without error...
+cluster 0050 has exited without error...
+cluster 0001 has exited without error...
+cluster 0002 has exited without error...
+cluster 0003 has exited without error...
+cluster 0004 has exited without error...
+cluster 0005 has exited without error...
+cluster 0009 has exited without error...
+cluster 0012 has exited without error...
+cluster 0013 has exited without error...
+cluster 0015 has exited without error...
+cluster 0016 has exited without error...
+cluster 0019 has exited without error...
+cluster 0021 has exited without error...
+cluster 0023 has exited without error...
+cluster 0031 has exited without error...
+cluster 0039 has exited without error...
+cluster 0041 has exited without error...
+cluster 0047 has exited without error...
+cluster 0049 has exited without error...
+cluster 0006 has exited without error...
+cluster 0030 has exited without error...
+cluster 0007 has exited without error...
+cluster 0043 has exited without error...
+-------------------------------------------------------------------------------
+Enter -parallel printlog #- to checkout logfiles.
+-------------------------------------------------------------------------------
+
+.  foreach v of var $statvars {
+  2.                         local l`v' : variable label `v'
+  3.                         if `"`l`v''"' == "" {
+  4.                                 local l`v' "`v'"
+  5.                         }
+  6.                 }
+
+. collapse (mean) $statvars , by(year province age5) fast
+
+. foreach v of var $statvars {
+  2.                         label var `v' "`l`v''"
+  3.                 }
+
+. save output/$scenario/meanbyyearage.dta, replace
+file output/notrendmortality/meanbyyearage.dta saved
+
+. timer off 1
+
+. timer list
+   1:     64.78 /        1 =      64.7830
+  97:      0.00 /        2 =       0.0000
+  98:      0.00 /        1 =       0.0000
+  99:     29.18 /        1 =      29.1840
+
+. timer clear
+
+. 
+. timer on 1
+
+. global stat = "sum"
+
+. parallel append, do(popstatsbyage) programs(popstatsbyage) e("output/$scenari
+> o/simpop-%01.0f, 1/$rep")
+The following files will be processed:
+ 001 output/notrendmortality/simpop-1.dta
+ 002 output/notrendmortality/simpop-2.dta
+ 003 output/notrendmortality/simpop-3.dta
+ 004 output/notrendmortality/simpop-4.dta
+ 005 output/notrendmortality/simpop-5.dta
+ 006 output/notrendmortality/simpop-6.dta
+ 007 output/notrendmortality/simpop-7.dta
+ 008 output/notrendmortality/simpop-8.dta
+ 009 output/notrendmortality/simpop-9.dta
+ 010 output/notrendmortality/simpop-10.dta
+ 011 output/notrendmortality/simpop-11.dta
+ 012 output/notrendmortality/simpop-12.dta
+ 013 output/notrendmortality/simpop-13.dta
+ 014 output/notrendmortality/simpop-14.dta
+ 015 output/notrendmortality/simpop-15.dta
+ 016 output/notrendmortality/simpop-16.dta
+ 017 output/notrendmortality/simpop-17.dta
+ 018 output/notrendmortality/simpop-18.dta
+ 019 output/notrendmortality/simpop-19.dta
+ 020 output/notrendmortality/simpop-20.dta
+ 021 output/notrendmortality/simpop-21.dta
+ 022 output/notrendmortality/simpop-22.dta
+ 023 output/notrendmortality/simpop-23.dta
+ 024 output/notrendmortality/simpop-24.dta
+ 025 output/notrendmortality/simpop-25.dta
+ 026 output/notrendmortality/simpop-26.dta
+ 027 output/notrendmortality/simpop-27.dta
+ 028 output/notrendmortality/simpop-28.dta
+ 029 output/notrendmortality/simpop-29.dta
+ 030 output/notrendmortality/simpop-30.dta
+ 031 output/notrendmortality/simpop-31.dta
+ 032 output/notrendmortality/simpop-32.dta
+ 033 output/notrendmortality/simpop-33.dta
+ 034 output/notrendmortality/simpop-34.dta
+ 035 output/notrendmortality/simpop-35.dta
+ 036 output/notrendmortality/simpop-36.dta
+ 037 output/notrendmortality/simpop-37.dta
+ 038 output/notrendmortality/simpop-38.dta
+ 039 output/notrendmortality/simpop-39.dta
+ 040 output/notrendmortality/simpop-40.dta
+ 041 output/notrendmortality/simpop-41.dta
+ 042 output/notrendmortality/simpop-42.dta
+ 043 output/notrendmortality/simpop-43.dta
+ 044 output/notrendmortality/simpop-44.dta
+ 045 output/notrendmortality/simpop-45.dta
+ 046 output/notrendmortality/simpop-46.dta
+ 047 output/notrendmortality/simpop-47.dta
+ 048 output/notrendmortality/simpop-48.dta
+ 049 output/notrendmortality/simpop-49.dta
+ 050 output/notrendmortality/simpop-50.dta
+ 051 output/notrendmortality/simpop-51.dta
+ 052 output/notrendmortality/simpop-52.dta
+ 053 output/notrendmortality/simpop-53.dta
+ 054 output/notrendmortality/simpop-54.dta
+ 055 output/notrendmortality/simpop-55.dta
+ 056 output/notrendmortality/simpop-56.dta
+ 057 output/notrendmortality/simpop-57.dta
+ 058 output/notrendmortality/simpop-58.dta
+ 059 output/notrendmortality/simpop-59.dta
+ 060 output/notrendmortality/simpop-60.dta
+ 061 output/notrendmortality/simpop-61.dta
+ 062 output/notrendmortality/simpop-62.dta
+ 063 output/notrendmortality/simpop-63.dta
+ 064 output/notrendmortality/simpop-64.dta
+ 065 output/notrendmortality/simpop-65.dta
+ 066 output/notrendmortality/simpop-66.dta
+ 067 output/notrendmortality/simpop-67.dta
+ 068 output/notrendmortality/simpop-68.dta
+ 069 output/notrendmortality/simpop-69.dta
+ 070 output/notrendmortality/simpop-70.dta
+ 071 output/notrendmortality/simpop-71.dta
+ 072 output/notrendmortality/simpop-72.dta
+ 073 output/notrendmortality/simpop-73.dta
+ 074 output/notrendmortality/simpop-74.dta
+ 075 output/notrendmortality/simpop-75.dta
+ 076 output/notrendmortality/simpop-76.dta
+ 077 output/notrendmortality/simpop-77.dta
+ 078 output/notrendmortality/simpop-78.dta
+ 079 output/notrendmortality/simpop-79.dta
+ 080 output/notrendmortality/simpop-80.dta
+ 081 output/notrendmortality/simpop-81.dta
+ 082 output/notrendmortality/simpop-82.dta
+ 083 output/notrendmortality/simpop-83.dta
+ 084 output/notrendmortality/simpop-84.dta
+ 085 output/notrendmortality/simpop-85.dta
+ 086 output/notrendmortality/simpop-86.dta
+ 087 output/notrendmortality/simpop-87.dta
+ 088 output/notrendmortality/simpop-88.dta
+ 089 output/notrendmortality/simpop-89.dta
+ 090 output/notrendmortality/simpop-90.dta
+ 091 output/notrendmortality/simpop-91.dta
+ 092 output/notrendmortality/simpop-92.dta
+ 093 output/notrendmortality/simpop-93.dta
+ 094 output/notrendmortality/simpop-94.dta
+ 095 output/notrendmortality/simpop-95.dta
+ 096 output/notrendmortality/simpop-96.dta
+ 097 output/notrendmortality/simpop-97.dta
+ 098 output/notrendmortality/simpop-98.dta
+ 099 output/notrendmortality/simpop-99.dta
+ 100 output/notrendmortality/simpop-100.dta
+The files will be processed in the following order:
+ 001 output/notrendmortality/simpop-1.dta output/notrendmortality/simpop-2.dta 
+> output/notrendmortality/simpop-3.dta output/notrendmortality/simpop-4.dta out
+> put/notrendmortality/simpop-5.dta output/notrendmortality/simpop-6.dta output
+> /notrendmortality/simpop-7.dta output/notrendmortality/simpop-8.dta output/no
+> trendmortality/simpop-9.dta output/notrendmortality/simpop-10.dta output/notr
+> endmortality/simpop-11.dta output/notrendmortality/simpop-12.dta output/notre
+> ndmortality/simpop-13.dta output/notrendmortality/simpop-14.dta output/notren
+> dmortality/simpop-15.dta output/notrendmortality/simpop-16.dta output/notrend
+> mortality/simpop-17.dta output/notrendmortality/simpop-18.dta output/notrendm
+> ortality/simpop-19.dta output/notrendmortality/simpop-20.dta output/notrendmo
+> rtality/simpop-21.dta output/notrendmortality/simpop-22.dta output/notrendmor
+> tality/simpop-23.dta output/notrendmortality/simpop-24.dta output/notrendmort
+> ality/simpop-25.dta output/notrendmortality/simpop-26.dta output/notrendmorta
+> lity/simpop-27.dta output/notrendmortality/simpop-28.dta output/notrendmortal
+> ity/simpop-29.dta output/notrendmortality/simpop-30.dta output/notrendmortali
+> ty/simpop-31.dta output/notrendmortality/simpop-32.dta output/notrendmortalit
+> y/simpop-33.dta output/notrendmortality/simpop-34.dta output/notrendmortality
+> /simpop-35.dta output/notrendmortality/simpop-36.dta output/notrendmortality/
+> simpop-37.dta output/notrendmortality/simpop-38.dta output/notrendmortality/s
+> impop-39.dta output/notrendmortality/simpop-40.dta output/notrendmortality/si
+> mpop-41.dta output/notrendmortality/simpop-42.dta output/notrendmortality/sim
+> pop-43.dta output/notrendmortality/simpop-44.dta output/notrendmortality/simp
+> op-45.dta output/notrendmortality/simpop-46.dta output/notrendmortality/simpo
+> p-47.dta output/notrendmortality/simpop-48.dta output/notrendmortality/simpop
+> -49.dta output/notrendmortality/simpop-50.dta
+ 002 output/notrendmortality/simpop-51.dta output/notrendmortality/simpop-52.dt
+> a output/notrendmortality/simpop-53.dta output/notrendmortality/simpop-54.dta
+>  output/notrendmortality/simpop-55.dta output/notrendmortality/simpop-56.dta 
+> output/notrendmortality/simpop-57.dta output/notrendmortality/simpop-58.dta o
+> utput/notrendmortality/simpop-59.dta output/notrendmortality/simpop-60.dta ou
+> tput/notrendmortality/simpop-61.dta output/notrendmortality/simpop-62.dta out
+> put/notrendmortality/simpop-63.dta output/notrendmortality/simpop-64.dta outp
+> ut/notrendmortality/simpop-65.dta output/notrendmortality/simpop-66.dta outpu
+> t/notrendmortality/simpop-67.dta output/notrendmortality/simpop-68.dta output
+> /notrendmortality/simpop-69.dta output/notrendmortality/simpop-70.dta output/
+> notrendmortality/simpop-71.dta output/notrendmortality/simpop-72.dta output/n
+> otrendmortality/simpop-73.dta output/notrendmortality/simpop-74.dta output/no
+> trendmortality/simpop-75.dta output/notrendmortality/simpop-76.dta output/not
+> rendmortality/simpop-77.dta output/notrendmortality/simpop-78.dta output/notr
+> endmortality/simpop-79.dta output/notrendmortality/simpop-80.dta output/notre
+> ndmortality/simpop-81.dta output/notrendmortality/simpop-82.dta output/notren
+> dmortality/simpop-83.dta output/notrendmortality/simpop-84.dta output/notrend
+> mortality/simpop-85.dta output/notrendmortality/simpop-86.dta output/notrendm
+> ortality/simpop-87.dta output/notrendmortality/simpop-88.dta output/notrendmo
+> rtality/simpop-89.dta output/notrendmortality/simpop-90.dta output/notrendmor
+> tality/simpop-91.dta output/notrendmortality/simpop-92.dta output/notrendmort
+> ality/simpop-93.dta output/notrendmortality/simpop-94.dta output/notrendmorta
+> lity/simpop-95.dta output/notrendmortality/simpop-96.dta output/notrendmortal
+> ity/simpop-97.dta output/notrendmortality/simpop-98.dta output/notrendmortali
+> ty/simpop-99.dta output/notrendmortality/simpop-100.dta
+(note: file /share/Laliberteaug/compas/__pllatwj8ozf17_prog.log not found)
+-------------------------------------------------------------------------------
+      name:  plllogatwj8ozf17
+       log:  /share/Laliberteaug/compas/__pllatwj8ozf17_prog.log
+  log type:  text
+ opened on:  19 Jun 2015, 10:43:43
+
+popstatsbyage:
+  1.                 drop if year>2050
+  2.                 egen age5 = cut(age), at(30(5)110)
+  3.                 qui tab educ, gen(educ_)
+  4.                 qui tab smoke, gen(smoke_)
+  5.                 qui tab bmi, gen(bmi_)
+  6.                 gen cognitive= (inv==2|inv==5|inv==7)
+  7.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  8.                 gen adl =(inv==4|inv==6|inv==7)
+  9.                 gen nhome =(ltc==3)
+ 10.                 gen homecare =(ltc==2)
+ 11.                 rename bmi_2 obese
+ 12.                 rename bmi_3 veryobese
+ 13.                 rename smoke_2 smoker
+ 14.                 rename smoke_3 former
+ 15.                 rename educ_1 lesshs
+ 16.                 rename educ_2 hs
+ 17.                 rename educ_3 college
+ 18.                 rename educ_4 univ
+ 19.                 gen pop = 1
+ 20.                 foreach v of var cost_* {
+ 21.                         replace `v' = . if `v'==0
+ 22.                 }
+ 23.                 global vars = "pop imm sex diabe hibpe hearte stroke cancr
+> e lunge mentae                   obese veryobese smoker former lesshs hs coll
+> ege univ cognitive iadl adl                 hc_* income                 nhome
+>  homecare                 cost_* hours_* nyrs* agefirst* agedead             
+>     total* ever*"
+ 24.                 collapse ($stat) $vars [fw=wgt], by(year age5 province) fa
+> st
+      name:  plllogatwj8ozf17
+       log:  /share/Laliberteaug/compas/__pllatwj8ozf17_prog.log
+  log type:  text
+ closed on:  19 Jun 2015, 10:43:43
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Parallel Computing with Stata (by GVY)
+Clusters   : 50
+pll_id     : atwj8ozf17
+Running at : /share/Laliberteaug/compas
+Randtype   : datetime
+Waiting for the clusters to finish...
+cluster 0005 has exited without error...
+cluster 0006 has exited without error...
+cluster 0024 has exited without error...
+cluster 0027 has exited without error...
+cluster 0028 has exited without error...
+cluster 0031 has exited without error...
+cluster 0037 has exited without error...
+cluster 0038 has exited without error...
+cluster 0039 has exited without error...
+cluster 0040 has exited without error...
+cluster 0047 has exited without error...
+cluster 0048 has exited without error...
+cluster 0050 has exited without error...
+cluster 0002 has exited without error...
+cluster 0003 has exited without error...
+cluster 0007 has exited without error...
+cluster 0008 has exited without error...
+cluster 0009 has exited without error...
+cluster 0014 has exited without error...
+cluster 0015 has exited without error...
+cluster 0016 has exited without error...
+cluster 0017 has exited without error...
+cluster 0018 has exited without error...
+cluster 0020 has exited without error...
+cluster 0021 has exited without error...
+cluster 0022 has exited without error...
+cluster 0023 has exited without error...
+cluster 0030 has exited without error...
+cluster 0032 has exited without error...
+cluster 0033 has exited without error...
+cluster 0035 has exited without error...
+cluster 0036 has exited without error...
+cluster 0041 has exited without error...
+cluster 0042 has exited without error...
+cluster 0043 has exited without error...
+cluster 0045 has exited without error...
+cluster 0004 has exited without error...
+cluster 0011 has exited without error...
+cluster 0019 has exited without error...
+cluster 0034 has exited without error...
+cluster 0046 has exited without error...
+cluster 0049 has exited without error...
+cluster 0001 has exited without error...
+cluster 0026 has exited without error...
+cluster 0029 has exited without error...
+cluster 0013 has exited without error...
+cluster 0025 has exited without error...
+cluster 0010 has exited without error...
+cluster 0044 has exited without error...
+cluster 0012 has exited without error...
+-------------------------------------------------------------------------------
+Enter -parallel printlog #- to checkout logfiles.
+-------------------------------------------------------------------------------
+(note: file /share/Laliberteaug/compas/__pllehxu6cf319_prog.log not found)
+-------------------------------------------------------------------------------
+      name:  plllogehxu6cf319
+       log:  /share/Laliberteaug/compas/__pllehxu6cf319_prog.log
+  log type:  text
+ opened on:  19 Jun 2015, 10:44:16
+
+popstatsbyage:
+  1.                 drop if year>2050
+  2.                 egen age5 = cut(age), at(30(5)110)
+  3.                 qui tab educ, gen(educ_)
+  4.                 qui tab smoke, gen(smoke_)
+  5.                 qui tab bmi, gen(bmi_)
+  6.                 gen cognitive= (inv==2|inv==5|inv==7)
+  7.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  8.                 gen adl =(inv==4|inv==6|inv==7)
+  9.                 gen nhome =(ltc==3)
+ 10.                 gen homecare =(ltc==2)
+ 11.                 rename bmi_2 obese
+ 12.                 rename bmi_3 veryobese
+ 13.                 rename smoke_2 smoker
+ 14.                 rename smoke_3 former
+ 15.                 rename educ_1 lesshs
+ 16.                 rename educ_2 hs
+ 17.                 rename educ_3 college
+ 18.                 rename educ_4 univ
+ 19.                 gen pop = 1
+ 20.                 foreach v of var cost_* {
+ 21.                         replace `v' = . if `v'==0
+ 22.                 }
+ 23.                 global vars = "pop imm sex diabe hibpe hearte stroke cancr
+> e lunge mentae                   obese veryobese smoker former lesshs hs coll
+> ege univ cognitive iadl adl                 hc_* income                 nhome
+>  homecare                 cost_* hours_* nyrs* agefirst* agedead             
+>     total* ever*"
+ 24.                 collapse ($stat) $vars [fw=wgt], by(year age5 province) fa
+> st
+      name:  plllogehxu6cf319
+       log:  /share/Laliberteaug/compas/__pllehxu6cf319_prog.log
+  log type:  text
+ closed on:  19 Jun 2015, 10:44:16
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Parallel Computing with Stata (by GVY)
+Clusters   : 50
+pll_id     : ehxu6cf319
+Running at : /share/Laliberteaug/compas
+Randtype   : datetime
+Waiting for the clusters to finish...
+cluster 0015 has exited without error...
+cluster 0017 has exited without error...
+cluster 0020 has exited without error...
+cluster 0024 has exited without error...
+cluster 0032 has exited without error...
+cluster 0033 has exited without error...
+cluster 0035 has exited without error...
+cluster 0036 has exited without error...
+cluster 0039 has exited without error...
+cluster 0041 has exited without error...
+cluster 0042 has exited without error...
+cluster 0046 has exited without error...
+cluster 0004 has exited without error...
+cluster 0006 has exited without error...
+cluster 0008 has exited without error...
+cluster 0009 has exited without error...
+cluster 0011 has exited without error...
+cluster 0013 has exited without error...
+cluster 0014 has exited without error...
+cluster 0018 has exited without error...
+cluster 0021 has exited without error...
+cluster 0022 has exited without error...
+cluster 0025 has exited without error...
+cluster 0031 has exited without error...
+cluster 0034 has exited without error...
+cluster 0037 has exited without error...
+cluster 0038 has exited without error...
+cluster 0040 has exited without error...
+cluster 0048 has exited without error...
+cluster 0050 has exited without error...
+cluster 0002 has exited without error...
+cluster 0003 has exited without error...
+cluster 0005 has exited without error...
+cluster 0007 has exited without error...
+cluster 0012 has exited without error...
+cluster 0016 has exited without error...
+cluster 0023 has exited without error...
+cluster 0026 has exited without error...
+cluster 0027 has exited without error...
+cluster 0029 has exited without error...
+cluster 0030 has exited without error...
+cluster 0043 has exited without error...
+cluster 0044 has exited without error...
+cluster 0045 has exited without error...
+cluster 0047 has exited without error...
+cluster 0019 has exited without error...
+cluster 0028 has exited without error...
+cluster 0001 has exited without error...
+cluster 0049 has exited without error...
+cluster 0010 has exited without error...
+-------------------------------------------------------------------------------
+Enter -parallel printlog #- to checkout logfiles.
+-------------------------------------------------------------------------------
+
+.  foreach v of var $statvars {
+  2.                         local l`v' : variable label `v'
+  3.                         if `"`l`v''"' == "" {
+  4.                                 local l`v' "`v'"
+  5.                         }
+  6.                 }
+
+. collapse (mean) $statvars , by(year province age5) fast
+
+. foreach v of var $statvars {
+  2.                         label var `v' "`l`v''"
+  3.                 }
+
+. save output/$scenario/sumbyyearage.dta, replace
+file output/notrendmortality/sumbyyearage.dta saved
+
+. timer off 1
+
+. timer list
+   1:     69.92 /        1 =      69.9230
+  97:      0.00 /        2 =       0.0000
+  98:      0.00 /        1 =       0.0000
+  99:     32.62 /        1 =      32.6150
+
+. timer clear
+
+. 
+end of do-file
+
+. * creates statistics by cohorts
+.    do do/stats/cohortstats.do
+
+. * main code to produce statistics from a scenario
+. clear all
+
+. capture log close
+
+. set more off
+
+. 
+. cd ~/compas
+/share/Laliberteaug/compas
+
+. 
+. program def cohortstats
+  1.                 * prevalence by 5 year age cells
+. 
+.                 *use output/$scenario/simpop.dta,clear
+.                 qui sum byear
+  2.                 local maxbyear = r(max)+2
+  3.                 *qui egen byear2 = cut(byear), at(1910(2)`maxbyear')
+.                 qui tab educ, gen(educ_)
+  4.                 qui tab smoke, gen(smoke_)
+  5.                 qui tab bmi, gen(bmi_)
+  6.                 gen cognitive= (inv==2|inv==5|inv==7)
+  7.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  8.                 gen adl =(inv==4|inv==6|inv==7)
+  9.                 gen nhome =(ltc==3)
+ 10.                 gen homecare =(ltc==2)
+ 11.                 rename bmi_2 obese
+ 12.                 rename bmi_3 veryobese
+ 13.                 rename smoke_2 smoker
+ 14.                 rename smoke_3 former
+ 15.                 rename educ_1 lesshs
+ 16.                 rename educ_2 hs
+ 17.                 rename educ_3 college
+ 18.                 rename educ_4 univ
+ 19.                 qui gen pop = 1
+ 20.                 *sort byear2 year
+.                 *qui by byear2: replace wgt = wgt[1]
+.                 foreach v of var cost_* {
+ 21.                         replace `v' = . if `v'==0
+ 22.                 }
+ 23.                 #d ;
+delimiter now ;
+.                 global vars = "pop imm sex diabe hibpe hearte stroke cancre l
+> unge mentae  
+>                 obese veryobese smoker former lesshs hs college univ cognitiv
+> e iadl adl
+>                 hc_* cost_* hours* nyrs* agefirst* agedead total* ever* incom
+> e homecare nhome";
+ 24.                 #d cr
+delimiter now cr
+.                  foreach v of var $vars {
+ 25.                         local l`v' : variable label `v'
+ 26.                         if `"`l`v''"' == "" {
+ 27.                                 local l`v' "`v'"
+ 28.                         }
+ 29.                 }
+ 30.                 collapse ($stat) $vars [fw=wgt], by(byear year province) f
+> ast
+ 31.                 qui gen age = year - byear 
+ 32.                 foreach v of var $vars {
+ 33.                         label var `v' "`l`v''"
+ 34.                 }
+ 35.                 *save output/$scenario/`stat'bycohortyear.dta, replace
+. end
+
+. #d ;
+delimiter now ;
+.                 global statvars = "pop imm sex diabe hibpe hearte stroke canc
+> re lunge mentae  
+>                 obese veryobese smoker former lesshs hs college cognitive iad
+> l adl
+>                 hc_* cost_* hours* nyrs* agefirst* agedead total* ever* age i
+> ncome homecare nhome";
+
+.                 #d cr
+delimiter now cr
+. timer on 1
+
+. 
+. parallel setclusters 50,force
+N Clusters: 50
+Stata dir:  /usr/local/stata/stata-mp
+
+. global stat = "mean"
+
+. parallel append, do(cohortstats) programs(cohortstats) e("output/$scenario/si
+> mpop-%01.0f, 1/$rep")
+The following files will be processed:
+ 001 output/notrendmortality/simpop-1.dta
+ 002 output/notrendmortality/simpop-2.dta
+ 003 output/notrendmortality/simpop-3.dta
+ 004 output/notrendmortality/simpop-4.dta
+ 005 output/notrendmortality/simpop-5.dta
+ 006 output/notrendmortality/simpop-6.dta
+ 007 output/notrendmortality/simpop-7.dta
+ 008 output/notrendmortality/simpop-8.dta
+ 009 output/notrendmortality/simpop-9.dta
+ 010 output/notrendmortality/simpop-10.dta
+ 011 output/notrendmortality/simpop-11.dta
+ 012 output/notrendmortality/simpop-12.dta
+ 013 output/notrendmortality/simpop-13.dta
+ 014 output/notrendmortality/simpop-14.dta
+ 015 output/notrendmortality/simpop-15.dta
+ 016 output/notrendmortality/simpop-16.dta
+ 017 output/notrendmortality/simpop-17.dta
+ 018 output/notrendmortality/simpop-18.dta
+ 019 output/notrendmortality/simpop-19.dta
+ 020 output/notrendmortality/simpop-20.dta
+ 021 output/notrendmortality/simpop-21.dta
+ 022 output/notrendmortality/simpop-22.dta
+ 023 output/notrendmortality/simpop-23.dta
+ 024 output/notrendmortality/simpop-24.dta
+ 025 output/notrendmortality/simpop-25.dta
+ 026 output/notrendmortality/simpop-26.dta
+ 027 output/notrendmortality/simpop-27.dta
+ 028 output/notrendmortality/simpop-28.dta
+ 029 output/notrendmortality/simpop-29.dta
+ 030 output/notrendmortality/simpop-30.dta
+ 031 output/notrendmortality/simpop-31.dta
+ 032 output/notrendmortality/simpop-32.dta
+ 033 output/notrendmortality/simpop-33.dta
+ 034 output/notrendmortality/simpop-34.dta
+ 035 output/notrendmortality/simpop-35.dta
+ 036 output/notrendmortality/simpop-36.dta
+ 037 output/notrendmortality/simpop-37.dta
+ 038 output/notrendmortality/simpop-38.dta
+ 039 output/notrendmortality/simpop-39.dta
+ 040 output/notrendmortality/simpop-40.dta
+ 041 output/notrendmortality/simpop-41.dta
+ 042 output/notrendmortality/simpop-42.dta
+ 043 output/notrendmortality/simpop-43.dta
+ 044 output/notrendmortality/simpop-44.dta
+ 045 output/notrendmortality/simpop-45.dta
+ 046 output/notrendmortality/simpop-46.dta
+ 047 output/notrendmortality/simpop-47.dta
+ 048 output/notrendmortality/simpop-48.dta
+ 049 output/notrendmortality/simpop-49.dta
+ 050 output/notrendmortality/simpop-50.dta
+ 051 output/notrendmortality/simpop-51.dta
+ 052 output/notrendmortality/simpop-52.dta
+ 053 output/notrendmortality/simpop-53.dta
+ 054 output/notrendmortality/simpop-54.dta
+ 055 output/notrendmortality/simpop-55.dta
+ 056 output/notrendmortality/simpop-56.dta
+ 057 output/notrendmortality/simpop-57.dta
+ 058 output/notrendmortality/simpop-58.dta
+ 059 output/notrendmortality/simpop-59.dta
+ 060 output/notrendmortality/simpop-60.dta
+ 061 output/notrendmortality/simpop-61.dta
+ 062 output/notrendmortality/simpop-62.dta
+ 063 output/notrendmortality/simpop-63.dta
+ 064 output/notrendmortality/simpop-64.dta
+ 065 output/notrendmortality/simpop-65.dta
+ 066 output/notrendmortality/simpop-66.dta
+ 067 output/notrendmortality/simpop-67.dta
+ 068 output/notrendmortality/simpop-68.dta
+ 069 output/notrendmortality/simpop-69.dta
+ 070 output/notrendmortality/simpop-70.dta
+ 071 output/notrendmortality/simpop-71.dta
+ 072 output/notrendmortality/simpop-72.dta
+ 073 output/notrendmortality/simpop-73.dta
+ 074 output/notrendmortality/simpop-74.dta
+ 075 output/notrendmortality/simpop-75.dta
+ 076 output/notrendmortality/simpop-76.dta
+ 077 output/notrendmortality/simpop-77.dta
+ 078 output/notrendmortality/simpop-78.dta
+ 079 output/notrendmortality/simpop-79.dta
+ 080 output/notrendmortality/simpop-80.dta
+ 081 output/notrendmortality/simpop-81.dta
+ 082 output/notrendmortality/simpop-82.dta
+ 083 output/notrendmortality/simpop-83.dta
+ 084 output/notrendmortality/simpop-84.dta
+ 085 output/notrendmortality/simpop-85.dta
+ 086 output/notrendmortality/simpop-86.dta
+ 087 output/notrendmortality/simpop-87.dta
+ 088 output/notrendmortality/simpop-88.dta
+ 089 output/notrendmortality/simpop-89.dta
+ 090 output/notrendmortality/simpop-90.dta
+ 091 output/notrendmortality/simpop-91.dta
+ 092 output/notrendmortality/simpop-92.dta
+ 093 output/notrendmortality/simpop-93.dta
+ 094 output/notrendmortality/simpop-94.dta
+ 095 output/notrendmortality/simpop-95.dta
+ 096 output/notrendmortality/simpop-96.dta
+ 097 output/notrendmortality/simpop-97.dta
+ 098 output/notrendmortality/simpop-98.dta
+ 099 output/notrendmortality/simpop-99.dta
+ 100 output/notrendmortality/simpop-100.dta
+The files will be processed in the following order:
+ 001 output/notrendmortality/simpop-1.dta output/notrendmortality/simpop-2.dta 
+> output/notrendmortality/simpop-3.dta output/notrendmortality/simpop-4.dta out
+> put/notrendmortality/simpop-5.dta output/notrendmortality/simpop-6.dta output
+> /notrendmortality/simpop-7.dta output/notrendmortality/simpop-8.dta output/no
+> trendmortality/simpop-9.dta output/notrendmortality/simpop-10.dta output/notr
+> endmortality/simpop-11.dta output/notrendmortality/simpop-12.dta output/notre
+> ndmortality/simpop-13.dta output/notrendmortality/simpop-14.dta output/notren
+> dmortality/simpop-15.dta output/notrendmortality/simpop-16.dta output/notrend
+> mortality/simpop-17.dta output/notrendmortality/simpop-18.dta output/notrendm
+> ortality/simpop-19.dta output/notrendmortality/simpop-20.dta output/notrendmo
+> rtality/simpop-21.dta output/notrendmortality/simpop-22.dta output/notrendmor
+> tality/simpop-23.dta output/notrendmortality/simpop-24.dta output/notrendmort
+> ality/simpop-25.dta output/notrendmortality/simpop-26.dta output/notrendmorta
+> lity/simpop-27.dta output/notrendmortality/simpop-28.dta output/notrendmortal
+> ity/simpop-29.dta output/notrendmortality/simpop-30.dta output/notrendmortali
+> ty/simpop-31.dta output/notrendmortality/simpop-32.dta output/notrendmortalit
+> y/simpop-33.dta output/notrendmortality/simpop-34.dta output/notrendmortality
+> /simpop-35.dta output/notrendmortality/simpop-36.dta output/notrendmortality/
+> simpop-37.dta output/notrendmortality/simpop-38.dta output/notrendmortality/s
+> impop-39.dta output/notrendmortality/simpop-40.dta output/notrendmortality/si
+> mpop-41.dta output/notrendmortality/simpop-42.dta output/notrendmortality/sim
+> pop-43.dta output/notrendmortality/simpop-44.dta output/notrendmortality/simp
+> op-45.dta output/notrendmortality/simpop-46.dta output/notrendmortality/simpo
+> p-47.dta output/notrendmortality/simpop-48.dta output/notrendmortality/simpop
+> -49.dta output/notrendmortality/simpop-50.dta
+ 002 output/notrendmortality/simpop-51.dta output/notrendmortality/simpop-52.dt
+> a output/notrendmortality/simpop-53.dta output/notrendmortality/simpop-54.dta
+>  output/notrendmortality/simpop-55.dta output/notrendmortality/simpop-56.dta 
+> output/notrendmortality/simpop-57.dta output/notrendmortality/simpop-58.dta o
+> utput/notrendmortality/simpop-59.dta output/notrendmortality/simpop-60.dta ou
+> tput/notrendmortality/simpop-61.dta output/notrendmortality/simpop-62.dta out
+> put/notrendmortality/simpop-63.dta output/notrendmortality/simpop-64.dta outp
+> ut/notrendmortality/simpop-65.dta output/notrendmortality/simpop-66.dta outpu
+> t/notrendmortality/simpop-67.dta output/notrendmortality/simpop-68.dta output
+> /notrendmortality/simpop-69.dta output/notrendmortality/simpop-70.dta output/
+> notrendmortality/simpop-71.dta output/notrendmortality/simpop-72.dta output/n
+> otrendmortality/simpop-73.dta output/notrendmortality/simpop-74.dta output/no
+> trendmortality/simpop-75.dta output/notrendmortality/simpop-76.dta output/not
+> rendmortality/simpop-77.dta output/notrendmortality/simpop-78.dta output/notr
+> endmortality/simpop-79.dta output/notrendmortality/simpop-80.dta output/notre
+> ndmortality/simpop-81.dta output/notrendmortality/simpop-82.dta output/notren
+> dmortality/simpop-83.dta output/notrendmortality/simpop-84.dta output/notrend
+> mortality/simpop-85.dta output/notrendmortality/simpop-86.dta output/notrendm
+> ortality/simpop-87.dta output/notrendmortality/simpop-88.dta output/notrendmo
+> rtality/simpop-89.dta output/notrendmortality/simpop-90.dta output/notrendmor
+> tality/simpop-91.dta output/notrendmortality/simpop-92.dta output/notrendmort
+> ality/simpop-93.dta output/notrendmortality/simpop-94.dta output/notrendmorta
+> lity/simpop-95.dta output/notrendmortality/simpop-96.dta output/notrendmortal
+> ity/simpop-97.dta output/notrendmortality/simpop-98.dta output/notrendmortali
+> ty/simpop-99.dta output/notrendmortality/simpop-100.dta
+(note: file /share/Laliberteaug/compas/__pll1jpzgrsf22_prog.log not found)
+-------------------------------------------------------------------------------
+      name:  plllog1jpzgrsf22
+       log:  /share/Laliberteaug/compas/__pll1jpzgrsf22_prog.log
+  log type:  text
+ opened on:  19 Jun 2015, 10:44:53
+
+cohortstats:
+  1.                 qui sum byear
+  2.                 local maxbyear = r(max)+2
+  3.                 qui tab educ, gen(educ_)
+  4.                 qui tab smoke, gen(smoke_)
+  5.                 qui tab bmi, gen(bmi_)
+  6.                 gen cognitive= (inv==2|inv==5|inv==7)
+  7.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  8.                 gen adl =(inv==4|inv==6|inv==7)
+  9.                 gen nhome =(ltc==3)
+ 10.                 gen homecare =(ltc==2)
+ 11.                 rename bmi_2 obese
+ 12.                 rename bmi_3 veryobese
+ 13.                 rename smoke_2 smoker
+ 14.                 rename smoke_3 former
+ 15.                 rename educ_1 lesshs
+ 16.                 rename educ_2 hs
+ 17.                 rename educ_3 college
+ 18.                 rename educ_4 univ
+ 19.                 qui gen pop = 1
+ 20.                 foreach v of var cost_* {
+ 21.                         replace `v' = . if `v'==0
+ 22.                 }
+ 23.                 global vars = "pop imm sex diabe hibpe hearte stroke cancr
+> e lunge mentae                   obese veryobese smoker former lesshs hs coll
+> ege univ cognitive iadl adl                 hc_* cost_* hours* nyrs* agefirst
+> * agedead total* ever* income homecare nhome"
+ 24.                  foreach v of var $vars {
+ 25.                         local l`v' : variable label `v'
+ 26.                         if `"`l`v''"' == "" {
+ 27.                                 local l`v' "`v'"
+ 28.                         }
+ 29.                 }
+ 30.                 collapse ($stat) $vars [fw=wgt], by(byear year province) f
+> ast
+ 31.                 qui gen age = year - byear
+ 32.                 foreach v of var $vars {
+ 33.                         label var `v' "`l`v''"
+ 34.                 }
+      name:  plllog1jpzgrsf22
+       log:  /share/Laliberteaug/compas/__pll1jpzgrsf22_prog.log
+  log type:  text
+ closed on:  19 Jun 2015, 10:44:53
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Parallel Computing with Stata (by GVY)
+Clusters   : 50
+pll_id     : 1jpzgrsf22
+Running at : /share/Laliberteaug/compas
+Randtype   : datetime
+Waiting for the clusters to finish...
+cluster 0015 has exited without error...
+cluster 0033 has exited without error...
+cluster 0036 has exited without error...
+cluster 0037 has exited without error...
+cluster 0048 has exited without error...
+cluster 0050 has exited without error...
+cluster 0001 has exited without error...
+cluster 0002 has exited without error...
+cluster 0005 has exited without error...
+cluster 0006 has exited without error...
+cluster 0007 has exited without error...
+cluster 0008 has exited without error...
+cluster 0009 has exited without error...
+cluster 0010 has exited without error...
+cluster 0012 has exited without error...
+cluster 0014 has exited without error...
+cluster 0016 has exited without error...
+cluster 0018 has exited without error...
+cluster 0019 has exited without error...
+cluster 0020 has exited without error...
+cluster 0022 has exited without error...
+cluster 0023 has exited without error...
+cluster 0024 has exited without error...
+cluster 0025 has exited without error...
+cluster 0026 has exited without error...
+cluster 0028 has exited without error...
+cluster 0029 has exited without error...
+cluster 0031 has exited without error...
+cluster 0032 has exited without error...
+cluster 0034 has exited without error...
+cluster 0035 has exited without error...
+cluster 0038 has exited without error...
+cluster 0039 has exited without error...
+cluster 0040 has exited without error...
+cluster 0041 has exited without error...
+cluster 0043 has exited without error...
+cluster 0044 has exited without error...
+cluster 0045 has exited without error...
+cluster 0046 has exited without error...
+cluster 0047 has exited without error...
+cluster 0049 has exited without error...
+cluster 0021 has exited without error...
+cluster 0030 has exited without error...
+cluster 0003 has exited without error...
+cluster 0013 has exited without error...
+cluster 0042 has exited without error...
+cluster 0027 has exited without error...
+cluster 0004 has exited without error...
+cluster 0011 has exited without error...
+cluster 0017 has exited without error...
+-------------------------------------------------------------------------------
+Enter -parallel printlog #- to checkout logfiles.
+-------------------------------------------------------------------------------
+(note: file /share/Laliberteaug/compas/__pll4djenoiy24_prog.log not found)
+-------------------------------------------------------------------------------
+      name:  plllog4djenoiy24
+       log:  /share/Laliberteaug/compas/__pll4djenoiy24_prog.log
+  log type:  text
+ opened on:  19 Jun 2015, 10:45:39
+
+cohortstats:
+  1.                 qui sum byear
+  2.                 local maxbyear = r(max)+2
+  3.                 qui tab educ, gen(educ_)
+  4.                 qui tab smoke, gen(smoke_)
+  5.                 qui tab bmi, gen(bmi_)
+  6.                 gen cognitive= (inv==2|inv==5|inv==7)
+  7.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  8.                 gen adl =(inv==4|inv==6|inv==7)
+  9.                 gen nhome =(ltc==3)
+ 10.                 gen homecare =(ltc==2)
+ 11.                 rename bmi_2 obese
+ 12.                 rename bmi_3 veryobese
+ 13.                 rename smoke_2 smoker
+ 14.                 rename smoke_3 former
+ 15.                 rename educ_1 lesshs
+ 16.                 rename educ_2 hs
+ 17.                 rename educ_3 college
+ 18.                 rename educ_4 univ
+ 19.                 qui gen pop = 1
+ 20.                 foreach v of var cost_* {
+ 21.                         replace `v' = . if `v'==0
+ 22.                 }
+ 23.                 global vars = "pop imm sex diabe hibpe hearte stroke cancr
+> e lunge mentae                   obese veryobese smoker former lesshs hs coll
+> ege univ cognitive iadl adl                 hc_* cost_* hours* nyrs* agefirst
+> * agedead total* ever* income homecare nhome"
+ 24.                  foreach v of var $vars {
+ 25.                         local l`v' : variable label `v'
+ 26.                         if `"`l`v''"' == "" {
+ 27.                                 local l`v' "`v'"
+ 28.                         }
+ 29.                 }
+ 30.                 collapse ($stat) $vars [fw=wgt], by(byear year province) f
+> ast
+ 31.                 qui gen age = year - byear
+ 32.                 foreach v of var $vars {
+ 33.                         label var `v' "`l`v''"
+ 34.                 }
+      name:  plllog4djenoiy24
+       log:  /share/Laliberteaug/compas/__pll4djenoiy24_prog.log
+  log type:  text
+ closed on:  19 Jun 2015, 10:45:39
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Parallel Computing with Stata (by GVY)
+Clusters   : 50
+pll_id     : 4djenoiy24
+Running at : /share/Laliberteaug/compas
+Randtype   : datetime
+Waiting for the clusters to finish...
+cluster 0032 has exited without error...
+cluster 0039 has exited without error...
+cluster 0040 has exited without error...
+cluster 0044 has exited without error...
+cluster 0048 has exited without error...
+cluster 0004 has exited without error...
+cluster 0005 has exited without error...
+cluster 0007 has exited without error...
+cluster 0008 has exited without error...
+cluster 0010 has exited without error...
+cluster 0012 has exited without error...
+cluster 0013 has exited without error...
+cluster 0014 has exited without error...
+cluster 0015 has exited without error...
+cluster 0016 has exited without error...
+cluster 0017 has exited without error...
+cluster 0018 has exited without error...
+cluster 0019 has exited without error...
+cluster 0021 has exited without error...
+cluster 0022 has exited without error...
+cluster 0023 has exited without error...
+cluster 0024 has exited without error...
+cluster 0025 has exited without error...
+cluster 0027 has exited without error...
+cluster 0028 has exited without error...
+cluster 0030 has exited without error...
+cluster 0033 has exited without error...
+cluster 0034 has exited without error...
+cluster 0035 has exited without error...
+cluster 0037 has exited without error...
+cluster 0041 has exited without error...
+cluster 0042 has exited without error...
+cluster 0043 has exited without error...
+cluster 0045 has exited without error...
+cluster 0046 has exited without error...
+cluster 0049 has exited without error...
+cluster 0050 has exited without error...
+cluster 0001 has exited without error...
+cluster 0002 has exited without error...
+cluster 0011 has exited without error...
+cluster 0020 has exited without error...
+cluster 0026 has exited without error...
+cluster 0029 has exited without error...
+cluster 0036 has exited without error...
+cluster 0047 has exited without error...
+cluster 0038 has exited without error...
+cluster 0006 has exited without error...
+cluster 0009 has exited without error...
+cluster 0003 has exited without error...
+cluster 0031 has exited without error...
+-------------------------------------------------------------------------------
+Enter -parallel printlog #- to checkout logfiles.
+-------------------------------------------------------------------------------
+
+.  foreach v of var $statvars {
+  2.                         local l`v' : variable label `v'
+  3.                         if `"`l`v''"' == "" {
+  4.                                 local l`v' "`v'"
+  5.                         }
+  6.                 }
+
+. collapse (mean) $statvars , by(byear year province) fast
+
+. foreach v of var $statvars {
+  2.                         label var `v' "`l`v''"
+  3.                 }
+
+. save output/$scenario/meanbycohortyear.dta, replace
+file output/notrendmortality/meanbycohortyear.dta saved
+
+. timer off 1
+
+. timer list
+   1:    114.28 /        1 =     114.2840
+  97:      0.00 /        2 =       0.0000
+  98:      0.00 /        1 =       0.0000
+  99:     44.79 /        1 =      44.7860
+
+. timer clear
+
+. 
+. timer on 1
+
+. global stat = "sum"
+
+. parallel append, do(cohortstats) programs(cohortstats) e("output/$scenario/si
+> mpop-%01.0f, 1/$rep")
+The following files will be processed:
+ 001 output/notrendmortality/simpop-1.dta
+ 002 output/notrendmortality/simpop-2.dta
+ 003 output/notrendmortality/simpop-3.dta
+ 004 output/notrendmortality/simpop-4.dta
+ 005 output/notrendmortality/simpop-5.dta
+ 006 output/notrendmortality/simpop-6.dta
+ 007 output/notrendmortality/simpop-7.dta
+ 008 output/notrendmortality/simpop-8.dta
+ 009 output/notrendmortality/simpop-9.dta
+ 010 output/notrendmortality/simpop-10.dta
+ 011 output/notrendmortality/simpop-11.dta
+ 012 output/notrendmortality/simpop-12.dta
+ 013 output/notrendmortality/simpop-13.dta
+ 014 output/notrendmortality/simpop-14.dta
+ 015 output/notrendmortality/simpop-15.dta
+ 016 output/notrendmortality/simpop-16.dta
+ 017 output/notrendmortality/simpop-17.dta
+ 018 output/notrendmortality/simpop-18.dta
+ 019 output/notrendmortality/simpop-19.dta
+ 020 output/notrendmortality/simpop-20.dta
+ 021 output/notrendmortality/simpop-21.dta
+ 022 output/notrendmortality/simpop-22.dta
+ 023 output/notrendmortality/simpop-23.dta
+ 024 output/notrendmortality/simpop-24.dta
+ 025 output/notrendmortality/simpop-25.dta
+ 026 output/notrendmortality/simpop-26.dta
+ 027 output/notrendmortality/simpop-27.dta
+ 028 output/notrendmortality/simpop-28.dta
+ 029 output/notrendmortality/simpop-29.dta
+ 030 output/notrendmortality/simpop-30.dta
+ 031 output/notrendmortality/simpop-31.dta
+ 032 output/notrendmortality/simpop-32.dta
+ 033 output/notrendmortality/simpop-33.dta
+ 034 output/notrendmortality/simpop-34.dta
+ 035 output/notrendmortality/simpop-35.dta
+ 036 output/notrendmortality/simpop-36.dta
+ 037 output/notrendmortality/simpop-37.dta
+ 038 output/notrendmortality/simpop-38.dta
+ 039 output/notrendmortality/simpop-39.dta
+ 040 output/notrendmortality/simpop-40.dta
+ 041 output/notrendmortality/simpop-41.dta
+ 042 output/notrendmortality/simpop-42.dta
+ 043 output/notrendmortality/simpop-43.dta
+ 044 output/notrendmortality/simpop-44.dta
+ 045 output/notrendmortality/simpop-45.dta
+ 046 output/notrendmortality/simpop-46.dta
+ 047 output/notrendmortality/simpop-47.dta
+ 048 output/notrendmortality/simpop-48.dta
+ 049 output/notrendmortality/simpop-49.dta
+ 050 output/notrendmortality/simpop-50.dta
+ 051 output/notrendmortality/simpop-51.dta
+ 052 output/notrendmortality/simpop-52.dta
+ 053 output/notrendmortality/simpop-53.dta
+ 054 output/notrendmortality/simpop-54.dta
+ 055 output/notrendmortality/simpop-55.dta
+ 056 output/notrendmortality/simpop-56.dta
+ 057 output/notrendmortality/simpop-57.dta
+ 058 output/notrendmortality/simpop-58.dta
+ 059 output/notrendmortality/simpop-59.dta
+ 060 output/notrendmortality/simpop-60.dta
+ 061 output/notrendmortality/simpop-61.dta
+ 062 output/notrendmortality/simpop-62.dta
+ 063 output/notrendmortality/simpop-63.dta
+ 064 output/notrendmortality/simpop-64.dta
+ 065 output/notrendmortality/simpop-65.dta
+ 066 output/notrendmortality/simpop-66.dta
+ 067 output/notrendmortality/simpop-67.dta
+ 068 output/notrendmortality/simpop-68.dta
+ 069 output/notrendmortality/simpop-69.dta
+ 070 output/notrendmortality/simpop-70.dta
+ 071 output/notrendmortality/simpop-71.dta
+ 072 output/notrendmortality/simpop-72.dta
+ 073 output/notrendmortality/simpop-73.dta
+ 074 output/notrendmortality/simpop-74.dta
+ 075 output/notrendmortality/simpop-75.dta
+ 076 output/notrendmortality/simpop-76.dta
+ 077 output/notrendmortality/simpop-77.dta
+ 078 output/notrendmortality/simpop-78.dta
+ 079 output/notrendmortality/simpop-79.dta
+ 080 output/notrendmortality/simpop-80.dta
+ 081 output/notrendmortality/simpop-81.dta
+ 082 output/notrendmortality/simpop-82.dta
+ 083 output/notrendmortality/simpop-83.dta
+ 084 output/notrendmortality/simpop-84.dta
+ 085 output/notrendmortality/simpop-85.dta
+ 086 output/notrendmortality/simpop-86.dta
+ 087 output/notrendmortality/simpop-87.dta
+ 088 output/notrendmortality/simpop-88.dta
+ 089 output/notrendmortality/simpop-89.dta
+ 090 output/notrendmortality/simpop-90.dta
+ 091 output/notrendmortality/simpop-91.dta
+ 092 output/notrendmortality/simpop-92.dta
+ 093 output/notrendmortality/simpop-93.dta
+ 094 output/notrendmortality/simpop-94.dta
+ 095 output/notrendmortality/simpop-95.dta
+ 096 output/notrendmortality/simpop-96.dta
+ 097 output/notrendmortality/simpop-97.dta
+ 098 output/notrendmortality/simpop-98.dta
+ 099 output/notrendmortality/simpop-99.dta
+ 100 output/notrendmortality/simpop-100.dta
+The files will be processed in the following order:
+ 001 output/notrendmortality/simpop-1.dta output/notrendmortality/simpop-2.dta 
+> output/notrendmortality/simpop-3.dta output/notrendmortality/simpop-4.dta out
+> put/notrendmortality/simpop-5.dta output/notrendmortality/simpop-6.dta output
+> /notrendmortality/simpop-7.dta output/notrendmortality/simpop-8.dta output/no
+> trendmortality/simpop-9.dta output/notrendmortality/simpop-10.dta output/notr
+> endmortality/simpop-11.dta output/notrendmortality/simpop-12.dta output/notre
+> ndmortality/simpop-13.dta output/notrendmortality/simpop-14.dta output/notren
+> dmortality/simpop-15.dta output/notrendmortality/simpop-16.dta output/notrend
+> mortality/simpop-17.dta output/notrendmortality/simpop-18.dta output/notrendm
+> ortality/simpop-19.dta output/notrendmortality/simpop-20.dta output/notrendmo
+> rtality/simpop-21.dta output/notrendmortality/simpop-22.dta output/notrendmor
+> tality/simpop-23.dta output/notrendmortality/simpop-24.dta output/notrendmort
+> ality/simpop-25.dta output/notrendmortality/simpop-26.dta output/notrendmorta
+> lity/simpop-27.dta output/notrendmortality/simpop-28.dta output/notrendmortal
+> ity/simpop-29.dta output/notrendmortality/simpop-30.dta output/notrendmortali
+> ty/simpop-31.dta output/notrendmortality/simpop-32.dta output/notrendmortalit
+> y/simpop-33.dta output/notrendmortality/simpop-34.dta output/notrendmortality
+> /simpop-35.dta output/notrendmortality/simpop-36.dta output/notrendmortality/
+> simpop-37.dta output/notrendmortality/simpop-38.dta output/notrendmortality/s
+> impop-39.dta output/notrendmortality/simpop-40.dta output/notrendmortality/si
+> mpop-41.dta output/notrendmortality/simpop-42.dta output/notrendmortality/sim
+> pop-43.dta output/notrendmortality/simpop-44.dta output/notrendmortality/simp
+> op-45.dta output/notrendmortality/simpop-46.dta output/notrendmortality/simpo
+> p-47.dta output/notrendmortality/simpop-48.dta output/notrendmortality/simpop
+> -49.dta output/notrendmortality/simpop-50.dta
+ 002 output/notrendmortality/simpop-51.dta output/notrendmortality/simpop-52.dt
+> a output/notrendmortality/simpop-53.dta output/notrendmortality/simpop-54.dta
+>  output/notrendmortality/simpop-55.dta output/notrendmortality/simpop-56.dta 
+> output/notrendmortality/simpop-57.dta output/notrendmortality/simpop-58.dta o
+> utput/notrendmortality/simpop-59.dta output/notrendmortality/simpop-60.dta ou
+> tput/notrendmortality/simpop-61.dta output/notrendmortality/simpop-62.dta out
+> put/notrendmortality/simpop-63.dta output/notrendmortality/simpop-64.dta outp
+> ut/notrendmortality/simpop-65.dta output/notrendmortality/simpop-66.dta outpu
+> t/notrendmortality/simpop-67.dta output/notrendmortality/simpop-68.dta output
+> /notrendmortality/simpop-69.dta output/notrendmortality/simpop-70.dta output/
+> notrendmortality/simpop-71.dta output/notrendmortality/simpop-72.dta output/n
+> otrendmortality/simpop-73.dta output/notrendmortality/simpop-74.dta output/no
+> trendmortality/simpop-75.dta output/notrendmortality/simpop-76.dta output/not
+> rendmortality/simpop-77.dta output/notrendmortality/simpop-78.dta output/notr
+> endmortality/simpop-79.dta output/notrendmortality/simpop-80.dta output/notre
+> ndmortality/simpop-81.dta output/notrendmortality/simpop-82.dta output/notren
+> dmortality/simpop-83.dta output/notrendmortality/simpop-84.dta output/notrend
+> mortality/simpop-85.dta output/notrendmortality/simpop-86.dta output/notrendm
+> ortality/simpop-87.dta output/notrendmortality/simpop-88.dta output/notrendmo
+> rtality/simpop-89.dta output/notrendmortality/simpop-90.dta output/notrendmor
+> tality/simpop-91.dta output/notrendmortality/simpop-92.dta output/notrendmort
+> ality/simpop-93.dta output/notrendmortality/simpop-94.dta output/notrendmorta
+> lity/simpop-95.dta output/notrendmortality/simpop-96.dta output/notrendmortal
+> ity/simpop-97.dta output/notrendmortality/simpop-98.dta output/notrendmortali
+> ty/simpop-99.dta output/notrendmortality/simpop-100.dta
+(note: file /share/Laliberteaug/compas/__pllmkqw64xy27_prog.log not found)
+-------------------------------------------------------------------------------
+      name:  plllogmkqw64xy27
+       log:  /share/Laliberteaug/compas/__pllmkqw64xy27_prog.log
+  log type:  text
+ opened on:  19 Jun 2015, 10:46:47
+
+cohortstats:
+  1.                 qui sum byear
+  2.                 local maxbyear = r(max)+2
+  3.                 qui tab educ, gen(educ_)
+  4.                 qui tab smoke, gen(smoke_)
+  5.                 qui tab bmi, gen(bmi_)
+  6.                 gen cognitive= (inv==2|inv==5|inv==7)
+  7.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  8.                 gen adl =(inv==4|inv==6|inv==7)
+  9.                 gen nhome =(ltc==3)
+ 10.                 gen homecare =(ltc==2)
+ 11.                 rename bmi_2 obese
+ 12.                 rename bmi_3 veryobese
+ 13.                 rename smoke_2 smoker
+ 14.                 rename smoke_3 former
+ 15.                 rename educ_1 lesshs
+ 16.                 rename educ_2 hs
+ 17.                 rename educ_3 college
+ 18.                 rename educ_4 univ
+ 19.                 qui gen pop = 1
+ 20.                 foreach v of var cost_* {
+ 21.                         replace `v' = . if `v'==0
+ 22.                 }
+ 23.                 global vars = "pop imm sex diabe hibpe hearte stroke cancr
+> e lunge mentae                   obese veryobese smoker former lesshs hs coll
+> ege univ cognitive iadl adl                 hc_* cost_* hours* nyrs* agefirst
+> * agedead total* ever* income homecare nhome"
+ 24.                  foreach v of var $vars {
+ 25.                         local l`v' : variable label `v'
+ 26.                         if `"`l`v''"' == "" {
+ 27.                                 local l`v' "`v'"
+ 28.                         }
+ 29.                 }
+ 30.                 collapse ($stat) $vars [fw=wgt], by(byear year province) f
+> ast
+ 31.                 qui gen age = year - byear
+ 32.                 foreach v of var $vars {
+ 33.                         label var `v' "`l`v''"
+ 34.                 }
+      name:  plllogmkqw64xy27
+       log:  /share/Laliberteaug/compas/__pllmkqw64xy27_prog.log
+  log type:  text
+ closed on:  19 Jun 2015, 10:46:47
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Parallel Computing with Stata (by GVY)
+Clusters   : 50
+pll_id     : mkqw64xy27
+Running at : /share/Laliberteaug/compas
+Randtype   : datetime
+Waiting for the clusters to finish...
+cluster 0010 has exited without error...
+cluster 0012 has exited without error...
+cluster 0014 has exited without error...
+cluster 0016 has exited without error...
+cluster 0020 has exited without error...
+cluster 0021 has exited without error...
+cluster 0024 has exited without error...
+cluster 0031 has exited without error...
+cluster 0032 has exited without error...
+cluster 0036 has exited without error...
+cluster 0040 has exited without error...
+cluster 0042 has exited without error...
+cluster 0046 has exited without error...
+cluster 0047 has exited without error...
+cluster 0001 has exited without error...
+cluster 0006 has exited without error...
+cluster 0008 has exited without error...
+cluster 0011 has exited without error...
+cluster 0017 has exited without error...
+cluster 0019 has exited without error...
+cluster 0022 has exited without error...
+cluster 0023 has exited without error...
+cluster 0025 has exited without error...
+cluster 0027 has exited without error...
+cluster 0029 has exited without error...
+cluster 0034 has exited without error...
+cluster 0035 has exited without error...
+cluster 0038 has exited without error...
+cluster 0043 has exited without error...
+cluster 0044 has exited without error...
+cluster 0048 has exited without error...
+cluster 0003 has exited without error...
+cluster 0005 has exited without error...
+cluster 0007 has exited without error...
+cluster 0018 has exited without error...
+cluster 0028 has exited without error...
+cluster 0030 has exited without error...
+cluster 0033 has exited without error...
+cluster 0037 has exited without error...
+cluster 0041 has exited without error...
+cluster 0045 has exited without error...
+cluster 0049 has exited without error...
+cluster 0050 has exited without error...
+cluster 0002 has exited without error...
+cluster 0009 has exited without error...
+cluster 0015 has exited without error...
+cluster 0039 has exited without error...
+cluster 0026 has exited without error...
+cluster 0004 has exited without error...
+cluster 0013 has exited without error...
+-------------------------------------------------------------------------------
+Enter -parallel printlog #- to checkout logfiles.
+-------------------------------------------------------------------------------
+(note: file /share/Laliberteaug/compas/__pllhpye26mw29_prog.log not found)
+-------------------------------------------------------------------------------
+      name:  pllloghpye26mw29
+       log:  /share/Laliberteaug/compas/__pllhpye26mw29_prog.log
+  log type:  text
+ opened on:  19 Jun 2015, 10:47:40
+
+cohortstats:
+  1.                 qui sum byear
+  2.                 local maxbyear = r(max)+2
+  3.                 qui tab educ, gen(educ_)
+  4.                 qui tab smoke, gen(smoke_)
+  5.                 qui tab bmi, gen(bmi_)
+  6.                 gen cognitive= (inv==2|inv==5|inv==7)
+  7.                 gen iadl =(inv==3|inv==5|inv==6|inv==7)
+  8.                 gen adl =(inv==4|inv==6|inv==7)
+  9.                 gen nhome =(ltc==3)
+ 10.                 gen homecare =(ltc==2)
+ 11.                 rename bmi_2 obese
+ 12.                 rename bmi_3 veryobese
+ 13.                 rename smoke_2 smoker
+ 14.                 rename smoke_3 former
+ 15.                 rename educ_1 lesshs
+ 16.                 rename educ_2 hs
+ 17.                 rename educ_3 college
+ 18.                 rename educ_4 univ
+ 19.                 qui gen pop = 1
+ 20.                 foreach v of var cost_* {
+ 21.                         replace `v' = . if `v'==0
+ 22.                 }
+ 23.                 global vars = "pop imm sex diabe hibpe hearte stroke cancr
+> e lunge mentae                   obese veryobese smoker former lesshs hs coll
+> ege univ cognitive iadl adl                 hc_* cost_* hours* nyrs* agefirst
+> * agedead total* ever* income homecare nhome"
+ 24.                  foreach v of var $vars {
+ 25.                         local l`v' : variable label `v'
+ 26.                         if `"`l`v''"' == "" {
+ 27.                                 local l`v' "`v'"
+ 28.                         }
+ 29.                 }
+ 30.                 collapse ($stat) $vars [fw=wgt], by(byear year province) f
+> ast
+ 31.                 qui gen age = year - byear
+ 32.                 foreach v of var $vars {
+ 33.                         label var `v' "`l`v''"
+ 34.                 }
+      name:  pllloghpye26mw29
+       log:  /share/Laliberteaug/compas/__pllhpye26mw29_prog.log
+  log type:  text
+ closed on:  19 Jun 2015, 10:47:40
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+Parallel Computing with Stata (by GVY)
+Clusters   : 50
+pll_id     : hpye26mw29
+Running at : /share/Laliberteaug/compas
+Randtype   : datetime
+Waiting for the clusters to finish...
+cluster 0049 has exited without error...
+cluster 0008 has exited without error...
+cluster 0011 has exited without error...
+cluster 0013 has exited without error...
+cluster 0016 has exited without error...
+cluster 0019 has exited without error...
+cluster 0027 has exited without error...
+cluster 0031 has exited without error...
+cluster 0032 has exited without error...
+cluster 0036 has exited without error...
+cluster 0038 has exited without error...
+cluster 0039 has exited without error...
+cluster 0045 has exited without error...
+cluster 0046 has exited without error...
+cluster 0047 has exited without error...
+cluster 0048 has exited without error...
+cluster 0050 has exited without error...
+cluster 0003 has exited without error...
+cluster 0004 has exited without error...
+cluster 0007 has exited without error...
+cluster 0018 has exited without error...
+cluster 0020 has exited without error...
+cluster 0023 has exited without error...
+cluster 0025 has exited without error...
+cluster 0028 has exited without error...
+cluster 0029 has exited without error...
+cluster 0030 has exited without error...
+cluster 0033 has exited without error...
+cluster 0034 has exited without error...
+cluster 0035 has exited without error...
+cluster 0042 has exited without error...
+cluster 0005 has exited without error...
+cluster 0021 has exited without error...
+cluster 0024 has exited without error...
+cluster 0037 has exited without error...
+cluster 0040 has exited without error...
+cluster 0044 has exited without error...
+cluster 0001 has exited without error...
+cluster 0006 has exited without error...
+cluster 0017 has exited without error...
+cluster 0022 has exited without error...
+cluster 0043 has exited without error...
+cluster 0026 has exited without error...
+cluster 0041 has exited without error...
+cluster 0009 has exited without error...
+cluster 0010 has exited without error...
+cluster 0015 has exited without error...
+cluster 0012 has exited without error...
+cluster 0014 has exited without error...
+cluster 0002 has exited without error...
+-------------------------------------------------------------------------------
+Enter -parallel printlog #- to checkout logfiles.
+-------------------------------------------------------------------------------
+
+.  foreach v of var $statvars {
+  2.                         local l`v' : variable label `v'
+  3.                         if `"`l`v''"' == "" {
+  4.                                 local l`v' "`v'"
+  5.                         }
+  6.                 }
+
+. collapse (mean) $statvars , by(byear year province) fast
+
+. foreach v of var $statvars {
+  2.                         label var `v' "`l`v''"
+  3.                 }
+
+. save output/$scenario/sumbycohortyear.dta, replace
+file output/notrendmortality/sumbycohortyear.dta saved
+
+. timer off 1
+
+. timer list
+   1:    136.92 /        1 =     136.9230
+  97:      0.00 /        2 =       0.0000
+  98:      0.00 /        1 =       0.0000
+  99:     53.40 /        1 =      53.4010
+
+. timer clear
+
+. 
+end of do-file
+
+. * insert additional code here
+. use output/$scenario/simpop-1.dta
+(simulated population from scenario notrendmortality)
+
+. 
+. 
+. if $rep > 2 {
+. global appended = ""
+.         forvalues i=2/$rep {
+  2.                 global appended = "$appended output/$scenario/simpop-`i'.d
+> ta"
+  3. }
+. append using $appended,gen(replication)
+(note: variable hc_generalist was byte, now int to accommodate using data's
+       values)
+(note: variable total_hours_homecare_i was int, now float to accommodate
+       using data's values)
+(note: variable totalundis_cost_generalist was int, now float to accommodate
+       using data's values)
+(note: variable totalundis_cost_specialist was int, now float to accommodate
+       using data's values)
+. }
+
+. replace wgt = round(wgt/$rep)
+(30858565 real changes made)
+
+. save output/$scenario/simpop-all.dta, replace
+file output/notrendmortality/simpop-all.dta saved
+
+. 
+. 
+. * erase traces of files
+. 
+. forvalues i=1/$rep {
+  2. erase output/$scenario/simpop-`i'.dta
+  3. }
+
+. 
+. 
+end of do-file

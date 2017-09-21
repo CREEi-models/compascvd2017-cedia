@@ -1,0 +1,5 @@
+#ignore everything in this directory
+*.dta
+# Except this file
+!.gitignore
+!startpop-all.dta

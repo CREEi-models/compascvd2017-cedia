@@ -1,0 +1,31 @@
+Version 0.20.3 - 2010-04-08
+
+    * Corrected bug when saving integer(1) variables (Stata byte variables)
+    
+Version 0.20.2 - 2009-08-30
+
+    * Allow result dimension to differ from nobsStata
+
+Version 0.20.1 - 2009-07-01
+
+    * Explict routines for error handling (statamodWarn and statamodError)
+    * Raise error if attempt to save a variable with too many characters
+
+Version 0.20.0 - 2008-11-11
+
+    * Code clean up, Fortran standards, readStata now as subroutine
+
+Version 0.11.0 - 2007-07-19
+
+    * Added support for Stata 10 files
+
+Version 0.10.2 - 2007-01-17
+
+    * Public access for maximum non-missing stata variables via maxST_xxx
+
+Version 0.10.1 - 2006-10-24
+
+    * replaced DFPORT with IFPORT
+    * corrected input type of versionStata to integer(i1)
+    * corrected input type of typeStata to integer(i4)
+

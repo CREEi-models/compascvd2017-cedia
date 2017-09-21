@@ -1,0 +1,96 @@
+.DS_Store
+._.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# SVN
+.svn
+
+# Temporary files
+#temp/*
+#logs/*
+output/*
+
+#Compile files
+*.mod
+runtime/compas
+runtime/*.log
+
+#eclipse file
+.metadata/**
+
+#Compare file
+compare/rapport
+
+#Parameter created by create_compas.do
+#params/newcohorts/choleski.csv
+#params/newcohorts/mean_bmi.csv
+#params/newcohorts/mean_educ.csv
+#params/newcohorts/mean_smoke.csv
+#params/newcohorts/thres_bmi.csv
+#params/newcohorts/thres_educ.csv
+#params/newcohorts/thres_smoke.csv
+
+#params/trends/trend-mortality-1-0.dta
+#params/trends/trend-mortality-1-1.dta
+#params/trends/trend-mortality-2-0.dta
+#params/trends/trend-mortality-2-1.dta
+#params/trends/trend-mortality-3-0.dta
+#params/trends/trend-mortality-3-1.dta
+#params/trends/trend-mortality-4-0.dta
+#params/trends/trend-mortality-4-1.dta
+#params/trends/trend-mortality-5-0.dta
+#params/trends/trend-mortality-5-1.dta
+
+#params/trends/trend-mortality-1-0.csv
+#params/trends/trend-mortality-1-1.csv
+#params/trends/trend-mortality-2-0.csv
+#params/trends/trend-mortality-2-1.csv
+#params/trends/trend-mortality-3-0.csv
+#params/trends/trend-mortality-3-1.csv
+#params/trends/trend-mortality-4-0.csv
+#params/trends/trend-mortality-4-1.csv
+#params/trends/trend-mortality-5-0.csv
+#params/trends/trend-mortality-5-1.csv
+#params/transit/factor.csv
+
+#Compiled library
+libs/dcdflib.a
+libs/ranlib.a
+
+#Startpop and newcohort created by create_compas.do
+#data/input/*
+#data/input/newcohorts.csv
+#data/input/newcohorts.dta
+#data/input/startpop.csv
+#data/input/startpop.dta
+
+*Stata path
+params/stata_path.dat
+src/stata_path.f95
+
+*Other file
+runtime/test_newbase_1.sh
+params/stats/statlist-short.dat

@@ -1,0 +1,521 @@
+Province;Sexe;Age;Total - Type of collective dwelling;  Health care and related facilities [2];    General and speciality hospitals;    Nursing homes, chronic care and long-term care hospitals;    Residences for senior citizens;    Group homes or institutions for the physically handicapped and treatment centres;    Group homes or institutions for people with psychiatric disorders or developmental disabilities;  Correctional and penal institutions [3];  Shelters [4];  Group homes for children and youth;  Service collective dwellings [5];    Lodging and rooming houses;    Hotels, motels and other establishments with temporary accommodation services;    Other service collective dwellings [6];  Religious establishments;  Hutterite colonies;  Other [7]
+Manitoba;Etablissement;;1310;675;45;140;50;95;350;15;70;50;360;130;170;55;25;110;10
+Manitoba;Tous;0 to 100 years;32955;16845;605;9185;4345;625;2085;1565;910;190;2860;765;1455;635;140;10355;85
+Manitoba; male;0 to 100 years;14660;5740;255;2820;1135;375;1155;1155;605;95;1955;585;1045;330;70;4975;75
+Manitoba; female;0 to 100 years;18295;11110;355;6365;3210;250;925;410;310;95;905;185;415;310;70;5380;15
+Manitoba;Tous; under 15 years;4045;95;5;0;0;10;80;10;180;90;95;10;35;50;0;3575;5
+Manitoba; male; under 15 years;2030;45;5;0;0;5;35;5;115;55;40;5;10;25;0;1775;0
+Manitoba; female; under 15 years;2020;50;5;0;0;5;45;5;60;40;55;5;25;25;5;1800;0
+Manitoba;Tous; 15 to 19 years;1440;90;0;0;0;5;85;125;70;90;165;20;25;125;5;895;10
+Manitoba; male; 15 to 19 years;785;45;0;0;0;5;40;105;35;35;85;10;15;65;0;470;5
+Manitoba; female; 15 to 19 years;660;45;0;0;0;0;40;20;40;55;80;5;10;60;5;425;0
+Manitoba;Tous; 20 to 24 years;1660;170;5;10;0;55;95;350;65;0;270;55;60;155;5;785;20
+Manitoba; male; 20 to 24 years;820;95;5;10;0;25;50;175;30;0;145;35;40;70;0;365;15
+Manitoba; female; 20 to 24 years;845;70;0;0;0;20;40;180;35;0;125;20;20;85;0;420;5
+Manitoba;Tous; 25 to 29 years;1580;210;10;5;10;60;120;340;70;0;210;55;85;75;5;725;30
+Manitoba; male; 25 to 29 years;860;135;5;5;5;40;85;205;30;0;130;35;50;50;0;330;25
+Manitoba; female; 25 to 29 years;720;75;5;5;5;20;40;135;40;0;80;20;35;25;0;390;0
+Manitoba;Tous; 30 to 34 years;1265;190;5;10;0;50;125;250;65;0;150;55;65;35;0;600;5
+Manitoba; male; 30 to 34 years;705;110;5;5;0;30;75;180;35;0;90;40;35;10;0;285;5
+Manitoba; female; 30 to 34 years;560;85;0;5;0;25;55;70;25;0;60;20;25;25;5;315;0
+Manitoba;Tous; 35 to 39 years;1300;230;10;15;5;55;150;170;80;5;190;70;100;25;10;595;10
+Manitoba; male; 35 to 39 years;815;150;10;5;5;40;90;170;60;0;140;55;75;10;10;285;5
+Manitoba; female; 35 to 39 years;480;90;5;5;5;15;55;0;20;0;55;15;25;10;5;315;0
+Manitoba;Tous; 40 to 44 years;1340;300;15;20;5;60;200;125;80;0;205;75;125;10;10;620;5
+Manitoba; male; 40 to 44 years;825;170;5;10;0;45;110;120;60;0;145;60;85;0;5;315;0
+Manitoba; female; 40 to 44 years;520;130;10;10;0;20;90;5;15;0;60;15;40;5;5;305;0
+Manitoba;Tous; 45 to 49 years;1520;445;15;100;10;55;260;100;95;0;330;115;200;15;5;535;0
+Manitoba; male; 45 to 49 years;915;240;5;40;0;45;145;105;70;0;245;90;155;5;0;245;5
+Manitoba; female; 45 to 49 years;605;205;10;55;5;15;115;5;25;5;80;25;50;10;0;290;0
+Manitoba;Tous; 50 to 54 years;1475;475;30;75;15;70;290;35;80;0;400;130;250;20;10;465;10
+Manitoba; male; 50 to 54 years;900;265;15;35;0;45;165;30;60;0;310;95;205;15;5;215;5
+Manitoba; female; 50 to 54 years;570;210;15;35;10;25;125;0;20;5;85;30;45;5;0;250;0
+Manitoba;Tous; 55 to 59 years;1345;525;30;165;45;55;235;20;70;0;300;75;160;65;10;425;0
+Manitoba; male; 55 to 59 years;770;280;15;100;5;35;125;20;60;5;235;60;140;30;5;175;0
+Manitoba; female; 55 to 59 years;570;245;10;65;35;20;110;0;10;0;65;15;20;30;5;245;0
+Manitoba;Tous; 60 to 64 years;1220;595;35;240;115;40;160;30;40;0;205;60;120;20;10;340;0
+Manitoba; male; 60 to 64 years;710;320;20;145;30;30;90;30;30;0;170;55;100;15;10;160;0
+Manitoba; female; 60 to 64 years;510;275;15;100;85;15;65;0;5;0;35;5;25;10;0;180;0
+Manitoba;Tous; 65 to 69 years;1175;705;35;365;160;25;120;10;15;0;115;30;70;20;10;315;0
+Manitoba; male; 65 to 69 years;630;365;10;215;60;10;70;10;15;0;100;30;60;10;5;145;0
+Manitoba; female; 65 to 69 years;545;345;20;155;100;15;55;0;5;0;25;0;10;5;5;170;0
+Manitoba;Tous; 70 to 74 years;1225;905;35;500;275;20;75;5;5;0;75;15;50;15;10;225;0
+Manitoba; male; 70 to 74 years;545;385;20;235;85;15;40;0;5;0;55;15;35;5;5;90;0
+Manitoba; female; 70 to 74 years;680;520;25;260;190;5;35;0;0;0;20;0;10;5;10;135;0
+Manitoba;Tous; 75 to 79 years;1745;1535;70;895;510;15;50;0;0;0;45;10;25;15;20;140;0
+Manitoba; male; 75 to 79 years;645;535;30;350;125;5;25;0;5;0;35;10;15;5;15;55;0
+Manitoba; female; 75 to 79 years;1095;995;40;540;385;10;20;0;0;0;10;0;5;5;5;80;0
+Manitoba;Tous; 80 to 84 years;2965;2855;100;1705;1030;10;15;0;0;0;30;0;25;5;15;65;0
+Manitoba; male; 80 to 84 years;925;870;45;570;245;5;5;0;0;0;20;0;15;5;5;30;0
+Manitoba; female; 80 to 84 years;2040;1990;55;1135;790;5;10;0;0;0;15;0;15;0;10;30;0
+Manitoba;Tous; 85 years and over;7660;7515;210;5085;2170;35;15;0;0;0;65;0;65;5;15;55;0
+Manitoba; male; 85 years and over;1780;1735;60;1095;570;5;0;0;0;0;10;5;10;0;5;30;0
+Manitoba; female; 85 years and over;5880;5785;155;3995;1600;30;10;0;0;0;50;0;55;0;15;30;0
+Colombie-Britanique;Etablissement;;4300;1675;45;375;300;415;540;30;195;45;2105;140;1595;360;75;5;175
+Colombie-Britanique;Tous;0 to 100 years;75185;51200;565;28855;14925;3125;3730;3425;3985;165;13715;2860;6235;4615;495;430;1765
+Colombie-Britanique; male;0 to 100 years;34090;17815;210;8985;4405;2040;2180;3240;2605;105;8810;2310;3880;2620;230;215;1080
+Colombie-Britanique; female;0 to 100 years;41095;33385;350;19875;10525;1090;1555;190;1380;60;4905;555;2355;1990;270;225;680
+Colombie-Britanique;Tous; under 15 years;1050;70;0;5;15;10;35;0;180;65;470;10;285;175;30;180;55
+Colombie-Britanique; male; under 15 years;535;40;0;5;10;5;20;0;90;45;235;5;150;85;15;80;25
+Colombie-Britanique; female; under 15 years;515;30;0;0;5;10;15;0;90;20;235;5;140;90;20;100;30
+Colombie-Britanique;Tous; 15 to 19 years;1225;120;0;0;5;55;60;95;70;65;760;15;130;615;20;50;55
+Colombie-Britanique; male; 15 to 19 years;620;70;5;0;5;25;40;80;25;35;335;5;65;275;10;25;35
+Colombie-Britanique; female; 15 to 19 years;605;45;0;0;5;30;20;15;45;30;420;10;70;345;10;25;20
+Colombie-Britanique;Tous; 20 to 24 years;2310;340;5;10;0;180;140;345;240;10;1000;65;335;605;25;40;310
+Colombie-Britanique; male; 20 to 24 years;1425;230;5;10;0;120;100;320;125;10;560;55;190;315;15;20;140
+Colombie-Britanique; female; 20 to 24 years;885;110;5;0;0;60;40;20;115;0;440;10;145;290;5;20;175
+Colombie-Britanique;Tous; 25 to 29 years;2490;475;5;15;15;250;190;515;335;5;810;95;355;360;15;35;300
+Colombie-Britanique; male; 25 to 29 years;1695;305;0;5;5;170;125;475;190;0;495;55;220;220;10;25;195
+Colombie-Britanique; female; 25 to 29 years;795;165;5;10;10;75;65;40;140;5;320;40;145;140;5;15;105
+Colombie-Britanique;Tous; 30 to 34 years;2525;600;0;35;45;275;245;645;390;5;675;145;335;190;25;35;150
+Colombie-Britanique; male; 30 to 34 years;1840;400;5;25;40;180;155;610;235;0;465;125;230;115;10;15;105
+Colombie-Britanique; female; 30 to 34 years;685;200;0;15;10;90;90;30;160;5;215;25;105;80;15;15;45
+Colombie-Britanique;Tous; 35 to 39 years;2415;610;5;60;30;265;250;500;445;5;735;230;350;155;25;10;85
+Colombie-Britanique; male; 35 to 39 years;1750;380;5;25;10;190;155;475;305;0;500;185;225;90;10;10;65
+Colombie-Britanique; female; 35 to 39 years;665;230;0;35;20;75;95;25;140;5;240;45;125;65;10;5;15
+Colombie-Britanique;Tous; 40 to 44 years;2840;795;5;120;40;310;320;440;450;0;1010;345;480;185;30;15;105
+Colombie-Britanique; male; 40 to 44 years;1985;500;0;50;25;215;205;415;280;0;700;265;325;105;10;5;70
+Colombie-Britanique; female; 40 to 44 years;850;295;5;70;10;90;115;30;175;0;305;85;150;75;15;10;25
+Colombie-Britanique;Tous; 45 to 49 years;3510;1115;10;165;90;370;490;335;560;0;1345;465;620;260;25;25;100
+Colombie-Britanique; male; 45 to 49 years;2475;670;10;70;50;245;300;325;420;0;975;385;435;150;10;10;65
+Colombie-Britanique; female; 45 to 49 years;1030;450;5;90;40;125;195;15;140;0;370;80;180;105;15;10;35
+Colombie-Britanique;Tous; 50 to 54 years;3895;1395;15;260;145;430;545;220;530;0;1560;420;720;420;45;20;120
+Colombie-Britanique; male; 50 to 54 years;2510;800;10;135;70;270;300;215;395;0;1010;340;445;220;20;10;75
+Colombie-Britanique; female; 50 to 54 years;1380;595;5;120;70;155;245;15;140;0;555;85;275;200;20;15;45
+Colombie-Britanique;Tous; 55 to 59 years;3865;1480;15;400;225;325;510;150;370;5;1680;390;810;485;35;10;135
+Colombie-Britanique; male; 55 to 59 years;2490;870;10;200;110;230;320;150;250;5;1120;340;490;290;10;5;80
+Colombie-Britanique; female; 55 to 59 years;1380;605;10;200;115;90;195;5;125;5;560;45;320;195;25;5;50
+Colombie-Britanique;Tous; 60 to 64 years;3755;1765;25;670;375;265;430;100;210;0;1460;310;735;420;55;10;155
+Colombie-Britanique; male; 60 to 64 years;2325;960;20;350;200;185;210;100;165;5;975;260;460;260;20;5;90
+Colombie-Britanique; female; 60 to 64 years;1435;805;5;320;175;80;220;0;45;0;490;50;280;160;30;0;65
+Colombie-Britanique;Tous; 65 to 69 years;3115;1830;15;1020;460;125;215;45;85;5;1020;205;465;350;40;5;100
+Colombie-Britanique; male; 65 to 69 years;1865;960;5;525;220;80;130;45;65;0;700;180;300;220;20;5;70
+Colombie-Britanique; female; 65 to 69 years;1255;870;5;490;240;45;90;0;15;0;320;25;165;135;15;0;30
+Colombie-Britanique;Tous; 70 to 74 years;3210;2545;35;1640;650;90;130;20;60;0;505;60;250;200;30;0;50
+Colombie-Britanique; male; 70 to 74 years;1525;1100;20;755;220;40;65;20;20;0;335;50;160;130;10;0;35
+Colombie-Britanique; female; 70 to 74 years;1685;1450;15;885;430;45;65;0;40;0;170;10;90;65;20;0;15
+Colombie-Britanique;Tous; 75 to 79 years;4870;4455;65;2885;1375;55;75;5;30;0;310;45;140;115;35;0;30
+Colombie-Britanique; male; 75 to 79 years;2020;1735;35;1195;445;25;30;5;30;0;215;40;100;80;15;0;15
+Colombie-Britanique; female; 75 to 79 years;2855;2725;30;1690;925;30;50;0;5;0;90;10;45;35;20;0;15
+Colombie-Britanique;Tous; 80 to 84 years;8980;8725;95;5430;3105;45;50;0;15;0;175;35;85;55;35;5;20
+Colombie-Britanique; male; 80 to 84 years;2915;2755;35;1800;885;15;25;5;10;0;115;25;50;40;25;5;10
+Colombie-Britanique; female; 80 to 84 years;6065;5970;65;3630;2220;35;25;0;10;0;65;5;45;15;15;0;5
+Colombie-Britanique;Tous; 85 years and over;25125;24880;260;16135;8365;85;40;0;10;0;190;20;135;35;30;0;10
+Colombie-Britanique; male; 85 years and over;6120;6035;60;3820;2115;25;10;5;5;0;65;10;40;20;10;5;5
+Colombie-Britanique; female; 85 years and over;19000;18845;200;12320;6250;50;20;0;5;0;120;15;95;15;25;0;5
+Alberta;Etablissement;;3235;1525;45;270;285;250;685;30;95;105;925;125;605;195;70;165;325
+Alberta;Tous;0 to 100 years;76925;45030;1315;21145;17030;2025;3515;2695;3810;565;4745;935;2410;1400;530;15600;3945
+Alberta; male;0 to 100 years;34340;15690;570;6700;4985;1345;2100;2535;2800;320;2995;700;1500;785;255;7460;2280
+Alberta; female;0 to 100 years;42585;29340;750;14445;12045;680;1415;160;1015;240;1750;230;905;615;275;8140;1660
+Alberta;Tous; under 15 years;6580;245;15;70;0;15;145;0;440;265;205;0;130;75;35;5220;170
+Alberta; male; under 15 years;3365;145;5;35;0;15;95;0;235;165;120;5;75;35;20;2600;80
+Alberta; female; under 15 years;3215;95;5;30;0;5;45;0;210;100;85;0;50;35;10;2615;90
+Alberta;Tous; 15 to 19 years;2755;285;10;25;0;55;195;125;240;280;225;15;85;120;15;1430;155
+Alberta; male; 15 to 19 years;1480;155;5;15;0;25;110;125;135;150;125;10;45;65;10;710;70
+Alberta; female; 15 to 19 years;1275;125;0;15;0;25;80;5;100;130;100;5;40;55;5;725;95
+Alberta;Tous; 20 to 24 years;3835;325;20;30;5;100;175;480;205;10;510;65;175;270;40;1290;985
+Alberta; male; 20 to 24 years;2130;210;20;10;0;65;115;445;105;0;265;40;85;140;20;570;510
+Alberta; female; 20 to 24 years;1710;115;5;15;5;30;60;30;95;5;245;25;85;125;15;720;480
+Alberta;Tous; 25 to 29 years;3965;470;20;35;5;180;225;590;275;0;395;70;205;120;35;1260;940
+Alberta; male; 25 to 29 years;2390;305;20;20;0;120;140;545;160;0;205;45;100;65;20;590;550
+Alberta; female; 25 to 29 years;1575;165;5;15;5;60;85;40;115;0;185;25;105;60;15;670;385
+Alberta;Tous; 30 to 34 years;3185;490;35;35;10;165;250;435;310;5;310;90;160;60;30;1035;575
+Alberta; male; 30 to 34 years;1925;300;25;20;5;120;135;405;195;0;195;55;105;30;20;470;340
+Alberta; female; 30 to 34 years;1255;190;10;20;10;40;115;30;110;0;120;30;60;30;5;565;230
+Alberta;Tous; 35 to 39 years;2765;535;25;90;10;195;220;325;320;5;345;105;175;60;25;920;295
+Alberta; male; 35 to 39 years;1770;365;15;50;5;155;140;310;225;0;225;85;105;35;10;445;190
+Alberta; female; 35 to 39 years;995;170;10;40;0;40;85;20;95;0;115;25;65;25;10;480;105
+Alberta;Tous; 40 to 44 years;2750;640;25;90;15;225;290;270;415;0;350;100;175;70;25;780;255
+Alberta; male; 40 to 44 years;1790;405;20;45;5;165;180;255;340;5;230;75;110;45;20;360;170
+Alberta; female; 40 to 44 years;960;240;5;45;10;60;110;15;75;0;120;25;70;30;10;420;85
+Alberta;Tous; 45 to 49 years;3025;885;35;165;30;225;430;225;505;0;445;105;260;75;25;765;175
+Alberta; male; 45 to 49 years;1985;540;15;85;15;170;265;220;425;0;320;90;180;50;20;340;120
+Alberta; female; 45 to 49 years;1040;340;15;80;20;60;170;10;80;5;125;15;80;25;5;420;60
+Alberta;Tous; 50 to 54 years;3015;1055;30;210;80;250;480;120;470;0;485;100;280;100;30;705;145
+Alberta; male; 50 to 54 years;1940;610;15;100;40;175;280;115;415;0;325;95;180;50;20;340;105
+Alberta; female; 50 to 54 years;1075;445;15;110;45;75;200;5;55;0;160;5;100;45;10;365;40
+Alberta;Tous; 55 to 59 years;2820;1185;50;385;180;185;390;65;325;0;540;100;305;135;25;565;115
+Alberta; male; 55 to 59 years;1770;680;30;190;100;125;235;65;285;0;370;85;205;80;10;280;75
+Alberta; female; 55 to 59 years;1055;505;15;195;80;55;155;5;40;0;175;15;95;60;10;285;35
+Alberta;Tous; 60 to 64 years;2625;1480;85;540;430;135;285;20;195;5;410;65;220;125;35;440;40
+Alberta; male; 60 to 64 years;1460;750;45;255;200;80;175;25;170;5;275;55;155;65;10;200;30
+Alberta; female; 60 to 64 years;1165;725;40;285;235;50;115;5;25;0;135;10;65;55;20;245;15
+Alberta;Tous; 65 to 69 years;2530;1785;60;715;780;60;165;15;50;0;250;35;120;95;25;380;25
+Alberta; male; 65 to 69 years;1295;835;30;335;340;35;95;20;45;0;175;30;75;65;5;205;15
+Alberta; female; 65 to 69 years;1235;950;35;385;440;25;70;0;5;0;75;0;40;30;20;180;10
+Alberta;Tous; 70 to 74 years;3430;2920;95;1325;1360;50;90;5;30;0;120;15;50;55;40;295;15
+Alberta; male; 70 to 74 years;1480;1190;45;595;470;25;45;10;25;0;80;10;35;35;15;160;5
+Alberta; female; 70 to 74 years;1950;1735;45;730;895;20;40;0;5;0;35;0;15;20;30;140;10
+Alberta;Tous; 75 to 79 years;5140;4800;130;2310;2235;40;70;0;10;0;65;5;35;20;45;210;15
+Alberta; male; 75 to 79 years;1945;1780;55;950;715;25;35;0;10;0;45;5;25;15;25;70;10
+Alberta; female; 75 to 79 years;3195;3015;75;1360;1520;15;40;0;0;0;20;5;15;5;20;135;5
+Alberta;Tous; 80 to 84 years;8780;8525;190;4205;4010;55;60;0;15;0;30;10;15;5;45;150;5
+Alberta; male; 80 to 84 years;2860;2745;85;1420;1195;15;35;0;10;0;15;0;10;0;15;70;0
+Alberta; female; 80 to 84 years;5915;5780;105;2785;2820;40;30;0;5;0;15;5;5;0;30;80;5
+Alberta;Tous; 85 years and over;19740;19410;490;10915;7880;90;45;0;15;0;60;40;15;5;60;155;25
+Alberta; male; 85 years and over;4755;4665;135;2575;1915;25;15;0;5;0;25;10;10;5;0;50;10
+Alberta; female; 85 years and over;14975;14750;355;8335;5965;65;30;0;10;0;35;30;5;0;60;110;20
+Saskatchewan;Etablissement;;1160;720;30;310;80;125;165;15;30;45;255;10;200;50;25;70;10
+Saskatchewan;Tous;0 to 100 years;24225;14445;530;10075;1505;1025;1310;1470;440;220;1310;40;580;685;190;6110;35
+Saskatchewan; male;0 to 100 years;10815;5145;165;3205;450;570;760;1435;215;120;795;20;370;400;20;3050;30
+Saskatchewan; female;0 to 100 years;13410;9295;370;6870;1055;455;555;35;225;100;515;20;210;280;175;3065;10
+Saskatchewan;Tous; under 15 years;2200;140;5;20;5;20;95;0;115;95;55;0;40;20;0;1790;5
+Saskatchewan; male; under 15 years;1145;90;0;5;5;10;70;0;55;70;35;0;20;15;0;900;0
+Saskatchewan; female; under 15 years;1060;55;5;10;0;10;25;0;60;20;20;0;15;10;0;895;5
+Saskatchewan;Tous; 15 to 19 years;1225;120;0;15;5;30;70;65;35;105;200;0;25;175;0;705;5
+Saskatchewan; male; 15 to 19 years;725;65;0;5;0;15;45;55;20;40;125;0;15;110;5;410;5
+Saskatchewan; female; 15 to 19 years;495;50;0;10;5;15;25;5;15;60;70;0;10;65;0;295;0
+Saskatchewan;Tous; 20 to 24 years;1310;135;5;25;0;40;65;305;55;20;305;0;35;275;0;490;0
+Saskatchewan; male; 20 to 24 years;765;75;0;10;0;20;40;295;15;5;175;0;15;160;0;195;0
+Saskatchewan; female; 20 to 24 years;545;60;0;15;0;20;25;10;40;10;130;0;15;115;5;290;0
+Saskatchewan;Tous; 25 to 29 years;1005;180;0;30;0;65;85;285;30;0;110;0;50;65;0;395;0
+Saskatchewan; male; 25 to 29 years;650;115;0;15;0;45;50;280;10;0;70;0;30;40;0;170;5
+Saskatchewan; female; 25 to 29 years;360;70;5;15;0;15;30;5;20;0;40;0;20;25;5;230;0
+Saskatchewan;Tous; 30 to 34 years;895;160;0;30;5;45;80;170;35;0;70;0;40;25;0;450;0
+Saskatchewan; male; 30 to 34 years;550;95;0;10;0;30;50;170;15;0;40;0;25;15;0;230;0
+Saskatchewan; female; 30 to 34 years;340;65;0;15;5;20;30;5;20;0;30;0;15;15;5;220;0
+Saskatchewan;Tous; 35 to 39 years;850;205;0;45;0;60;100;160;40;0;65;5;50;15;0;370;0
+Saskatchewan; male; 35 to 39 years;515;115;0;20;0;35;55;160;20;0;45;0;40;10;0;175;5
+Saskatchewan; female; 35 to 39 years;335;90;0;25;0;20;40;0;25;0;25;5;10;5;0;200;0
+Saskatchewan;Tous; 40 to 44 years;875;250;0;65;0;65;110;185;35;0;55;0;45;10;5;350;5
+Saskatchewan; male; 40 to 44 years;550;140;0;35;5;40;65;180;20;0;35;5;25;5;0;175;0
+Saskatchewan; female; 40 to 44 years;325;110;0;30;5;25;50;5;15;0;20;0;20;5;5;170;0
+Saskatchewan;Tous; 45 to 49 years;1060;390;10;120;5;115;140;125;30;5;80;5;65;10;0;425;10
+Saskatchewan; male; 45 to 49 years;650;240;5;65;5;75;85;125;15;5;45;5;40;5;0;210;5
+Saskatchewan; female; 45 to 49 years;410;150;0;55;0;35;55;5;10;5;30;0;30;5;0;215;5
+Saskatchewan;Tous; 50 to 54 years;910;425;5;140;15;125;135;85;20;0;105;5;80;25;5;265;0
+Saskatchewan; male; 50 to 54 years;535;240;5;80;10;70;75;90;10;0;75;5;55;15;0;120;5
+Saskatchewan; female; 50 to 54 years;370;180;0;60;5;55;55;0;10;0;30;5;20;10;5;140;0
+Saskatchewan;Tous; 55 to 59 years;770;425;0;170;15;115;120;40;15;0;75;0;60;10;0;210;5
+Saskatchewan; male; 55 to 59 years;445;235;5;90;10;70;60;35;10;0;45;0;40;10;0;115;0
+Saskatchewan; female; 55 to 59 years;325;195;0;80;10;45;55;5;10;0;25;0;25;0;0;100;0
+Saskatchewan;Tous; 60 to 64 years;795;465;15;215;30;105;100;30;15;0;65;5;45;20;5;210;5
+Saskatchewan; male; 60 to 64 years;455;245;10;110;15;60;45;30;10;0;35;0;25;10;0;130;5
+Saskatchewan; female; 60 to 64 years;340;220;10;100;10;50;50;0;10;0;25;0;15;10;0;85;0
+Saskatchewan;Tous; 65 to 69 years;655;445;10;305;25;45;55;10;5;0;45;0;30;15;15;130;0
+Saskatchewan; male; 65 to 69 years;335;225;5;150;10;30;30;10;0;0;30;0;25;10;5;65;5
+Saskatchewan; female; 65 to 69 years;320;225;5;155;15;20;30;0;0;0;15;0;10;5;15;65;0
+Saskatchewan;Tous; 70 to 74 years;830;635;20;510;50;30;25;0;5;0;25;5;10;5;40;135;0
+Saskatchewan; male; 70 to 74 years;355;280;5;225;15;20;15;0;5;0;10;0;10;0;5;60;0
+Saskatchewan; female; 70 to 74 years;480;360;15;290;35;10;10;0;0;0;10;5;0;5;35;75;0
+Saskatchewan;Tous; 75 to 79 years;1325;1190;40;955;140;30;30;0;5;0;20;5;15;5;20;90;0
+Saskatchewan; male; 75 to 79 years;530;475;25;380;40;15;15;0;5;0;15;0;10;0;0;40;0
+Saskatchewan; female; 75 to 79 years;785;715;15;575;95;15;15;0;0;0;5;0;0;0;15;45;0
+Saskatchewan;Tous; 80 to 84 years;2320;2215;90;1765;300;35;30;0;0;0;15;0;5;10;40;45;0
+Saskatchewan; male; 80 to 84 years;780;750;35;595;85;10;15;5;5;0;10;0;0;0;5;15;0
+Saskatchewan; female; 80 to 84 years;1540;1470;55;1165;210;20;15;0;0;0;5;0;5;5;35;30;0
+Saskatchewan;Tous; 85 years and over;7205;7065;320;5665;915;85;75;0;0;0;20;15;0;10;60;55;0
+Saskatchewan; male; 85 years and over;1830;1775;65;1395;255;20;40;0;0;0;5;5;0;5;0;40;0
+Saskatchewan; female; 85 years and over;5375;5285;255;4265;660;70;30;0;0;0;20;10;5;5;55;15;0
+Île-du-Prince-Édouard;Etablissement;;245;70;5;25;15;15;10;0;0;5;160;5;155;5;5;0;5
+Île-du-Prince-Édouard;Tous;0 to 100 years;2795;2120;70;1415;395;145;95;25;10;15;460;10;440;10;85;0;85
+Île-du-Prince-Édouard; male;0 to 100 years;1010;720;40;425;125;70;65;25;5;10;245;10;235;0;10;0;0
+Île-du-Prince-Édouard; female;0 to 100 years;1785;1395;30;990;270;75;25;0;5;10;215;0;205;5;80;0;85
+Île-du-Prince-Édouard;Tous; under 15 years;30;0;0;0;0;0;0;0;0;5;20;0;20;0;0;0;0
+Île-du-Prince-Édouard; male; under 15 years;15;0;0;0;0;0;0;0;0;5;10;0;10;0;0;0;0
+Île-du-Prince-Édouard; female; under 15 years;15;0;0;0;0;0;0;0;0;5;10;0;15;0;0;0;0
+Île-du-Prince-Édouard;Tous; 15 to 19 years;35;0;0;0;0;0;0;10;0;10;20;0;20;5;0;0;0
+Île-du-Prince-Édouard; male; 15 to 19 years;25;0;0;0;0;0;0;5;0;0;10;0;15;0;0;0;0
+Île-du-Prince-Édouard; female; 15 to 19 years;15;0;0;0;0;0;0;0;0;5;5;0;5;5;0;0;0
+Île-du-Prince-Édouard;Tous; 20 to 24 years;40;15;5;0;5;5;5;5;5;0;20;0;15;0;0;0;5
+Île-du-Prince-Édouard; male; 20 to 24 years;25;10;0;0;0;5;5;5;0;0;10;0;15;0;0;0;0
+Île-du-Prince-Édouard; female; 20 to 24 years;15;5;0;5;0;0;0;0;0;0;10;0;5;0;0;0;5
+Île-du-Prince-Édouard;Tous; 25 to 29 years;65;20;0;0;0;10;10;5;5;0;25;0;25;0;0;0;5
+Île-du-Prince-Édouard; male; 25 to 29 years;30;15;0;0;0;10;5;10;0;0;5;0;10;0;0;0;0
+Île-du-Prince-Édouard; female; 25 to 29 years;35;10;0;5;0;5;0;0;0;0;15;0;15;0;0;0;10
+Île-du-Prince-Édouard;Tous; 30 to 34 years;75;20;0;5;0;5;5;5;0;0;30;0;35;0;0;0;20
+Île-du-Prince-Édouard; male; 30 to 34 years;30;10;0;0;0;5;5;0;0;0;10;0;10;0;0;0;0
+Île-du-Prince-Édouard; female; 30 to 34 years;50;5;0;0;0;0;5;0;0;0;20;0;25;0;0;0;20
+Île-du-Prince-Édouard;Tous; 35 to 39 years;65;25;5;0;0;5;15;5;0;0;15;0;20;0;0;0;25
+Île-du-Prince-Édouard; male; 35 to 39 years;30;20;5;0;0;5;10;5;0;0;10;0;15;0;0;0;0
+Île-du-Prince-Édouard; female; 35 to 39 years;35;10;0;0;0;0;0;0;0;0;5;0;5;0;0;0;20
+Île-du-Prince-Édouard;Tous; 40 to 44 years;90;35;0;5;5;10;10;0;0;0;25;0;25;0;0;0;25
+Île-du-Prince-Édouard; male; 40 to 44 years;40;20;0;5;0;10;10;0;0;0;20;0;20;0;0;0;5
+Île-du-Prince-Édouard; female; 40 to 44 years;50;15;0;0;0;5;5;0;5;0;10;0;10;0;0;0;25
+Île-du-Prince-Édouard;Tous; 45 to 49 years;90;45;5;15;5;10;10;0;0;0;40;5;35;5;0;0;5
+Île-du-Prince-Édouard; male; 45 to 49 years;50;25;0;15;0;5;5;0;0;0;20;5;20;0;0;0;0
+Île-du-Prince-Édouard; female; 45 to 49 years;45;15;0;0;0;10;0;0;0;0;20;0;15;0;0;0;5
+Île-du-Prince-Édouard;Tous; 50 to 54 years;110;65;10;25;5;15;5;0;0;0;50;0;50;0;0;0;5
+Île-du-Prince-Édouard; male; 50 to 54 years;65;35;10;10;0;15;5;0;0;0;30;0;25;0;0;0;0
+Île-du-Prince-Édouard; female; 50 to 54 years;55;25;0;15;5;5;0;0;0;0;20;0;20;0;0;0;0
+Île-du-Prince-Édouard;Tous; 55 to 59 years;120;70;10;25;5;15;15;0;0;0;45;0;45;0;5;0;0
+Île-du-Prince-Édouard; male; 55 to 59 years;65;35;5;10;5;5;10;0;0;0;25;0;25;0;0;0;0
+Île-du-Prince-Édouard; female; 55 to 59 years;55;30;10;15;5;5;0;0;0;0;20;0;20;0;5;0;0
+Île-du-Prince-Édouard;Tous; 60 to 64 years;140;85;5;40;20;10;5;0;0;0;55;5;50;5;5;0;0
+Île-du-Prince-Édouard; male; 60 to 64 years;80;50;5;25;10;5;5;0;0;0;25;0;25;0;0;0;0
+Île-du-Prince-Édouard; female; 60 to 64 years;55;30;0;15;5;5;0;0;0;0;25;5;25;0;0;0;0
+Île-du-Prince-Édouard;Tous; 65 to 69 years;155;100;10;60;5;20;5;0;0;0;55;0;55;0;5;0;0
+Île-du-Prince-Édouard; male; 65 to 69 years;85;50;5;35;5;10;5;0;0;0;30;0;30;0;0;0;0
+Île-du-Prince-Édouard; female; 65 to 69 years;70;50;5;25;5;10;0;0;0;0;25;0;25;0;5;0;0
+Île-du-Prince-Édouard;Tous; 70 to 74 years;175;130;5;90;20;5;5;0;0;0;35;5;35;0;10;0;0
+Île-du-Prince-Édouard; male; 70 to 74 years;70;50;0;30;15;0;5;0;0;0;20;5;20;0;0;0;0
+Île-du-Prince-Édouard; female; 70 to 74 years;100;75;5;55;10;5;0;0;0;0;15;0;15;0;10;0;0
+Île-du-Prince-Édouard;Tous; 75 to 79 years;225;190;5;140;35;10;0;0;0;0;10;0;10;0;25;0;0
+Île-du-Prince-Édouard; male; 75 to 79 years;85;75;0;45;20;0;0;0;0;0;10;0;10;0;0;0;0
+Île-du-Prince-Édouard; female; 75 to 79 years;145;120;0;100;20;10;0;0;0;0;0;0;5;0;15;0;0
+Île-du-Prince-Édouard;Tous; 80 to 84 years;370;350;10;270;65;0;0;0;0;0;5;0;5;0;20;0;0
+Île-du-Prince-Édouard; male; 80 to 84 years;110;110;5;90;20;0;0;0;0;0;0;0;0;0;0;0;0
+Île-du-Prince-Édouard; female; 80 to 84 years;250;235;5;180;45;5;0;0;0;0;5;0;0;0;20;0;0
+Île-du-Prince-Édouard;Tous; 85 years and over;1010;980;5;730;230;10;0;0;0;0;5;0;5;0;25;0;0
+Île-du-Prince-Édouard; male; 85 years and over;215;210;5;155;55;5;0;0;0;0;5;0;0;0;0;0;0
+Île-du-Prince-Édouard; female; 85 years and over;795;765;5;575;175;10;0;0;0;0;5;0;5;0;25;0;0
+Ontario;Etablissement;;8530;4330;120;945;505;935;1825;85;340;175;2975;685;1715;580;215;0;415
+Ontario;Tous;0 to 100 years;192840;146685;2545;91495;32480;7085;13085;6495;7960;1095;21485;5065;6990;9430;2730;0;6400
+Ontario; male;0 to 100 years;82155;50390;1300;27440;9085;4370;8195;6265;4630;595;13435;3975;4370;5090;1020;0;5815
+Ontario; female;0 to 100 years;110690;96295;1240;64055;23390;2710;4890;230;3330;495;8050;1095;2620;4340;1705;0;580
+Ontario;Tous; under 15 years;2805;650;30;20;15;95;495;15;1020;305;725;40;295;390;10;0;65
+Ontario; male; under 15 years;1580;435;15;10;5;50;350;15;505;190;400;25;160;215;5;0;30
+Ontario; female; under 15 years;1220;220;15;10;5;40;150;0;520;110;325;15;135;175;5;0;40
+Ontario;Tous; 15 to 19 years;6450;910;5;15;10;150;735;295;660;685;3585;140;210;3235;35;0;280
+Ontario; male; 15 to 19 years;3675;610;0;10;5;100;490;270;300;370;1870;75;120;1675;25;0;225
+Ontario; female; 15 to 19 years;2775;300;0;10;5;45;240;30;360;315;1715;65;95;1560;5;0;55
+Ontario;Tous; 20 to 24 years;6720;1055;40;95;20;340;560;885;815;40;2575;460;375;1735;110;0;1245
+Ontario; male; 20 to 24 years;4690;735;30;65;15;240;380;850;410;10;1455;290;220;935;95;0;1135
+Ontario; female; 20 to 24 years;2035;320;10;30;10;100;175;30;405;30;1120;170;150;795;15;0;115
+Ontario;Tous; 25 to 29 years;5250;1275;70;110;25;425;645;1080;585;5;1330;330;325;675;120;0;855
+Ontario; male; 25 to 29 years;3865;860;55;70;15;275;435;1035;270;0;850;240;220;385;75;0;775
+Ontario; female; 25 to 29 years;1390;415;15;40;10;145;210;45;320;5;480;90;105;290;45;0;75
+Ontario;Tous; 30 to 34 years;4790;1440;85;90;40;500;725;915;635;0;850;260;295;290;125;0;820
+Ontario; male; 30 to 34 years;3555;920;65;50;10;310;480;890;335;0;565;210;195;165;80;0;760
+Ontario; female; 30 to 34 years;1235;525;20;40;25;190;240;25;305;0;280;55;95;125;45;0;60
+Ontario;Tous; 35 to 39 years;5160;1735;85;165;30;550;905;755;650;5;1000;365;385;250;105;0;915
+Ontario; male; 35 to 39 years;3845;1105;65;90;15;345;580;735;385;5;700;300;245;155;55;0;865
+Ontario; female; 35 to 39 years;1315;635;20;70;5;210;320;15;260;5;300;70;135;95;50;0;55
+Ontario;Tous; 40 to 44 years;6110;2335;100;285;50;690;1210;780;740;5;1275;560;520;190;130;0;845
+Ontario; male; 40 to 44 years;4550;1465;65;150;25;460;765;755;480;5;970;470;390;110;80;0;795
+Ontario; female; 40 to 44 years;1565;870;35;130;25;235;450;30;260;0;305;90;130;80;55;0;50
+Ontario;Tous; 45 to 49 years;7495;3470;130;565;105;930;1730;715;835;5;1665;665;715;285;130;0;665
+Ontario; male; 45 to 49 years;5310;2135;90;295;50;595;1110;700;580;0;1185;545;500;140;70;0;640
+Ontario; female; 45 to 49 years;2185;1330;45;275;55;335;625;15;255;5;485;125;215;145;60;0;25
+Ontario;Tous; 50 to 54 years;7735;4170;170;1085;185;945;1790;445;695;0;1955;790;825;340;135;0;325
+Ontario; male; 50 to 54 years;5245;2525;105;560;100;625;1135;430;480;0;1435;675;555;210;75;0;295
+Ontario; female; 50 to 54 years;2495;1650;65;525;80;320;655;20;215;0;520;120;270;130;60;0;30
+Ontario;Tous; 55 to 59 years;7430;4545;185;1650;340;825;1555;265;575;5;1715;600;760;350;135;0;185
+Ontario; male; 55 to 59 years;4685;2595;110;825;155;535;970;260;410;0;1200;505;520;175;60;0;160
+Ontario; female; 55 to 59 years;2745;1955;75;825;185;285;590;5;160;5;515;95;245;180;75;0;30
+Ontario;Tous; 60 to 64 years;7345;4920;180;2545;600;525;1070;165;325;5;1670;435;740;495;150;0;115
+Ontario; male; 60 to 64 years;4200;2600;100;1275;255;310;660;165;230;0;1045;350;465;240;65;0;85
+Ontario; female; 60 to 64 years;3145;2315;80;1275;340;215;410;5;90;0;620;90;275;255;85;0;30
+Ontario;Tous; 65 to 69 years;6835;5200;155;3200;915;330;600;95;180;10;1140;195;470;475;175;0;35
+Ontario; male; 65 to 69 years;3565;2555;90;1525;365;220;355;90;120;10;695;150;285;265;60;0;30
+Ontario; female; 65 to 69 years;3270;2640;65;1670;550;110;245;5;60;5;445;50;185;210;120;0;5
+Ontario;Tous; 70 to 74 years;8850;7660;160;5250;1710;190;350;45;95;5;800;100;330;370;210;0;35
+Ontario; male; 70 to 74 years;3795;3115;90;2155;560;105;205;45;75;0;480;80;190;210;70;0;10
+Ontario; female; 70 to 74 years;5055;4545;70;3095;1150;90;145;5;25;5;325;20;135;165;140;0;20
+Ontario;Tous; 75 to 79 years;14660;13815;235;9840;3370;125;245;20;70;5;485;50;245;190;275;0;5
+Ontario; male; 75 to 79 years;5390;4960;120;3590;1065;65;120;20;30;0;290;35;140;115;80;0;0
+Ontario; female; 75 to 79 years;9275;8855;115;6250;2305;60;125;0;30;0;195;15;100;75;195;0;0
+Ontario;Tous; 80 to 84 years;26215;25490;315;17895;6945;155;180;10;35;0;350;30;205;115;335;0;0
+Ontario; male; 80 to 84 years;8045;7790;125;5620;1910;55;85;5;15;0;165;20;75;70;65;0;5
+Ontario; female; 80 to 84 years;18170;17695;185;12280;5035;100;100;0;20;5;185;15;130;45;265;0;0
+Ontario;Tous; 85 years and over;68990;68010;600;48685;18130;310;285;5;45;15;365;25;300;40;545;0;0
+Ontario; male; 85 years and over;16175;15990;165;11155;4515;70;80;5;0;0;120;5;90;20;55;0;0
+Ontario; female; 85 years and over;52810;52025;435;37535;13610;235;210;0;45;10;245;20;210;20;485;0;0
+Nouvelle-Écosse;Etablissement;;1050;550;25;135;60;80;260;5;30;10;390;60;285;50;20;0;30
+Nouvelle-Écosse;Tous;0 to 100 years;15180;11700;315;7490;1595;600;1705;570;375;60;1920;445;665;810;275;0;280
+Nouvelle-Écosse; male;0 to 100 years;6160;4075;180;2135;435;320;995;485;245;30;1130;355;360;415;35;0;165
+Nouvelle-Écosse; female;0 to 100 years;9020;7625;135;5350;1155;280;705;80;135;30;785;90;305;390;245;0;120
+Nouvelle-Écosse;Tous; under 15 years;130;35;5;5;5;0;25;0;20;20;50;5;20;25;0;0;0
+Nouvelle-Écosse; male; under 15 years;80;30;5;5;0;0;20;0;15;10;30;0;15;15;0;0;0
+Nouvelle-Écosse; female; under 15 years;50;10;0;0;0;0;5;0;10;5;20;5;10;10;0;0;5
+Nouvelle-Écosse;Tous; 15 to 19 years;380;55;5;5;0;10;45;40;35;35;200;15;15;170;0;0;10
+Nouvelle-Écosse; male; 15 to 19 years;235;40;5;5;0;5;30;35;20;20;115;5;5;105;0;0;10
+Nouvelle-Écosse; female; 15 to 19 years;150;15;0;5;0;0;15;5;20;20;85;5;10;65;0;0;0
+Nouvelle-Écosse;Tous; 20 to 24 years;660;120;10;30;0;25;65;105;35;0;350;70;30;250;0;0;50
+Nouvelle-Écosse; male; 20 to 24 years;445;85;5;20;0;15;40;85;20;0;215;55;15;135;0;0;40
+Nouvelle-Écosse; female; 20 to 24 years;210;40;0;5;5;5;25;20;15;0;135;15;10;110;0;0;5
+Nouvelle-Écosse;Tous; 25 to 29 years;490;150;15;15;0;30;90;90;35;0;150;35;25;90;5;0;50
+Nouvelle-Écosse; male; 25 to 29 years;335;95;5;5;5;15;60;85;20;0;90;20;15;55;5;0;40
+Nouvelle-Écosse; female; 25 to 29 years;155;60;10;10;5;15;30;10;10;0;60;10;10;30;5;0;15
+Nouvelle-Écosse;Tous; 30 to 34 years;395;145;15;10;0;35;85;85;25;0;90;40;20;30;0;0;55
+Nouvelle-Écosse; male; 30 to 34 years;255;80;10;5;5;15;45;65;15;0;70;30;15;25;0;0;20
+Nouvelle-Écosse; female; 30 to 34 years;145;60;5;5;0;15;40;20;10;0;20;10;5;5;0;0;35
+Nouvelle-Écosse;Tous; 35 to 39 years;435;220;20;25;5;35;140;65;30;0;70;35;20;15;5;0;40
+Nouvelle-Écosse; male; 35 to 39 years;265;120;10;10;5;20;85;50;25;0;45;25;10;10;5;0;15
+Nouvelle-Écosse; female; 35 to 39 years;170;95;10;20;0;15;60;15;10;0;25;5;10;10;0;0;20
+Nouvelle-Écosse;Tous; 40 to 44 years;490;250;15;30;5;45;155;60;45;0;90;35;35;10;5;0;35
+Nouvelle-Écosse; male; 40 to 44 years;305;150;5;15;5;25;105;55;35;0;60;30;20;5;5;0;15
+Nouvelle-Écosse; female; 40 to 44 years;180;105;5;20;5;25;55;5;15;0;30;10;15;10;0;0;20
+Nouvelle-Écosse;Tous; 45 to 49 years;605;355;15;60;10;65;210;55;50;0;120;55;55;5;5;0;25
+Nouvelle-Écosse; male; 45 to 49 years;365;190;10;20;5;35;120;50;35;0;85;50;30;5;5;0;10
+Nouvelle-Écosse; female; 45 to 49 years;240;170;5;35;0;30;95;5;15;0;35;5;25;0;5;0;10
+Nouvelle-Écosse;Tous; 50 to 54 years;650;430;20;85;10;70;250;30;40;0;150;55;80;10;0;0;5
+Nouvelle-Écosse; male; 50 to 54 years;400;245;15;40;0;45;150;20;25;0;100;45;50;5;5;0;5
+Nouvelle-Écosse; female; 50 to 54 years;250;185;0;45;5;25;95;5;15;0;45;5;35;5;0;0;0
+Nouvelle-Écosse;Tous; 55 to 59 years;675;465;20;130;20;75;210;20;30;0;160;50;100;15;0;0;5
+Nouvelle-Écosse; male; 55 to 59 years;385;250;15;60;10;50;120;20;20;0;90;35;50;5;5;0;5
+Nouvelle-Écosse; female; 55 to 59 years;290;210;5;75;10;30;95;0;5;0;70;10;50;5;0;0;0
+Nouvelle-Écosse;Tous; 60 to 64 years;720;505;20;195;45;65;180;15;10;0;175;30;120;25;5;0;5
+Nouvelle-Écosse; male; 60 to 64 years;395;270;15;95;20;35;105;10;10;0;95;20;65;10;0;0;5
+Nouvelle-Écosse; female; 60 to 64 years;320;235;10;105;20;25;75;0;0;0;80;10;55;15;5;0;0
+Nouvelle-Écosse;Tous; 65 to 69 years;635;525;25;275;50;55;125;10;5;0;90;10;70;10;0;0;0
+Nouvelle-Écosse; male; 65 to 69 years;300;235;15;120;20;30;60;10;5;0;50;10;35;0;0;0;0
+Nouvelle-Écosse; female; 65 to 69 years;335;290;10;150;35;25;70;0;0;0;45;5;35;10;0;0;0
+Nouvelle-Écosse;Tous; 70 to 74 years;730;650;20;470;60;35;65;0;5;0;55;10;35;10;20;0;0
+Nouvelle-Écosse; male; 70 to 74 years;330;290;10;195;30;25;40;5;5;0;35;10;15;5;5;0;0
+Nouvelle-Écosse; female; 70 to 74 years;405;360;10;280;30;15;30;0;5;0;25;0;15;5;20;0;0
+Nouvelle-Écosse;Tous; 75 to 79 years;1165;1065;20;830;170;15;30;0;5;0;40;5;20;20;55;0;0
+Nouvelle-Écosse; male; 75 to 79 years;420;395;15;305;60;5;15;0;5;0;20;5;10;10;0;0;0
+Nouvelle-Écosse; female; 75 to 79 years;745;670;10;520;115;10;15;0;0;0;20;0;5;10;55;0;0
+Nouvelle-Écosse;Tous; 80 to 84 years;1895;1800;15;1435;330;10;10;0;0;0;35;0;5;25;60;0;0
+Nouvelle-Écosse; male; 80 to 84 years;525;510;5;405;90;0;0;0;0;0;15;5;5;5;5;0;0
+Nouvelle-Écosse; female; 80 to 84 years;1370;1295;10;1030;240;5;10;0;0;0;20;0;0;15;55;0;0
+Nouvelle-Écosse;Tous; 85 years and over;5110;4910;85;3890;890;35;15;0;0;0;100;0;5;95;100;0;0
+Nouvelle-Écosse; male; 85 years and over;1110;1095;40;845;200;5;10;0;0;0;20;5;0;15;0;0;0
+Nouvelle-Écosse; female; 85 years and over;4000;3820;45;3050;690;30;15;0;0;0;75;5;0;75;100;0;0
+ Terre-Neuve-et-Labrador;Etablissement;;455;190;15;80;55;5;40;5;15;35;165;40;120;5;25;0;15
+ Terre-Neuve-et-Labrador;Tous;0 to 100 years;7220;6020;255;3690;1685;105;275;65;120;75;715;210;330;180;180;0;50
+ Terre-Neuve-et-Labrador; male;0 to 100 years;2815;2125;110;1205;565;70;180;60;85;40;445;180;185;80;20;0;35
+ Terre-Neuve-et-Labrador; female;0 to 100 years;4405;3895;155;2490;1120;40;90;5;30;30;270;25;145;95;155;0;15
+ Terre-Neuve-et-Labrador;Tous; under 15 years;80;0;5;0;0;0;0;0;10;45;20;0;10;10;0;0;5
+ Terre-Neuve-et-Labrador; male; under 15 years;45;5;0;0;0;0;0;0;5;35;10;0;0;5;0;0;0
+ Terre-Neuve-et-Labrador; female; under 15 years;30;0;0;0;0;0;0;0;5;15;15;0;10;5;0;0;0
+ Terre-Neuve-et-Labrador;Tous; 15 to 19 years;100;5;0;0;0;0;0;15;15;20;40;0;15;25;0;0;0
+ Terre-Neuve-et-Labrador; male; 15 to 19 years;50;5;0;0;5;0;0;10;10;10;15;0;10;5;0;0;0
+ Terre-Neuve-et-Labrador; female; 15 to 19 years;45;0;0;0;0;0;0;0;5;15;25;0;0;20;0;0;5
+ Terre-Neuve-et-Labrador;Tous; 20 to 24 years;165;10;0;5;5;5;5;5;20;0;125;20;35;75;0;0;0
+ Terre-Neuve-et-Labrador; male; 20 to 24 years;105;10;0;0;0;5;0;10;15;0;75;15;30;30;0;0;0
+ Terre-Neuve-et-Labrador; female; 20 to 24 years;60;0;0;0;0;0;0;0;10;0;55;0;5;45;0;0;0
+ Terre-Neuve-et-Labrador;Tous; 25 to 29 years;115;15;5;5;5;5;5;10;10;0;70;10;25;35;0;0;5
+ Terre-Neuve-et-Labrador; male; 25 to 29 years;80;10;5;0;5;0;5;15;5;0;40;10;15;20;0;0;5
+ Terre-Neuve-et-Labrador; female; 25 to 29 years;35;5;0;5;0;0;0;0;5;5;25;0;10;10;0;0;0
+ Terre-Neuve-et-Labrador;Tous; 30 to 34 years;95;15;5;5;0;0;5;10;15;0;40;20;10;10;0;0;5
+ Terre-Neuve-et-Labrador; male; 30 to 34 years;65;10;5;5;0;0;5;15;15;0;25;15;0;5;0;0;5
+ Terre-Neuve-et-Labrador; female; 30 to 34 years;30;5;0;0;5;0;0;0;5;0;20;10;10;10;0;0;0
+ Terre-Neuve-et-Labrador;Tous; 35 to 39 years;95;30;5;5;5;5;20;5;5;0;40;20;15;5;0;0;5
+ Terre-Neuve-et-Labrador; male; 35 to 39 years;70;20;5;5;5;5;10;5;5;0;35;15;5;5;0;0;0
+ Terre-Neuve-et-Labrador; female; 35 to 39 years;25;15;0;5;0;0;10;0;5;0;10;5;5;5;0;0;0
+ Terre-Neuve-et-Labrador;Tous; 40 to 44 years;115;40;5;15;5;5;15;0;20;0;50;20;25;5;0;0;5
+ Terre-Neuve-et-Labrador; male; 40 to 44 years;85;30;0;5;5;5;15;0;10;0;30;20;15;5;0;0;5
+ Terre-Neuve-et-Labrador; female; 40 to 44 years;30;10;0;5;0;0;5;0;5;0;15;0;10;0;0;0;0
+ Terre-Neuve-et-Labrador;Tous; 45 to 49 years;170;90;10;25;15;5;35;0;10;0;60;35;25;0;0;0;10
+ Terre-Neuve-et-Labrador; male; 45 to 49 years;115;60;5;10;5;5;30;0;10;0;45;30;10;0;0;0;10
+ Terre-Neuve-et-Labrador; female; 45 to 49 years;55;35;0;10;5;0;10;0;5;0;15;0;15;0;5;0;5
+ Terre-Neuve-et-Labrador;Tous; 50 to 54 years;215;135;5;55;25;20;40;10;5;0;50;20;30;5;0;0;10
+ Terre-Neuve-et-Labrador; male; 50 to 54 years;140;90;5;30;15;10;30;0;0;0;35;15;15;0;0;0;5
+ Terre-Neuve-et-Labrador; female; 50 to 54 years;80;50;5;25;5;10;10;5;0;0;20;5;10;0;0;0;5
+ Terre-Neuve-et-Labrador;Tous; 55 to 59 years;290;195;20;80;45;10;45;0;5;0;80;35;45;0;0;0;5
+ Terre-Neuve-et-Labrador; male; 55 to 59 years;185;115;15;50;20;5;25;0;5;0;60;30;25;0;0;0;5
+ Terre-Neuve-et-Labrador; female; 55 to 59 years;110;80;5;30;20;5;15;0;0;0;25;0;20;0;0;0;0
+ Terre-Neuve-et-Labrador;Tous; 60 to 64 years;305;230;10;105;60;15;40;0;5;0;50;20;30;5;15;0;0
+ Terre-Neuve-et-Labrador; male; 60 to 64 years;175;135;10;60;30;10;25;0;0;0;40;15;20;5;5;0;0
+ Terre-Neuve-et-Labrador; female; 60 to 64 years;120;100;0;40;35;5;15;0;5;0;15;0;15;0;10;0;0
+ Terre-Neuve-et-Labrador;Tous; 65 to 69 years;365;305;15;180;70;10;30;0;0;0;40;0;35;0;20;0;0
+ Terre-Neuve-et-Labrador; male; 65 to 69 years;180;155;10;85;35;5;20;0;0;0;20;5;20;0;5;0;0
+ Terre-Neuve-et-Labrador; female; 65 to 69 years;190;150;5;90;35;5;15;0;0;0;25;0;25;0;15;0;0
+ Terre-Neuve-et-Labrador;Tous; 70 to 74 years;515;470;25;300;120;5;20;0;0;0;20;5;15;0;25;0;0
+ Terre-Neuve-et-Labrador; male; 70 to 74 years;215;200;5;130;50;0;15;0;0;0;15;0;10;0;5;0;0
+ Terre-Neuve-et-Labrador; female; 70 to 74 years;300;270;20;170;65;5;5;0;0;0;10;0;10;0;20;0;0
+ Terre-Neuve-et-Labrador;Tous; 75 to 79 years;815;770;35;495;215;5;15;0;0;0;10;5;10;0;30;0;0
+ Terre-Neuve-et-Labrador; male; 75 to 79 years;270;270;15;165;70;5;10;0;0;0;5;5;0;0;5;0;0
+ Terre-Neuve-et-Labrador; female; 75 to 79 years;540;500;20;335;140;0;5;0;0;0;5;0;10;0;30;0;5
+ Terre-Neuve-et-Labrador;Tous; 80 to 84 years;1195;1165;40;740;375;5;5;0;0;0;5;0;0;0;30;0;0
+ Terre-Neuve-et-Labrador; male; 80 to 84 years;380;375;15;230;120;0;0;0;0;0;0;0;5;0;0;0;0
+ Terre-Neuve-et-Labrador; female; 80 to 84 years;820;790;30;510;250;0;0;0;0;0;0;0;0;0;25;0;0
+ Terre-Neuve-et-Labrador;Tous; 85 years and over;2580;2525;85;1685;750;5;5;0;0;0;0;0;5;0;55;0;0
+ Terre-Neuve-et-Labrador; male; 85 years and over;645;640;25;420;195;0;0;0;0;0;0;0;0;0;5;0;0
+ Terre-Neuve-et-Labrador; female; 85 years and over;1935;1885;60;1265;555;0;5;0;0;0;0;0;0;0;45;0;0
+Nouveau-Brunswick;Etablissement;;965;575;15;205;90;85;185;10;20;15;305;105;160;35;30;0;20
+Nouveau-Brunswick;Tous;0 to 100 years;15335;12105;390;7065;2075;920;1655;1050;135;55;1435;685;565;185;285;0;265
+Nouveau-Brunswick; male;0 to 100 years;6865;4495;215;2205;625;475;970;1040;75;35;940;530;310;105;35;0;245
+Nouveau-Brunswick; female;0 to 100 years;8470;7610;170;4860;1455;445;685;15;60;25;495;160;255;80;250;0;20
+Nouveau-Brunswick;Tous; under 15 years;140;45;0;10;5;10;15;5;10;25;55;5;30;15;0;0;0
+Nouveau-Brunswick; male; under 15 years;65;25;0;5;5;5;10;0;0;15;25;5;15;5;0;0;0
+Nouveau-Brunswick; female; under 15 years;75;20;5;5;5;5;10;5;5;10;30;5;15;10;0;0;0
+Nouveau-Brunswick;Tous; 15 to 19 years;255;70;5;5;5;10;45;20;25;30;80;25;10;40;5;0;35
+Nouveau-Brunswick; male; 15 to 19 years;170;45;5;0;5;10;35;20;5;20;45;15;5;25;5;0;35
+Nouveau-Brunswick; female; 15 to 19 years;85;25;0;0;5;0;10;5;20;10;30;5;5;20;0;0;0
+Nouveau-Brunswick;Tous; 20 to 24 years;515;110;10;10;5;25;55;160;15;5;100;50;30;20;0;0;130
+Nouveau-Brunswick; male; 20 to 24 years;435;80;5;5;0;20;45;165;5;0;60;30;15;15;0;0;120
+Nouveau-Brunswick; female; 20 to 24 years;75;25;0;5;0;5;10;0;5;0;40;20;10;10;0;0;10
+Nouveau-Brunswick;Tous; 25 to 29 years;450;145;5;20;0;25;85;140;20;0;110;35;65;5;0;0;40
+Nouveau-Brunswick; male; 25 to 29 years;365;110;5;15;0;20;70;135;15;0;65;30;25;5;0;0;40
+Nouveau-Brunswick; female; 25 to 29 years;90;35;0;5;5;5;20;5;10;0;45;5;35;5;0;0;5
+Nouveau-Brunswick;Tous; 30 to 34 years;450;175;20;35;10;35;85;160;15;0;90;35;50;5;0;0;20
+Nouveau-Brunswick; male; 30 to 34 years;345;120;15;20;5;20;55;160;10;0;45;25;20;0;0;0;15
+Nouveau-Brunswick; female; 30 to 34 years;105;60;0;10;5;15;30;0;0;0;40;10;30;5;0;0;0
+Nouveau-Brunswick;Tous; 35 to 39 years;450;195;10;35;10;35;100;135;20;0;100;60;35;5;0;0;5
+Nouveau-Brunswick; male; 35 to 39 years;335;115;0;20;5;20;70;135;10;0;70;45;20;0;0;0;5
+Nouveau-Brunswick; female; 35 to 39 years;115;80;5;20;10;15;35;0;5;0;30;15;15;0;0;0;0
+Nouveau-Brunswick;Tous; 40 to 44 years;500;280;15;70;20;45;130;115;5;0;95;60;25;10;0;0;10
+Nouveau-Brunswick; male; 40 to 44 years;360;165;5;30;15;30;75;110;5;0;70;50;15;0;0;0;5
+Nouveau-Brunswick; female; 40 to 44 years;145;110;10;40;5;10;45;0;0;0;30;15;10;0;0;0;0
+Nouveau-Brunswick;Tous; 45 to 49 years;700;425;20;115;30;65;195;105;10;5;145;85;50;5;5;0;10
+Nouveau-Brunswick; male; 45 to 49 years;485;255;15;60;15;40;120;110;10;5;110;65;40;0;0;0;5
+Nouveau-Brunswick; female; 45 to 49 years;215;170;5;55;10;25;70;0;5;0;35;20;15;0;0;0;0
+Nouveau-Brunswick;Tous; 50 to 54 years;765;520;20;165;50;80;200;80;15;0;140;70;50;15;5;0;0
+Nouveau-Brunswick; male; 50 to 54 years;475;285;15;85;20;60;115;85;5;0;95;55;35;10;0;0;0
+Nouveau-Brunswick; female; 50 to 54 years;290;235;5;80;30;30;90;0;5;0;45;20;20;5;5;0;0
+Nouveau-Brunswick;Tous; 55 to 59 years;815;585;25;195;45;90;225;55;5;0;155;75;55;25;0;0;5
+Nouveau-Brunswick; male; 55 to 59 years;495;325;20;100;20;55;135;60;5;0;105;60;25;10;0;0;5
+Nouveau-Brunswick; female; 55 to 59 years;315;260;10;95;20;40;90;0;5;0;50;10;25;15;0;0;0
+Nouveau-Brunswick;Tous; 60 to 64 years;915;695;30;290;100;90;190;35;5;0;155;80;65;10;10;0;10
+Nouveau-Brunswick; male; 60 to 64 years;495;335;15;125;40;55;105;35;5;0;110;65;40;5;0;0;5
+Nouveau-Brunswick; female; 60 to 64 years;415;360;10;165;60;40;90;0;0;0;45;15;25;5;10;0;5
+Nouveau-Brunswick;Tous; 65 to 69 years;740;585;25;270;125;65;100;15;0;0;110;50;40;20;20;0;5
+Nouveau-Brunswick; male; 65 to 69 years;385;285;15;125;55;40;50;15;0;0;75;40;25;10;5;0;5
+Nouveau-Brunswick; female; 65 to 69 years;355;300;10;150;70;25;50;0;0;0;35;10;20;5;15;0;0
+Nouveau-Brunswick;Tous; 70 to 74 years;850;730;30;430;140;65;70;5;0;0;65;30;30;10;50;0;5
+Nouveau-Brunswick; male; 70 to 74 years;375;315;25;175;45;30;40;10;0;0;45;20;20;5;5;0;0
+Nouveau-Brunswick; female; 70 to 74 years;475;415;5;265;90;35;30;0;0;0;20;5;10;0;40;0;0
+Nouveau-Brunswick;Tous; 75 to 79 years;1240;1150;35;760;240;65;45;5;0;0;25;10;5;5;55;0;0
+Nouveau-Brunswick; male; 75 to 79 years;470;435;15;285;90;25;20;5;0;0;20;10;10;0;10;0;0
+Nouveau-Brunswick; female; 75 to 79 years;770;715;20;475;155;40;25;0;0;0;5;0;0;5;50;0;0
+Nouveau-Brunswick;Tous; 80 to 84 years;1895;1820;50;1250;410;65;40;5;0;0;10;5;5;5;55;0;0
+Nouveau-Brunswick; male; 80 to 84 years;555;550;20;375;110;20;15;0;0;0;5;0;0;0;0;0;5
+Nouveau-Brunswick; female; 80 to 84 years;1335;1270;35;875;300;45;25;0;0;0;5;0;0;0;55;0;0
+Nouveau-Brunswick;Tous; 85 years and over;4660;4565;85;3400;875;140;70;0;0;0;10;5;5;0;85;0;0
+Nouveau-Brunswick; male; 85 years and over;1050;1045;35;775;190;30;20;0;0;0;5;0;0;5;5;0;0
+Nouveau-Brunswick; female; 85 years and over;3610;3525;55;2620;685;110;55;0;0;0;5;0;5;0;80;0;0
+Québec;Etablissement;;7370;4170;75;1045;1475;430;1145;60;205;110;1995;650;1075;270;665;0;165
+Québec;Tous;0 to 100 years;169060;138760;2535;62185;59175;4575;10295;4275;2265;920;10910;4370;3220;3325;10075;0;1855
+Québec; male;0 to 100 years;63050;45570;1175;18820;16995;2645;5930;4085;1410;530;7250;3325;1995;1930;2550;0;1655
+Québec; female;0 to 100 years;106010;93190;1360;43360;42180;1930;4360;190;855;390;3665;1045;1230;1390;7525;0;195
+Québec;Tous; under 15 years;1450;445;60;5;55;50;265;95;160;415;300;30;145;120;25;0;10
+Québec; male; under 15 years;805;245;30;5;35;25;150;60;65;265;160;20;80;55;10;0;5
+Québec; female; under 15 years;645;205;30;0;20;25;120;35;100;150;140;10;65;65;15;0;0
+Québec;Tous; 15 to 19 years;1880;410;20;15;55;65;260;275;180;460;460;90;95;280;15;0;75
+Québec; male; 15 to 19 years;1115;225;20;5;30;40;135;220;110;240;245;50;50;145;5;0;70
+Québec; female; 15 to 19 years;765;185;5;15;20;20;125;60;75;220;215;40;40;135;10;0;10
+Québec;Tous; 20 to 24 years;2475;620;25;65;40;200;295;360;245;5;905;250;110;545;85;0;255
+Québec; male; 20 to 24 years;1710;430;20;45;15;145;205;355;145;5;505;150;50;300;45;0;225
+Québec; female; 20 to 24 years;760;190;5;20;20;55;85;5;100;5;400;100;55;240;45;0;25
+Québec;Tous; 25 to 29 years;2735;835;60;75;30;260;415;495;220;0;785;305;110;370;115;0;275
+Québec; male; 25 to 29 years;2060;590;40;55;20;180;295;490;150;0;515;205;75;235;55;0;265
+Québec; female; 25 to 29 years;675;250;20;15;15;75;120;5;75;5;270;95;40;140;55;0;10
+Québec;Tous; 30 to 34 years;2855;975;50;125;40;260;495;530;210;0;685;365;110;215;105;0;345
+Québec; male; 30 to 34 years;2175;665;35;80;25;195;335;525;125;0;470;265;65;140;60;0;335
+Québec; female; 30 to 34 years;685;305;15;45;15;65;160;10;90;0;220;95;45;75;45;0;15
+Québec;Tous; 35 to 39 years;2785;995;50;120;55;280;490;520;200;5;620;315;155;150;115;0;340
+Québec; male; 35 to 39 years;2090;635;35;65;25;200;310;505;115;0;440;230;95;115;60;0;330
+Québec; female; 35 to 39 years;700;360;15;50;35;80;185;15;85;0;180;85;60;40;55;0;15
+Québec;Tous; 40 to 44 years;3390;1485;55;235;125;325;740;585;215;5;735;435;190;110;155;0;205
+Québec; male; 40 to 44 years;2440;920;35;135;60;235;455;570;140;5;535;335;125;75;85;0;190
+Québec; female; 40 to 44 years;950;565;20;100;70;90;285;15;75;5;200;100;65;35;75;0;20
+Québec;Tous; 45 to 49 years;4620;2595;90;485;315;480;1230;495;270;0;965;510;315;135;200;0;100
+Québec; male; 45 to 49 years;3160;1600;65;265;180;320;775;485;170;0;715;425;215;75;100;0;90
+Québec; female; 45 to 49 years;1465;995;25;220;135;165;450;10;95;0;250;90;100;65;100;0;10
+Québec;Tous; 50 to 54 years;5495;3375;120;810;515;485;1445;380;235;5;1235;615;390;230;200;0;70
+Québec; male; 50 to 54 years;3490;1955;75;430;245;315;885;365;150;0;865;480;245;140;90;0;60
+Québec; female; 50 to 54 years;2010;1425;40;380;270;170;560;10;80;5;375;135;150;90;100;0;15
+Québec;Tous; 55 to 59 years;5845;3920;120;1215;785;470;1330;235;135;5;1325;580;485;255;200;0;25
+Québec; male; 55 to 59 years;3475;2075;65;625;335;275;770;225;95;5;960;475;340;145;100;0;10
+Québec; female; 55 to 59 years;2365;1845;55;590;450;195;555;5;40;0;365;105;145;115;95;0;10
+Québec;Tous; 60 to 64 years;6670;4840;130;1820;1265;375;1245;135;110;5;1150;395;425;330;375;0;45
+Québec; male; 60 to 64 years;3665;2475;75;965;530;215;685;135;85;5;795;340;275;180;140;0;30
+Québec; female; 60 to 64 years;3005;2360;60;855;735;160;555;0;25;0;365;60;155;150;235;0;20
+Québec;Tous; 65 to 69 years;7940;6180;160;2675;2265;280;800;85;55;5;785;215;285;285;780;0;45
+Québec; male; 65 to 69 years;3700;2795;70;1255;885;150;420;80;40;5;515;175;170;170;250;0;20
+Québec; female; 65 to 69 years;4240;3390;85;1415;1375;130;380;5;15;0;270;40;115;115;530;0;20
+Québec;Tous; 70 to 74 years;11195;9445;200;4155;4410;185;490;55;15;5;445;125;150;170;1200;0;30
+Québec; male; 70 to 74 years;4330;3675;105;1660;1565;80;260;50;10;0;285;90;90;95;295;0;20
+Québec; female; 70 to 74 years;6860;5770;95;2495;2850;100;230;5;5;0;160;35;55;70;905;0;10
+Québec;Tous; 75 to 79 years;19565;17480;265;7715;8965;195;340;20;10;0;255;65;120;80;1790;0;15
+Québec; male; 75 to 79 years;6485;5865;130;2755;2775;85;125;20;10;0;145;40;60;50;440;0;10
+Québec; female; 75 to 79 years;13080;11615;135;4965;6190;110;215;0;0;0;115;30;55;30;1345;0;10
+Québec;Tous; 80 to 84 years;31435;29295;375;13280;15190;235;205;10;5;0;130;45;55;30;1995;0;5
+Québec; male; 80 to 84 years;9035;8550;145;3950;4305;85;65;5;0;0;60;25;20;15;410;0;5
+Québec; female; 80 to 84 years;22400;20745;235;9330;10885;150;145;0;5;0;65;20;35;20;1585;0;0
+Québec;Tous; 85 years and over;58725;55860;750;29380;25050;430;245;5;0;0;125;30;85;10;2735;0;10
+Québec; male; 85 years and over;13325;12865;225;6520;5965;90;60;0;0;0;55;15;35;0;405;0;0
+Québec; female; 85 years and over;45405;43000;525;22865;19085;345;180;0;0;0;70;10;50;5;2325;0;5

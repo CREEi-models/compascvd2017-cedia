@@ -1,0 +1,198 @@
+* 00000006
+*! version 1.0.0
+* Do not erase or edit this file
+* It is used by Stata to track the ado and help
+* files you have installed.
+
+S http://fmwww.bc.edu/RePEc/bocode/c
+N cmp.pkg
+D 17 Feb 2014
+U 1
+d 'CMP': module to implement conditional (recursive) mixed process estimator
+d 
+d  cmp estimates multi-equation, mixed process models, potentially
+d with hierarchical random effects. "Mixed process" means that
+d different equations can have different kinds of dependent
+d variables. The choices are: continuous (like OLS), tobit (left-,
+d right-, or bi-censored), probit, and ordered probit.
+d "Conditional" means that the model can vary by observation. An
+d equation can be dropped for observations for which it is not
+d relevant--if, say, a worker retraining program is not offered in
+d a city then the determinants of uptake cannot be modeled there.
+d Or the type of dependent variable can vary by observation. A
+d dependent variable in one equation can appear on the right side
+d of another equation. Such dependencies must have a recursive
+d structure if the dependencies are on censored variables as
+d observed, meaning that they split the equations into stages. If
+d the dependencies are on (latent) linear dependent variables, they
+d can be recursive or simultaneous in structure. So cmp can fit
+d many SUR, simultaneous equation, and IV models. cmp's modeling
+d framework therefore embraces those of the official Stata commands
+d  probit, ivprobit, treatreg, biprobit, tetrachoric, oprobit,
+d mprobit, asmprobit, asroprobit, tobit, ivtobit, cnreg, intreg,
+d truncreg, heckman, heckprob, xtreg, xtprobit, xttobit, xtintreg,
+d in principle even regress, sureg, and reg3. It goes beyond them
+d in offering far more flexibility in model construction. The
+d routine runs under Stata 10 or later, faster under Stata 11.2 or
+d later.
+d 
+d KW: conditional models
+d KW: mixed process modules
+d KW: probit
+d KW: tobit
+d KW: ivtobit
+d KW: biprobit
+d KW: multinomial probit
+d KW: ordered probit
+d KW: truncated regression
+d 
+d Requires: Stata version 10.1 and package ghk2 (q.v.); version 11 to use factor variables
+d 
+d Distribution-Date: 20140205
+d 
+d Author: David Roodman
+d Support: email david@@davidroodman.com
+d 
+f c/cmp.ado
+f c/cmp_p.ado
+f c/cmp.sthlp
+f c/cmp.mata
+f l/lcmp.mlib
+f c/cmp_lf.ado
+f c/cmp_lf1.ado
+f c/cmp_d1.ado
+f c/cmp_clear.ado
+e
+S http://fmwww.bc.edu/repec/bocode/g
+N ghk2.pkg
+D 17 Feb 2014
+U 2
+d 'GHK2': module (enhanced Mata function) to implement the Geweke-Hajivassiliou-Keane multivariate normal simulator
+d 
+d   ghk2() estimates cumulative multivariate normal probabilities
+d and optionally  computes scores. It is modeled on Stata 10's
+d ghkfast(), using pre-generated draws for speed.  It differs in
+d the following significant respects: (1) It accepts lower as well
+d as upper bounds  of integration. (2) It works in Stata 9. (3) It
+d is an order of magnitude faster than ghkfast()  when the number
+d of observations is high relative to the number of simulation
+d draws per  observation, though it can be slower at the opposite
+d extreme. (4) It does not "pivot" bounds of integration, putting
+d the larger entries toward the end, which somewhat increases  the
+d variability of the simulated probability but eliminates
+d discontinuities in the function  that can otherwise stymie a
+d likelihood search by -ml- when draws are few.
+d 
+d KW: multivariate normal
+d KW: Geweke-Hajivassiliou-Keane
+d KW: Mata
+d 
+d Requires: Stata version 9.2
+d 
+d Distribution-Date: 20121105
+d 
+d Author: David Roodman, Center for Global Development
+d Support: email DRoodman@@CGDEV.ORG
+d 
+f g/ghk2version.ado
+f g/ghk2.mata
+f g/ghk2.hlp
+f l/lghk2.mlib
+e
+S http://fmwww.bc.edu/repec/bocode/o
+N outtable.pkg
+D 18 Apr 2014
+U 3
+d 'OUTTABLE': module to write matrix to LaTeX table
+d 
+d outtable automates the conversion of a Stata matrix to a LaTeX
+d table, written to an external file. The table is presented with
+d row and column names taken from the specified matrix.  Thus, one
+d need only generate the appropriate matrix  using standard Stata
+d commands. By default, only the lower triangle of a symmetric
+d matrix will be written. The using clause is required, and must
+d specify the name of a file to which the LaTeX  table is to be
+d written, without the .tex extension. If the file exists, either
+d the  replace option or the append option must be specified.
+d outtable7 may be used in Stata version 7.
+d 
+d KW: data handling
+d KW: LaTeX
+d KW: matrices
+d 
+d Requires: Stata version 8.0 (7.0 for outtable7)
+d 
+d 
+d Author: Christopher F Baum, Boston College
+d Support: email baum@@bc.edu
+d 
+d Author: Joao Pedro Azevedo, Instituto de Pesquisa Economica Aplicada, Rio de Janeiro
+d Support: email jazevedo@@ipea.gov.br
+d 
+d Distribution-Date: 20080420
+d 
+f o/outtable.ado
+f o/outtable.hlp
+f o/outtable7.ado
+f o/outtable7.hlp
+e
+S http://www.stata-journal.com/software/sj14-2
+N st0085_2.pkg
+D 23 Sep 2014
+U 4
+d SJ14-2 st0085_2. Update: Making regression...
+d Update: Making regression tables from stored
+d   estimates
+d by Ben Jann, University of Bern
+d Support:  jann@@soz.unibe.ch
+d After installation, type help ^estout^,
+d   ^esttab^, ^eststo^, ^estadd^, and ^estpost^
+f _/_eststo.ado
+f _/_eststo.hlp
+f e/esttab.ado
+f e/esttab.hlp
+f e/estadd.ado
+f e/estadd.hlp
+f e/eststo.ado
+f e/eststo.hlp
+f e/estout.ado
+f e/estout.hlp
+f e/estpost.ado
+f e/estpost.hlp
+e
+S http://fmwww.bc.edu/RePEc/bocode/s
+N sutex.pkg
+D 23 Sep 2014
+U 5
+d 'SUTEX': module to LaTeX code for summary statistics tables
+d 
+d This routine generates LaTeX code for summary statistics that
+d will produce a formatted table. Many options are available for
+d the handling of precision, variable labels, significance levels,
+d etc. The sutex routine now requires Stata 7; Stata 6 users may
+d use sutex6.
+d 
+d Author: Antoine Terracol, Universite de Paris-I
+d Support: email Antoine.Terracol@@univ-paris1.fr
+d 
+d Distribution-Date: 20020225
+f s/sutex.ado
+f s/sutex.hlp
+f s/sutex6.ado
+f s/sutex6.hlp
+e
+S http://www.stata.com/users/vwiggins
+N grc1leg.pkg
+D  3 Dec 2014
+U 6
+d grc1leg.  Combine graphs into one graph with a common legend.
+d Program by Vince Wiggins, StataCorp <vwiggins@@stata.com>.
+d Statalist distribution, 16 June 2003.
+d 
+d Exactly like -graph combine- but shows a single common legend for all
+d combined graphs.
+d 
+d Distribution-Date: 02jun2010
+f g/grc1leg.ado
+f g/grc1leg.hlp
+e

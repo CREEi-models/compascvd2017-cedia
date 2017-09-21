@@ -1,0 +1,17 @@
+16
+hc_nights 8 1 1
+hc_specialist 8 1 1
+hc_generalist 8 1 1
+hc_drugs 3 1 1
+hc_homecare 5 3 1
+hc_homecare_sp 3 1 1
+hours_homecare_f 7 1 1
+hours_homecare_i 8 1 1
+hours_homecare_sp 8 1 1
+hc_hui 7 1 1
+cost_nights 7 1 2
+cost_generalist 7 1 2
+cost_specialist 7 1 2
+cost_homecare_f 7 1 1
+cost_drugs 7 1 1
+cost_nhome 7 1 1

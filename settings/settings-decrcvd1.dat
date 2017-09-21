@@ -1,0 +1,23 @@
+startyear 2010
+stopyear 2052
+stopyear_enter 2050
+gapyear 2
+endstats 2052
+startage 30
+stopage 110
+doreps T
+nreps 100
+immigration T
+newcohort T
+imortality T
+ihcarecost T
+ieducation T
+ismoke F
+ibmi T
+iquebec T
+updhcare T
+exportstata F 1946 1966
+educ_intervention F
+n_coef 100
+decrcvd T,0.66
+decrmortality T
