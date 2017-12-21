@@ -1,73 +1,146 @@
-*Age ajusted mortality rate
+*   COMPAS: A Health Microsimulation Model for Quebec and Canada
+*   Copyright (c) 2012-2017, COMPAS Development Team 
+*
+*   This program is free software: you can redistribute it and/or modify
+*   it under the terms of the GNU Affero General Public License as published
+*   by the Free Software Foundation, either version 3 of the License, or
+*   (at your option) any later version.
+*
+*   This program is distributed in the hope that it will be useful,
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*   GNU Affero General Public License for more details.
+*
+*   You should have received a copy of the GNU Affero General Public License
+*   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-*Test decrease mortality in 2024
+******************************************
+*	The economic benefits of reducing    *
+*	cardiovascular disease mortality     *
+*   in Quebec, Canada					 *
+*										 *
+*	Do file to procude tables and figures*
+*	from COMPAS output		    		 *
+*										 *
+******************************************
 
-global path = "/Users/UQAM/compas_travail/output-scenario"
+*********
+* decrcvd is the incidence base scenario
+* decrcvd3 is the mortality base scenario
+* decrcvd1 decrcvd2 decrcvd4 decrcvd5 decrcvd6 are linear combination of both scenraio
+
+**** Result *****
+*** Desease Prevalence 
+global path = "[..]/compascvd2017/output" 
+global path_exp = "[..]/compascvd2017/tables_figures" 
+set scheme s1mono
+
+*"/PATH/TABLE-FIG/"
+
+*"/PATH/OUTPUT/"
 
 global scenario "reference decrcvd decrcvd1 decrcvd2 decrcvd3"
- 
+global variable "hearte stroke hibpe"
 foreach run of global scenario {
-	use "$path/`run'/ydead_cvd_sum_age_value1.dta",clear
-	global file = ""
-	forvalues i = 2/100 {
-	global file = "$file $path/`run'/ydead_cvd_sum_age_value`i'.dta"
+	foreach var of global variable {
+		use "$path/`run'/`var'_mean_year_value1.dta", clear 
+		global file = ""
+		forvalues i = 2/100 {
+		global file = "$file $path/`run'/`var'_mean_year_value`i'.dta"
+		}
+		append using $file, gen(coef)
+		rename `var' `var'_`run'
+		drop `var'_sd
+		tempfile `var'_`run'
+		save ``var'_`run''
 	}
-
-	append using $file, gen(coef)
-	rename ydead_cvd ydead_`run'
-	drop ydead_cvd_sd
-	save $path/`run'/ydead_cvd_sum_age_value.dta, replace
-
-
-	use "$path/`run'/pop_sum_age_value1.dta",clear
-
-	global file = ""
-	forvalues i = 2/100 {
-	global file = "$file $path/`run'/pop_sum_age_value`i'.dta"
-	}
-
-	append using $file, gen(coef)
-	rename pop pop_`run'
-	drop pop_sd
-	save $path/`run'/pop_sum_age_value.dta, replace
 }
 
-
-use "$path/reference/ydead_cvd_sum_age_value.dta",clear
-merge m:1 year age coef using "$path/reference/pop_sum_age_value.dta"
-drop _merge
-
-foreach run in decrcvd decrcvd decrcvd1 decrcvd2 decrcvd3{
-	merge m:1 year age coef using "$path/`run'/pop_sum_age_value.dta"
-	drop _merge
-	merge 1:1 year age coef cvd using "$path/`run'/ydead_cvd_sum_age_value.dta"
-	drop _merge
-
-}
+	local first = 1
 
 foreach run of global scenario {
+	foreach var of global variable {
+		if `first'==1 {
+			use ``var'_`run'', clear
+			local first = 2	
+		}	
+		else {
+			merge 1:1 year coef using ``var'_`run''
+			drop _merge
+		}
+	}
+}
+foreach var of global variable {
+	bysort year: egen pct5_`var'_reference = pctile(`var'_reference), p(5)
+	bysort year: egen pct95_`var'_reference = pctile(`var'_reference), p(95)
+	bysort year: egen mean_`var'_reference = mean(`var'_reference)
+}	
+foreach run in decrcvd decrcvd1 decrcvd2 decrcvd3 { 
+	foreach var of global variable {
+		local abbrev = abbrev("`run'",4)
+		gen d_`var'_`run' = `var'_reference-`var'_`run'
+
+		bysort year: egen pct5d_`var'_`run' = pctile(d_`var'_`run'), p(5)
+		bysort year: egen pct95d_`var'_`run' = pctile(d_`var'_`run'), p(95)
+		bysort year: egen meand_`var'_`run' = mean(d_`var'_`run')
+
+		bysort year: egen pct5_`var'_`run' = pctile(`var'_`run'), p(5)
+		bysort year: egen pct95_`var'_`run' = pctile(`var'_`run'), p(95)
+		bysort year: egen mean_`var'_`run' = mean(`var'_`run')
+	}
+}
+bysort year : keep if _n==1
+
+keep if inlist(year,2012,2020,2034,2050)
+local cell = 3
+putexcel set "$path_exp/diff2.xlsx",  sheet(ref) modify
+
+foreach var of global variable {
 	preserve
-	keep if year >=2012 & year<=2050
-	keep if age <=100
-	keep if cvd ==1 
-	bysort coef age year coef: gen tx_dead_cvd_`run' = ydead_`run'/pop_`run'
-	bysort coef age (year) : gen pop_dead_2012_`run' = tx_dead_cvd_`run'*pop_`run'[1]
-	collapse (sum) pop_dead_2012_`run' pop_`run' , by(year coef)
-	bysort coef (year): gen adj_mx_`run' = pop_dead_2012_`run'/pop_`run'[1]
-	bysort coef (year): gen diff_adj_mx_`run' = (adj_mx_`run'[1]-adj_mx_`run')/adj_mx_`run'[1]
-		
-	bysort year: egen pct5d_`run' = pctile(diff_adj_mx_`run'), p(5)
-	bysort year: egen pct95d_`run' = pctile(diff_adj_mx_`run'), p(95)
-	bysort year: egen meand_`run' = mean(diff_adj_mx_`run')
-	bysort year : keep if _n==1
-	di  "Diff in mortality for `run' : " meand_`run'[7] " ( " pct5d_`run'[7] " ; " pct95d_`run'[7] " ) "
+	di "`var'"
+	keep year pct5_`var'_reference mean_`var'_reference pct95_`var'_reference
+	order year pct5_`var'_reference mean_`var'_reference pct95_`var'_reference
+
+	replace pct5_`var'_reference = pct5_`var'_reference
+	replace mean_`var'_reference = mean_`var'_reference
+	replace pct95_`var'_reference = pct95_`var'_reference
+		mkmat year pct5_`var'_reference mean_`var'_reference pct95_`var'_reference, matrix(temp)
+	putexcel  B`cell' = matrix(temp)
+	matrix drop temp
+	
+	local cell = `cell'+7
+	list year pct5_`var'_reference mean_`var'_reference pct95_`var'_reference	
 	restore
 }
 
-*CVD and mortality
+foreach run in decrcvd decrcvd1 decrcvd2 decrcvd3 { 
+	putexcel set "$path_exp/diff2.xlsx",  sheet(`run') modify
 
-**Cost
-global path = "/PATH/OUTPUT/"
+	di "`run'" 
+	local cell = 3
+	foreach var of global variable {
+	preserve
+	di "`var'" 
+	keep year pct5_`var'_`run' mean_`var'_`run' pct95_`var'_`run'
+	order year pct5_`var'_`run' mean_`var'_`run' pct95_`var'_`run'
+	
+	replace pct5_`var'_`run' = pct5_`var'_`run'
+	replace mean_`var'_`run' = mean_`var'_`run'
+	replace pct95_`var'_`run' = pct95_`var'_`run'
+	mkmat year pct5_`var'_`run' mean_`var'_`run' pct95_`var'_`run', matrix(temp)
+	putexcel  B`cell' = matrix(temp)
+	*export excel using "$path_exp/scenario/diff.xlsx", sheet("`run'")  cell(A`cell') firstrow(variables) sheetmodify
+	matrix drop temp
+	list year pct5_`var'_`run' mean_`var'_`run' pct95_`var'_`run'
+	local cell = `cell'+7
+
+	restore
+	}
+}
+
+***Figure 1 and 2 - Cost nights and doctors. 
+* Show doctors splits
+* cost.dta is save to be use for Figure 3 
 
 global scenario "reference decrcvd decrcvd1 decrcvd2 decrcvd3 decrcvd4 decrcvd5 decrcvd6"
 global scenario1 "decrcvd decrcvd1 decrcvd2 decrcvd3 decrcvd4 decrcvd5 decrcvd6"
@@ -129,7 +202,7 @@ foreach run of global scenario1 {
 	}
 }
 
-save "$path/cost.dta",replace
+save "$path/cost.dta",replace 
 use "$path/cost.dta",clear
 
 
@@ -176,7 +249,7 @@ foreach var of global variable {
 
 bysort year: keep if _n==1
 drop *1 *2 *4 *5 *6
-global path_exp = "/PATH/TABLE-FIG/"
+*global path_exp = "/PATH/TABLE-FIG/"
 
 keep if inlist(year,2020,2030,2040,2050)
 
@@ -188,13 +261,14 @@ gen year_cvd3 = year
 recode year_ref  (2020=1) (2030=5) (2040=9) (2050=13)
 recode year_cvd3 (2020=2) (2030=6) (2040=10) (2050=14)
 recode year_cvd  (2020=3) (2030=7) (2040=11) (2050=15)
+
 twoway  (bar mean_cost_nights_reference year_ref) ///
 		(bar mean_cost_nights_decrcvd3 year_cvd3) /// 
 	    (bar mean_cost_nights_decrcvd year_cvd), ///
 		legend(row(1) order(1 "Baseline" 2 "Mortality-Based CVD Decrease" 3 "Incidence-Based CVD Decrease") symxsize(5.4) size(small)) ///
 		xlabel( 2 "2020" 6 "2030" 10 "2040" 14 "2050", noticks) xtitle("Year") ylabel(100(20)220) ///
 		ytitle("Cost (2012C$, 2012=100)" " ") graphregion(color(white)) name(cost_nights,replace)
-		graph export "$path_exp/scenario/cost_nights_bar.tiff", as(tif) replace	
+		graph export "$path_exp/cost_nights_bar.tiff", as(tif) replace	
 		
 twoway  (bar mean_cost_doctors_reference year_ref) ///
 		(bar mean_cost_doctors_decrcvd3 year_cvd3) /// 
@@ -202,128 +276,37 @@ twoway  (bar mean_cost_doctors_reference year_ref) ///
 		legend(row(1) order(1 "Baseline" 2 "Mortality-Based CVD Decrease" 3 "Incidence-Based CVD Decrease") symxsize(5.4) size(small)) ///
 		xlabel( 2 "2020" 6 "2030" 10 "2040" 14 "2050", noticks) xtitle("Year")  ylabel(100(20)220) ///
 		ytitle("Cost (2012C$, 2012=100)" " ") graphregion(color(white)) name(cost_doctors,replace)
-		graph export "$path_exp/scenario/cost_doctors_bar.tiff", as(tif) replace	
+		graph export "$path_exp/cost_doctors_bar.tiff", as(tif) replace	
 
 
-preserve
+*Numbers for figure 1 description		
+list year pct5_cost_nights_reference mean_cost_nights_reference pct95_cost_nights_reference ///
+          pct5_cost_nights_decrcvd   mean_cost_nights_decrcvd   pct95_cost_nights_decrcvd ///
+		  pct5_cost_nights_decrcvd3  mean_cost_nights_decrcvd3  pct95_cost_nights_decrcvd3 
 
-keep mean*doctors*  pct*doctors* year
+*Numbers for figure 2 description
+list year pct5_cost_doctors_reference mean_cost_doctors_reference pct95_cost_doctors_reference ///
+		  pct5d_cost_doctors_decrcvd  meand_cost_doctors_decrcvd  pct95d_cost_doctors_decrcvd  ///
+          pct5_cost_doctors_decrcvd3  mean_cost_doctors_decrcvd3  pct95_cost_doctors_decrcvd3  
+		  
+*Split Generalist and Specialist from figure 2 description
+*Incidence base scenario
+list year pct5d_cost_generalist_decrcvd meand_cost_generalist_decrcvd pct95d_cost_generalist_decrcvd ///
+		  pct5d_cost_specialist_decrcvd meand_cost_specialist_decrcvd pct95d_cost_specialist_decrcvd 
 
-restore
+*Mortality base scenario
+list year pct5d_cost_generalist_decrcvd3 meand_cost_generalist_decrcvd3 pct95d_cost_generalist_decrcvd3 ///
+		  pct5d_cost_specialist_decrcvd3 meand_cost_specialist_decrcvd3 pct95d_cost_specialist_decrcvd3 
+
+*Show the 0 cut-off percentile for mortality base cost of scecialist
+list   pct0_cost_specialist_decrcvd3 if year==2050
 
 
-keep if inlist(year,2050)
-preserve
-keep year pct0*
-keep pct* mean*
 
 
-**Desease
-global path = "/PATH/OUTPUT/"
+**Table 1 - life expectancy
 
-global scenario "reference decrcvd decrcvd1 decrcvd2 decrcvd3"
-global variable "hearte stroke hibpe mentae cancre diabe"
-foreach run of global scenario {
-	foreach var of global variable {
-		use "$path/`run'/`var'_mean_year_value1.dta", clear 
-		global file = ""
-		forvalues i = 2/100 {
-		global file = "$file $path/`run'/`var'_mean_year_value`i'.dta"
-		}
-		append using $file, gen(coef)
-		rename `var' `var'_`run'
-		drop `var'_sd
-		tempfile `var'_`run'
-		save ``var'_`run''
-	}
-}
-
-	local first = 1
-
-foreach run of global scenario {
-	foreach var of global variable {
-		if `first'==1 {
-			use ``var'_`run'', clear
-			local first = 2	
-		}	
-		else {
-			merge 1:1 year coef using ``var'_`run''
-			drop _merge
-		}
-	}
-}
-foreach var of global variable {
-	bysort year: egen pct5_`var'_reference = pctile(`var'_reference), p(5)
-	bysort year: egen pct95_`var'_reference = pctile(`var'_reference), p(95)
-	bysort year: egen mean_`var'_reference = mean(`var'_reference)
-}	
-foreach run in decrcvd decrcvd1 decrcvd2 decrcvd3 { 
-	foreach var of global variable {
-		local abbrev = abbrev("`run'",4)
-		gen d_`var'_`run' = `var'_reference-`var'_`run'
-
-		bysort year: egen pct5d_`var'_`run' = pctile(d_`var'_`run'), p(5)
-		bysort year: egen pct95d_`var'_`run' = pctile(d_`var'_`run'), p(95)
-		bysort year: egen meand_`var'_`run' = mean(d_`var'_`run')
-
-		bysort year: egen pct5_`var'_`run' = pctile(`var'_`run'), p(5)
-		bysort year: egen pct95_`var'_`run' = pctile(`var'_`run'), p(95)
-		bysort year: egen mean_`var'_`run' = mean(`var'_`run')
-	}
-}
-bysort year : keep if _n==1
-
-keep if inlist(year,2012,2020,2034,2050)
-global path_exp = "/PATH/TABLE-FIG/"
-local cell = 3
-putexcel set "$path_exp/scenario/diff2.xlsx",  sheet(ref) modify
-
-foreach var of global variable {
-	preserve
-	di "`var'"
-	keep year pct5_`var'_reference mean_`var'_reference pct95_`var'_reference
-	order year pct5_`var'_reference mean_`var'_reference pct95_`var'_reference
-
-	replace pct5_`var'_reference = pct5_`var'_reference
-	replace mean_`var'_reference = mean_`var'_reference
-	replace pct95_`var'_reference = pct95_`var'_reference
-		mkmat year pct5_`var'_reference mean_`var'_reference pct95_`var'_reference, matrix(temp)
-	putexcel  B`cell' = matrix(temp)
-	matrix drop temp
-	
-	local cell = `cell'+7
-	list year pct5_`var'_reference mean_`var'_reference pct95_`var'_reference	
-	restore
-}
-
-foreach run in decrcvd decrcvd1 decrcvd2 decrcvd3 { 
-	putexcel set "$path_exp/scenario/diff2.xlsx",  sheet(`run') modify
-
-	di "`run'" 
-	local cell = 3
-	foreach var of global variable {
-	preserve
-	di "`var'" 
-	keep year pct5_`var'_`run' mean_`var'_`run' pct95_`var'_`run'
-	order year pct5_`var'_`run' mean_`var'_`run' pct95_`var'_`run'
-	
-	replace pct5_`var'_`run' = pct5_`var'_`run'
-	replace mean_`var'_`run' = mean_`var'_`run'
-	replace pct95_`var'_`run' = pct95_`var'_`run'
-	mkmat year pct5_`var'_`run' mean_`var'_`run' pct95_`var'_`run', matrix(temp)
-	putexcel  B`cell' = matrix(temp)
-	*export excel using "$path_exp/scenario/diff.xlsx", sheet("`run'")  cell(A`cell') firstrow(variables) sheetmodify
-	matrix drop temp
-	list year pct5_`var'_`run' mean_`var'_`run' pct95_`var'_`run'
-	local cell = `cell'+7
-
-	restore
-	}
-}
-
-**Mortality
-
-global scenario "reference decrcvd decrcvd1 decrcvd2 decrcvd3"
+global scenario "reference decrcvd decrcvd3"
 global variable "ydead"
 foreach run of global scenario {
 	foreach var of global variable {
@@ -380,7 +363,7 @@ bysort year: egen pct5_eh_reference = pctile(eh_reference), p(5)
 bysort year: egen pct95_eh_reference = pctile(eh_reference), p(95)
 bysort year: egen mean_eh_reference = mean(eh_reference)
 
-foreach run in decrcvd decrcvd1 decrcvd2 decrcvd3 { 
+foreach run in decrcvd decrcvd3 { 
 		gen d_eh_`run' = eh_reference-eh_`run'
 		sort year d_eh_`run'
 		by year : gen zero_pct_tmp = _n if d_eh_`run'<=0 & d_eh_`run'[_n+1]>0
@@ -399,26 +382,34 @@ sort year (coef)
 
 
 bysort year : keep if _n==1
-keep if year >=2012
-drop if year ==2052
 
 keep if inlist(year,2012,2020,2030,2050)
 
-preserve 
-
-keep year zero_pct_decrcvd zero_pct_decrcvd3
-list
-
-restore
-keep year pct5_eh_reference pct95_eh_reference mean_eh_reference pct5d_eh_decrcvd pct95d_eh_decrcvd meand_eh_decrcvd pct5d_eh_decrcvd1 pct95d_eh_decrcvd1 meand_eh_decrcvd1 pct5d_eh_decrcvd2 pct95d_eh_decrcvd2 meand_eh_decrcvd2 pct5d_eh_decrcvd3 pct95d_eh_decrcvd3 meand_eh_decrcvd3
-
-order year pct5_eh_reference mean_eh_reference pct95_eh_reference pct5d_eh_decrcvd meand_eh_decrcvd pct95d_eh_decrcvd pct5d_eh_decrcvd1 meand_eh_decrcvd1 pct95d_eh_decrcvd1 pct5d_eh_decrcvd2 meand_eh_decrcvd2 pct95d_eh_decrcvd2 pct5d_eh_decrcvd3 meand_eh_decrcvd3 pct95d_eh_decrcvd3 pct5_eh_reference
+* Percentile of positive gain of health
+list year zero_pct_decrcvd zero_pct_decrcvd3
 
 
-** VAN **
+
+keep year pct5_eh_reference pct95_eh_reference mean_eh_reference pct5d_eh_decrcvd pct95d_eh_decrcvd meand_eh_decrcvd pct5d_eh_decrcvd3 pct95d_eh_decrcvd3 meand_eh_decrcvd3
+
+order year pct5_eh_reference mean_eh_reference pct95_eh_reference ///
+           pct5d_eh_decrcvd  meand_eh_decrcvd  pct95d_eh_decrcvd ///
+		   pct5d_eh_decrcvd3 meand_eh_decrcvd3 pct95d_eh_decrcvd3
+*Table 1
+* Reference life expectancy		   
+list year pct5_eh_reference mean_eh_reference pct95_eh_reference
+*Mortality base difference (ref-mortality) Presente at the opposite in table 1 (mortality-ref)
+* A negative number is an increase in life expectancy
+list year pct5d_eh_decrcvd3 meand_eh_decrcvd3 pct95d_eh_decrcvd3
+*Incidence base difference (ref-incidence) Presente at the opposite in table 1 (incende-ref)
+* A negative number is an increase in life expectancy
+list year pct5d_eh_decrcvd  meand_eh_decrcvd  pct95d_eh_decrcvd
 
 
-global path = "/PATH/OUTPUT/"
+
+** Table 2 and data for table 3a and table 3b and figure 3
+*** Number of years of life saved and VAN
+
 
 global scenario "reference decrcvd decrcvd1 decrcvd2 decrcvd3 decrcvd4 decrcvd5 decrcvd6"
 global scenario_1 " decrcvd decrcvd1 decrcvd2 decrcvd3 decrcvd4 decrcvd5 decrcvd6 "
@@ -447,7 +438,7 @@ foreach run of global scenario_1 {
 
 collapse (sum) pop_decrcvd pop_decrcvd1 pop_decrcvd2 pop_decrcvd3 pop_decrcvd4 pop_decrcvd5 pop_decrcvd6 pop_reference, by(year coef)
 drop if year==2010 | year==2052
-local discrate = 0.03
+local discrate = 0.03  // Can be change to obtain other discount rate (e.g. 0.01 or 0.05)
 local valueyear = 200000
 bysort coef (year) : gen n = (_n-1)*2
 
@@ -465,27 +456,45 @@ foreach run of global scenario_1 {
 		gen d_pop_`run' = pop_`run'-pop_reference
 		gen value_life_`run' = d_pop_`run'*`valueyear'
 		gen discount_value_`run' = value_life_`run' *(1+`discrate')^(-n)
+		bysort coef (year): gen d_tot_pop_`run' = sum(d_pop_`run')
+
+		bysort year: egen pct5d_pop_`run' = pctile(d_pop_`run'), p(5)
+		bysort year: egen pct95d_pop_`run' = pctile(d_pop_`run'), p(95)
+		bysort year: egen meand_pop_`run' = mean(d_pop_`run')
+		
+		bysort year: egen pct5d_tot_pop_`run' = pctile(d_tot_pop_`run'), p(5)
+		bysort year: egen pct95d_tot_pop_`run' = pctile(d_tot_pop_`run'), p(95)
+		bysort year: egen meand_tot_pop_`run' = mean(d_tot_pop_`run')
+		
 		bysort coef (year): gen tot_discount_`run' = sum(discount_value_`run')
+		bysort year: egen pct5d_tot_discount_`run' = pctile(tot_discount_`run'), p(5)
+		bysort year: egen pct95d_tot_discount_`run' = pctile(tot_discount_`run'), p(95)
+		bysort year: egen meand_tot_discount_`run' = mean(tot_discount_`run')
 	}
 
 save "$path/lifevalue.dta",replace
 
-
-
-keep pct* mean* year
+keep pct* mean*  year
 by year : keep if _n==1
 keep if inlist(year,2020,2030,2035,2050)
+list year pct5d_tot_discount_decrcvd  meand_tot_discount_decrcvd  pct95d_tot_discount_decrcvd
+list year pct5d_tot_discount_decrcvd3 meand_tot_discount_decrcvd3 pct95d_tot_discount_decrcvd3
 
-list year mean_discount_value_decrcvd mean_discount_value_decrcvd1 mean_discount_value_decrcvd2 mean_discount_value_decrcvd3
+*Table 2 
+keep if inlist(year,2030,2050)
 
-order year pct5_discount_value_decrcvd mean_discount_value_decrcvd pct95_discount_value_decrcvd ///
-pct5_discount_value_decrcvd1 mean_discount_value_decrcvd1 pct95_discount_value_decrcvd1 ///
-pct5_discount_value_decrcvd2 mean_discount_value_decrcvd2 pct95_discount_value_decrcvd2 ///
-pct5_discount_value_decrcvd3 mean_discount_value_decrcvd3 pct95_discount_value_decrcvd3 
+*Mortality base scenario years of life annual and total
+list year meand_pop_decrcvd3 pct5d_pop_decrcvd3 pct95d_pop_decrcvd3
+list year meand_tot_pop_decrcvd3 pct5d_tot_pop_decrcvd3 pct95d_tot_pop_decrcvd3
+
+
+*Incidence base scenario years of life annual and total
+list year meand_pop_decrcvd pct5d_pop_decrcvd pct95d_pop_decrcvd
+list year meand_tot_pop_decrcvd pct5d_tot_pop_decrcvd pct95d_tot_pop_decrcvd
 
 
 
-***** Graph alpha ****
+***** table 3a and table 3b and figure 3 ****
 use "$path/cost.dta",clear
 recode year (2034=2035)
 merge 1:1 year coef using "$path/lifevalue.dta"
@@ -494,8 +503,6 @@ drop if year ==2034
 
 keep if inlist(year,2020,2035,2050)
 
-global path = "/PATH/OUTPUT/"
-global path_exp = "/PATH/TABLE-FIG/"
 
 global scenario "reference decrcvd decrcvd1 decrcvd2 decrcvd3 decrcvd4 decrcvd5 decrcvd6"
 global scenario_1 " decrcvd decrcvd1 decrcvd2 decrcvd3 decrcvd4 decrcvd5 decrcvd6 "
@@ -536,14 +543,16 @@ foreach run of global scenario_1 {
 }
 
 bysort year : keep if _n ==1
+/*
 preserve 
 
 keep year  pct0_totvalue_decrcvd pct0_cost_nights_decrcvd  pct0_cost_generalist_decrcvd pct0_cost_specialist_decrcvd pct0_discount_decrcvd ///
-		pct0_totvalue_decrcvd3 pct0_cost_nights_decrcvd3  pct0_cost_generalist_decrcvd3 pct0_cost_specialist_decrcvd3 pct0_discount_decrcvd3 
+			pct0_totvalue_decrcvd3 pct0_cost_nights_decrcvd3  pct0_cost_generalist_decrcvd3 pct0_cost_specialist_decrcvd3 pct0_discount_decrcvd3 
 list year pct0_totvalue_decrcvd pct0_cost_nights_decrcvd  pct0_cost_generalist_decrcvd pct0_cost_specialist_decrcvd pct0_discount_decrcvd
 list year pct0_totvalue_decrcvd3 pct0_cost_nights_decrcvd3  pct0_cost_generalist_decrcvd3 pct0_cost_specialist_decrcvd3 pct0_discount_decrcvd3 
 
 restore
+*/
 keep year  pct* mean*
 
 /*** Tableau van */
@@ -571,15 +580,17 @@ foreach var in	 pct5v_cost_nights_decrcvd  pct5v_cost_generalist_decrcvd  pct5v_
 
 sort alpha year
 
+*Data for table 3 ùnd table 4
 order	pct5v_cost_nights_decrcvd  meanv_cost_nights_decrcvd pct95v_cost_nights_decrcvd ///
 		pct5v_cost_generalist_decrcvd meanv_cost_generalist_decrcvd  pct95v_cost_generalist_decrcvd ///
 		pct5v_cost_specialist_decrcvd meanv_cost_specialist_decrcvd pct95v_cost_specialist_decrcvd ///
 		pct5_discount_value_decrcvd mean_discount_value_decrcvd pct95_discount_value_decrcvd ///
 		pct5v_totvalue_decrcvd meanv_totvalue_decrcvd pct95v_totvalue_decrcvd ///
 		pct5v_totcost_decrcvd meanv_totcost_decrcvd pct95v_totcost_decrcvd
-
 restore 
 	
+	 
+*Figure 3
 foreach var in	 pct5v_totvalue_decrcvd pct25v_totvalue_decrcvd  pct75v_totvalue_decrcvd  meanv_totvalue_decrcvd  pct95v_totvalue_decrcvd {
 	 
 	 rename `var' `var'0
@@ -605,14 +616,13 @@ twoway (bar  meanv_totvalue_decrcvd alpha if year==2050,  barwidth(.05) fcolor(g
 xlab(0(.5)1,format(%9.1f) labsize(medsmall))            ///
 xmlabel(0.166666667(.166666667).33333333 .66666666667(.166666666).833333333 ,format(%9.3f) labsize(medsmall))            ///
 xtitle("Share of CVD mortality reduction attributable to reduced incidence", size(small))  ytitle(`"Total discounted value, 2012-2050 (billions of 2012C$)"',size(small)) legend(off) graphregion(color(white)) ylabel(0(20)100)
-graph export "$path_exp/scenario/alpha.tiff", as(tif) replace
+graph export "$path_exp/alpha.tiff", as(tif) replace
 
  
 
 
 
-*****Population
-global path = "/PATH/OUTPUT/"
+*****Increase of Population
 
 global scenario "reference decrcvd decrcvd1 decrcvd2 decrcvd3 decrcvd4 decrcvd5 decrcvd6"
 global scenario_1 " decrcvd decrcvd1 decrcvd2 decrcvd3 decrcvd4 decrcvd5 decrcvd6 "
@@ -676,3 +686,172 @@ bysort year : keep if _n==1
 keep year mean* pct*
 
 keep if inlist(year,2020,2030,2035,2050)
+
+
+
+
+*Age ajusted mortality rate
+
+*Test decrease mortality in 2024. Code to calibrate scenario to obtain 25%
+* of devrease in 2024.
+
+global scenario "reference decrcvd decrcvd1 decrcvd2 decrcvd3"
+ 
+foreach run of global scenario {
+	use "$path/`run'/ydead_cvd_sum_age_value1.dta",clear
+	global file = ""
+	forvalues i = 2/100 {
+	global file = "$file $path/`run'/ydead_cvd_sum_age_value`i'.dta"
+	}
+
+	append using $file, gen(coef)
+	rename ydead_cvd ydead_`run'
+	drop ydead_cvd_sd
+	save $path/`run'/ydead_cvd_sum_age_value.dta, replace
+
+
+	use "$path/`run'/pop_sum_age_value1.dta",clear
+
+	global file = ""
+	forvalues i = 2/100 {
+	global file = "$file $path/`run'/pop_sum_age_value`i'.dta"
+	}
+
+	append using $file, gen(coef)
+	rename pop pop_`run'
+	drop pop_sd
+	save $path/`run'/pop_sum_age_value.dta, replace
+}
+
+
+use "$path/reference/ydead_cvd_sum_age_value.dta",clear
+merge m:1 year age coef using "$path/reference/pop_sum_age_value.dta"
+drop _merge
+
+foreach run in decrcvd decrcvd decrcvd1 decrcvd2 decrcvd3{
+	merge m:1 year age coef using "$path/`run'/pop_sum_age_value.dta"
+	drop _merge
+	merge 1:1 year age coef cvd using "$path/`run'/ydead_cvd_sum_age_value.dta"
+	drop _merge
+
+}
+
+foreach run of global scenario {
+	preserve
+	keep if year >=2012 & year<=2050
+	keep if age <=100
+	keep if cvd ==1 
+	bysort coef age year coef: gen tx_dead_cvd_`run' = ydead_`run'/pop_`run'
+	bysort coef age (year) : gen pop_dead_2012_`run' = tx_dead_cvd_`run'*pop_`run'[1]
+	collapse (sum) pop_dead_2012_`run' pop_`run' , by(year coef)
+	bysort coef (year): gen adj_mx_`run' = pop_dead_2012_`run'/pop_`run'[1]
+	bysort coef (year): gen diff_adj_mx_`run' = (adj_mx_`run'[1]-adj_mx_`run')/adj_mx_`run'[1]
+		
+	bysort year: egen pct5d_`run' = pctile(diff_adj_mx_`run'), p(5)
+	bysort year: egen pct95d_`run' = pctile(diff_adj_mx_`run'), p(95)
+	bysort year: egen meand_`run' = mean(diff_adj_mx_`run')
+	bysort year : keep if _n==1
+	di  "Diff in mortality for `run' : " meand_`run'[7] " ( " pct5d_`run'[7] " ; " pct95d_`run'[7] " ) "
+	restore
+}
+
+
+**Desease
+
+global scenario "reference decrcvd decrcvd1 decrcvd2 decrcvd3"
+global variable "hearte stroke hibpe mentae cancre diabe"
+foreach run of global scenario {
+	foreach var of global variable {
+		use "$path/`run'/`var'_mean_year_value1.dta", clear 
+		global file = ""
+		forvalues i = 2/100 {
+		global file = "$file $path/`run'/`var'_mean_year_value`i'.dta"
+		}
+		append using $file, gen(coef)
+		rename `var' `var'_`run'
+		drop `var'_sd
+		tempfile `var'_`run'
+		save ``var'_`run''
+	}
+}
+
+	local first = 1
+
+foreach run of global scenario {
+	foreach var of global variable {
+		if `first'==1 {
+			use ``var'_`run'', clear
+			local first = 2	
+		}	
+		else {
+			merge 1:1 year coef using ``var'_`run''
+			drop _merge
+		}
+	}
+}
+foreach var of global variable {
+	bysort year: egen pct5_`var'_reference = pctile(`var'_reference), p(5)
+	bysort year: egen pct95_`var'_reference = pctile(`var'_reference), p(95)
+	bysort year: egen mean_`var'_reference = mean(`var'_reference)
+}	
+foreach run in decrcvd decrcvd1 decrcvd2 decrcvd3 { 
+	foreach var of global variable {
+		local abbrev = abbrev("`run'",4)
+		gen d_`var'_`run' = `var'_reference-`var'_`run'
+
+		bysort year: egen pct5d_`var'_`run' = pctile(d_`var'_`run'), p(5)
+		bysort year: egen pct95d_`var'_`run' = pctile(d_`var'_`run'), p(95)
+		bysort year: egen meand_`var'_`run' = mean(d_`var'_`run')
+
+		bysort year: egen pct5_`var'_`run' = pctile(`var'_`run'), p(5)
+		bysort year: egen pct95_`var'_`run' = pctile(`var'_`run'), p(95)
+		bysort year: egen mean_`var'_`run' = mean(`var'_`run')
+	}
+}
+bysort year : keep if _n==1
+
+keep if inlist(year,2012,2020,2034,2050)
+local cell = 3
+putexcel set "$path_exp/diff2.xlsx",  sheet(ref) modify
+
+foreach var of global variable {
+	preserve
+	di "`var'"
+	keep year pct5_`var'_reference mean_`var'_reference pct95_`var'_reference
+	order year pct5_`var'_reference mean_`var'_reference pct95_`var'_reference
+
+	replace pct5_`var'_reference = pct5_`var'_reference
+	replace mean_`var'_reference = mean_`var'_reference
+	replace pct95_`var'_reference = pct95_`var'_reference
+		mkmat year pct5_`var'_reference mean_`var'_reference pct95_`var'_reference, matrix(temp)
+	putexcel  B`cell' = matrix(temp)
+	matrix drop temp
+	
+	local cell = `cell'+7
+	list year pct5_`var'_reference mean_`var'_reference pct95_`var'_reference	
+	restore
+}
+
+foreach run in decrcvd decrcvd1 decrcvd2 decrcvd3 { 
+	putexcel set "$path_exp/diff2.xlsx",  sheet(`run') modify
+
+	di "`run'" 
+	local cell = 3
+	foreach var of global variable {
+	preserve
+	di "`var'" 
+	keep year pct5_`var'_`run' mean_`var'_`run' pct95_`var'_`run'
+	order year pct5_`var'_`run' mean_`var'_`run' pct95_`var'_`run'
+	
+	replace pct5_`var'_`run' = pct5_`var'_`run'
+	replace mean_`var'_`run' = mean_`var'_`run'
+	replace pct95_`var'_`run' = pct95_`var'_`run'
+	mkmat year pct5_`var'_`run' mean_`var'_`run' pct95_`var'_`run', matrix(temp)
+	putexcel  B`cell' = matrix(temp)
+	matrix drop temp
+	list year pct5_`var'_`run' mean_`var'_`run' pct95_`var'_`run'
+	local cell = `cell'+7
+
+	restore
+	}
+}
