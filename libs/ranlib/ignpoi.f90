@@ -12,6 +12,9 @@ function ignpoi ( mu )
 !  Licensing:
 !
 !    This code is distributed under the GNU LGPL license.
+!  Modified:
+!
+!    20 october 2015
 !
 !  Modified:
 !
@@ -21,6 +24,9 @@ function ignpoi ( mu )
 !
 !    Original FORTRAN77 version by Barry Brown, James Lovato.
 !    FORTRAN90 version by John Burkardt.
+!    Use of random_number_f to define random_number ]0,1] by Francois Laliberte-Auger
+!    for Chaire de recherche Industrielle Alliance
+!		 sur les enjeux économiques des changements démographiques
 !
 !  Reference:
 !
